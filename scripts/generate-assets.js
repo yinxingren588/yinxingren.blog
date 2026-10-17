@@ -7,6 +7,8 @@ const imgDir = path.resolve(publicDir, 'images');
 
 const requiredFiles = [
   path.join(publicDir, 'favicon.ico'),
+  path.join(publicDir, 'favicon-32x32.png'),
+  path.join(publicDir, 'favicon-16x16.png'),
   path.join(publicDir, 'apple-touch-icon.png'),
   path.join(imgDir, 'logo-clean.png'),
   path.join(imgDir, 'logo-mascot.png'),

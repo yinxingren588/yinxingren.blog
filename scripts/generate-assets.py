@@ -42,10 +42,16 @@ def generate_all():
     mascot_sq.save(os.path.join(img_dir, 'logo-mascot.png'))
     print('[OK] Created logo-mascot.png:', mascot_sq.size)
 
-    # 3. favicon.ico (multi-resolution ICO: 16, 32, 48, 64)
+    # 3. favicon PNGs (16x16, 32x32, 48x48) & multi-resolution ICO
+    mascot_rgba = mascot_sq.convert('RGBA')
+    for sz in [16, 32, 48]:
+        fav_png = mascot_rgba.resize((sz, sz), Image.Resampling.LANCZOS)
+        fav_png.save(os.path.join(public_dir, f'favicon-{sz}x{sz}.png'), 'PNG')
+        print(f'[OK] Created favicon-{sz}x{sz}.png')
+
     ico_path = os.path.join(public_dir, 'favicon.ico')
-    mascot_sq.save(ico_path, format='ICO', sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
-    print('[OK] Created favicon.ico (multi-resolution 16/32/48/64)')
+    mascot_rgba.save(ico_path, format='ICO', sizes=[(16, 16), (32, 32), (48, 48)])
+    print('[OK] Created favicon.ico (multi-resolution 16/32/48)')
 
     # 4. apple-touch-icon.png (180x180)
     touch = Image.new('RGB', (180, 180), (255, 255, 255))
