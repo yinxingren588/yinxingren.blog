@@ -1,0 +1,5 @@
+# Static Hosting Redirects & 404 Handling
+# 规范要求：未知路径必须返回真实 HTTP 404，不得回退到首页返回 200
+
+# 兜底：未匹配到的路径统一指向 404.html 并返回 HTTP 404 状态码
+/*    /404.html    404

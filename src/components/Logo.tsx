@@ -1,0 +1,51 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
+
+interface LogoProps {
+  className?: string;
+  showSubtitle?: boolean;
+}
+
+/**
+ * 品牌 Logo 组件 (浅紫色紫罗兰主题)
+ * 规则：Logo 不能跳转 AFF，只跳转站内首页 '/'
+ * 视觉母题：淡雅紫罗兰底色、双弧收敛、隐形微光节点
+ */
+export const Logo: React.FC<LogoProps> = ({ className = '', showSubtitle = true }) => {
+  return (
+    <Link
+      to="/"
+      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9333EA] rounded-lg p-1 transition-opacity hover:opacity-90 ${className}`}
+      aria-label={`${BRAND_NAME} 首页`}
+    >
+      {/* 品牌 Logo 图标：用户定制隐形人形象 */}
+      <div className="relative w-9 h-9 rounded-lg bg-white border border-[#E9D5FF] flex items-center justify-center shadow-subtle group-hover:border-[#C084FC] transition-colors overflow-hidden p-0.5">
+        <img
+          src="/images/logo-mascot.png"
+          alt={`${BRAND_NAME} 标识`}
+          className="w-full h-full object-contain"
+          width={36}
+          height={36}
+          loading="eager"
+        />
+      </div>
+
+      <div className="flex flex-col text-left">
+        <span className="text-base font-bold tracking-tight text-[#1E1B4B] flex items-center gap-1.5 leading-none">
+          {BRAND_NAME}
+          <span className="text-[10px] font-mono tracking-widest uppercase px-1.5 py-0.5 rounded bg-[#F3E8FF] border border-[#E9D5FF] text-[#7E22CE] font-semibold">
+            {BRAND_NAME_EN}
+          </span>
+        </span>
+        {showSubtitle && (
+          <span className="text-[11px] text-slate-500 mt-1 leading-none font-medium">
+            第三方连接指引
+          </span>
+        )}
+      </div>
+    </Link>
+  );
+};
+
+export default Logo;
