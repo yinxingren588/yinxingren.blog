@@ -26,8 +26,7 @@ import {
  */
 export const ServicesPage: React.FC = () => {
   useEffect(() => {
-    document.title = `服务概览与技术方案 - ${BRAND_NAME}`;
-    // 移除临时 noindex，设置为正常收录
+    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -134,11 +133,11 @@ export const ServicesPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 跨境网络服务概览与技术方案
+            {BRAND_NAME}机场服务概览与官网技术方案
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            深入解析{BRAND_NAME}（{BRAND_NAME_EN}）的传输混淆机制、容灾分流规则与全生态终端支持。作为中立的第三方使用指引平台，我们协助您全面理解技术边界，打造顺畅的跨国开发与出海协作通道。
+            深入解析隐形人机场（{BRAND_NAME_EN}）的专线传输混淆机制、容灾分流规则与全生态终端支持。作为中立的第三方使用指引平台，我们协助您全面理解隐形人官网提供的专线技术边界，打造顺畅的跨国开发与出海协作通道。
           </p>
         </div>
 

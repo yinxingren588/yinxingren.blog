@@ -27,8 +27,7 @@ import {
  */
 export const AdvantagesPage: React.FC = () => {
   useEffect(() => {
-    document.title = `核心优势与架构解析 - ${BRAND_NAME}`;
-    // 移除临时 noindex，设置为正常收录
+    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -120,11 +119,11 @@ export const AdvantagesPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 核心优势与技术选择价值
+            {BRAND_NAME}机场核心优势与官网架构选择价值
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            我们不以虚构的测速数值或拉踩竞品为噱头，而是从协议隐匿性、架构容灾能力与多端易用性三个根本维度，阐述{BRAND_NAME}（{BRAND_NAME_EN}）如何真正解决出海数字工作流中的真实痛点。
+            我们不以虚构的测速数值或拉踩竞品为噱头，而是从协议隐匿性、专线架构容灾能力与多端易用性三个根本维度，阐述隐形人机场（{BRAND_NAME_EN}）如何真正解决出海数字工作流中的真实痛点，为用户提供清晰中立的隐形人官网选型指引。
           </p>
         </div>
 

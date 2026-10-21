@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN, AFF_DISCLOSURE_TEXT } from '@/config/site';
+import { BRAND_NAME_EN, AFF_DISCLOSURE_TEXT } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import HeroVisual from '@/components/HeroVisual';
 import {
@@ -55,23 +55,23 @@ export const Hero: React.FC = () => {
             {/* 品牌定位短句 */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold shadow-subtle">
               <ShieldCheck className="w-4 h-4 text-[#9333EA]" />
-              <span>第三方服务指引 · 跨境连接与隐私防护导航</span>
+              <span>第三方服务指引 · 隐形人官网与机场服务导航</span>
             </div>
 
-            {/* 页面唯一 H1：自然融入核心关键词「隐形人」，清晰明确 */}
+            {/* 页面唯一 H1：自然融入核心关键词「隐形人官网」与「隐形人机场」 */}
             <h1
               id="hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
             >
-              <span className="text-[#9333EA]">{BRAND_NAME}</span> 网络指引：
+              <span className="text-[#9333EA]">隐形人官网</span> 与 <span className="text-[#9333EA]">隐形人机场</span> 指南：
               <span className="block text-[#1E1B4B] mt-1 sm:mt-2">
-                安全、低调、敏捷的跨境连接方案
+                专线节点、安全低调的跨境连接方案
               </span>
             </h1>
 
             {/* Hero 副标题：客观阐明服务主题与本站用途 */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-              专注{BRAND_NAME}（{BRAND_NAME_EN}）网络接入特性解析、多平台客户端配置教程与服务线路选型参考。为出海团队、跨境开发者与数字游民提供清晰务实的第三方使用指南。
+              专注隐形人机场（{BRAND_NAME_EN}）专线节点特性解析、隐形人官网入口导航、9大精选订阅套餐与多平台客户端配置教程。为出海团队、跨境开发者与数字游民提供清晰务实的第三方使用指南。
             </p>
 
             {/* CTA 操作按钮组 */}

@@ -70,16 +70,16 @@ export const PricingGuideSection: React.FC<PricingGuideSectionProps> = ({ isPage
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-              <span>官方全系 9 大正式配套 · 真实透明</span>
+              <span>隐形人官网全系 9 大正式配套 · 真实透明</span>
             </div>
             <h2
               id="pricing-section-heading"
               className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B]"
             >
-              9 大精选订阅与买断方案规格
+              隐形人机场 9 大精选订阅与买断方案规格
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              全系配备专线网络与统一 1x 计费倍率。涵盖 6 款按月/按年循环重置的周期方案，以及 3 款永不过期的一次性独立买断流量包，灵活满足多元化出海需求。
+              全系配备专线网络与统一 1x 计费倍率。涵盖 6 款按月/按年循环重置的周期方案，以及 3 款永不过期的一次性独立买断流量包，灵活满足隐形人官网多元化出海需求。
             </p>
           </div>
         )}

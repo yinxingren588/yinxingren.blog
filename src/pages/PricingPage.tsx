@@ -16,8 +16,7 @@ import { ChevronRight, HelpCircle, ShieldAlert, Sparkles } from 'lucide-react';
  */
 export const PricingPage: React.FC = () => {
   useEffect(() => {
-    document.title = `套餐方案与选型对比指南 - ${BRAND_NAME}`;
-    // 移除临时 noindex（正式内容已在当前步骤开发完成）
+    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -52,11 +51,11 @@ export const PricingPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 套餐选型与订阅方案指南
+            {BRAND_NAME}机场套餐选型与官网订阅方案指南
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            旨在解答您关于{BRAND_NAME}（{BRAND_NAME_EN}）官方公布的 9 大正式配套规格（含星耀风暴、白银纪元、黄金序列、铂金至臻、钻石穹顶、王者定制版等 6 款周期方案，以及 3 款永不过期的一次性买断流量包）、设备并发许可、流量重置机制以及计费周期的决策疑问。全方位协助您结合实际跨境工作场景理性选择。
+            旨在解答您关于隐形人机场（{BRAND_NAME_EN}）官方公布的 9 大正式配套规格（含星耀风暴、白银纪元、黄金序列、铂金至臻、钻石穹顶、王者定制版等 6 款周期方案，以及 3 款永不过期的一次性买断流量包）、设备并发许可、流量重置机制以及隐形人官网计费周期的决策疑问。全方位协助您结合实际跨境工作场景理性选择。
           </p>
         </div>
 

@@ -26,10 +26,10 @@ export const LocationsScopeSection: React.FC = () => {
             id="locations-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B]"
           >
-            服务线路范围与选型指引
+            隐形人机场节点线路范围与选型指引
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-            跨境网络状态受国际骨干网波动、运营商路由策略及物理距离多重因素影响。本站秉持真实合规原则，提供客观选型方法论。
+            跨境网络状态受国际骨干网波动、运营商路由策略及物理距离多重因素影响。本站为您提供隐形人机场专线节点选型方法论与隐形人官网实时状态核对指引。
           </p>
         </div>
 

@@ -31,7 +31,6 @@ export const HelpPage: React.FC = () => {
   const [expandedArticleId, setExpandedArticleId] = useState<string | null>(HELP_ARTICLES[0].id);
 
   useEffect(() => {
-    document.title = `帮助中心与常见问题 - ${BRAND_NAME}`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -111,11 +110,11 @@ export const HelpPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 帮助中心与故障排错手册
+            {BRAND_NAME}机场帮助中心与官网排错手册
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            为您整理从入门使用、套餐选型考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
+            为您整理从入门使用、隐形人机场套餐选型考量、多端客户端导入到隐形人官网常见网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
           </p>
         </div>
 

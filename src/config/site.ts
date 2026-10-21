@@ -9,8 +9,9 @@ export const BRAND_NAME_EN = 'Invisible'; // 本站英文展示名，非品牌�
 export const SITE_URL = 'https://yinxingren.blog'; // 正式域名，不含末尾斜杠
 export const OFFICIAL_URL = 'https://varnexa.invisibleaff.com/#/?code=JF4seZUy'; // 完整AFF链接，完整保留Hash、Query与推广参数
 
-export const PRIMARY_KEYWORD = '隐形人';
-export const SECONDARY_KEYWORD = '隐形人官网';
+export const PRIMARY_KEYWORD = '隐形人官网';
+export const SECONDARY_KEYWORD = '隐形人机场';
+export const BRAND_KEYWORDS = ['隐形人', '隐形人官网', '隐形人机场', '隐形人机场官网'] as const;
 
 export const TELEGRAM_CHANNEL_URL = 'https://t.me/+diFXhmhTx-E4Mjc1'; // 官方频道链接
 export const TELEGRAM_GROUP_URL = 'https://t.me/+YnHn1D4JK7c2Yjg1'; // 交流群链接

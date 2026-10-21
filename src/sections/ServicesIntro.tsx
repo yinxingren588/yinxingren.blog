@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
+import { BRAND_NAME_EN } from '@/config/site';
 import { ArrowRight, ShieldCheck, Terminal, Cpu } from 'lucide-react';
 
 /**
@@ -19,22 +19,22 @@ export const ServicesIntro: React.FC = () => {
           {/* 左侧深度技术与服务阐述 (7列) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold shadow-subtle">
-              <span>架构概览 · 服务体系</span>
+              <span>架构概览 · 专线服务体系</span>
             </div>
 
             <h2
               id="services-heading"
               className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
             >
-              隐匿传输与敏捷连接服务解析
+              隐形人机场隐匿传输与敏捷连接服务解析
             </h2>
 
             <p className="text-base text-slate-700 leading-relaxed font-normal">
-              {BRAND_NAME}（{BRAND_NAME_EN}）专注于为跨境团队与数字游民提供低感知、高鲁棒性的网络接入解决方案。通过底层混淆协议与多节点中继路由，有效抵御公共网络中的数据嗅探与特征识别，保障关键业务数据安全流转。
+              隐形人机场（{BRAND_NAME_EN}）专注于为跨境团队与数字游民提供低感知、高鲁棒性的专线网络接入解决方案。通过底层混淆协议与多节点中继路由，有效抵御公共网络中的数据嗅探与特征识别，保障关键业务数据安全流转。
             </p>
 
             <p className="text-sm text-slate-600 leading-relaxed">
-              本站作为中立的第三方使用指引平台，致力于为用户提供客观的技术特性解读、全平台配置手册以及理性选型建议。无论是跨国代码协同、云端开发环境调试，还是海外业务运营，均能获得清晰的实施指引。
+              本站作为中立的第三方使用指引平台，致力于为用户提供客观的技术特性解读、隐形人官网全平台配置手册以及理性选型建议。无论是跨国代码协同、云端开发环境调试，还是海外业务运营，均能获得清晰的实施指引。
             </p>
 
             <div className="pt-2">

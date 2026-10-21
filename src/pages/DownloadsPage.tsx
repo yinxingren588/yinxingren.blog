@@ -29,7 +29,6 @@ import {
  */
 export const DownloadsPage: React.FC = () => {
   useEffect(() => {
-    document.title = `客户端下载与安装 - ${BRAND_NAME}`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -127,11 +126,11 @@ export const DownloadsPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 客户端获取与多平台配置指引
+            {BRAND_NAME}机场客户端获取与官网配置指引
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            为您整理主流桌面与移动操作系统（Windows、macOS、iOS、Android）的标准客户端获取途径与配置导入方法。本站不私自托管经过二次打包的安装文件，所有官方软件与订阅凭证均指引至合规合作平台安全获取。
+            为您整理主流桌面与移动操作系统（Windows、macOS、iOS、Android）的标准客户端获取途径与隐形人机场订阅导入方法。本站不私自托管经过二次打包的安装文件，所有官方软件与隐形人官网订阅凭证均指引至合规合作平台安全获取。
           </p>
         </div>
 

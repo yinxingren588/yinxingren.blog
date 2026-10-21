@@ -54,10 +54,10 @@ export const AdvantagesSection: React.FC = () => {
             id="advantages-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
           >
-            为什么选择隐形人连接方案？
+            为什么选择隐形人机场与专线方案？
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-            摒弃繁琐多余的营销包装，聚焦于连接的私密性、多端通用性与长效稳定性，为现代数字工作流构建坚固防护。
+            摒弃繁琐多余的营销包装，聚焦于隐形人机场专线连接的私密性、多端通用性与长效稳定性，为现代数字出海工作流构建坚固防护。
           </p>
         </div>
 

@@ -17,13 +17,13 @@ export const Logo: React.FC<LogoProps> = ({ className = '', showSubtitle = true 
     <Link
       to="/"
       className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9333EA] rounded-lg p-1 transition-opacity hover:opacity-90 ${className}`}
-      aria-label={`${BRAND_NAME} 首页`}
+      aria-label={`${BRAND_NAME}官网 · ${BRAND_NAME}机场 首页`}
     >
       {/* 品牌 Logo 图标：用户定制隐形人形象 */}
       <div className="relative w-9 h-9 rounded-lg bg-white border border-[#E9D5FF] flex items-center justify-center shadow-subtle group-hover:border-[#C084FC] transition-colors overflow-hidden p-0.5">
         <img
           src="/images/logo-mascot.png"
-          alt={`${BRAND_NAME} 标识`}
+          alt={`${BRAND_NAME}官网 · ${BRAND_NAME}机场标识`}
           className="w-full h-full object-contain"
           width={36}
           height={36}
@@ -40,7 +40,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', showSubtitle = true 
         </span>
         {showSubtitle && (
           <span className="text-[11px] text-slate-500 mt-1 leading-none font-medium">
-            第三方连接指引
+            官网与机场导航
           </span>
         )}
       </div>

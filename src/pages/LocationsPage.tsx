@@ -26,8 +26,7 @@ import {
  */
 export const LocationsPage: React.FC = () => {
   useEffect(() => {
-    document.title = `服务线路与节点分布 - ${BRAND_NAME}`;
-    // 移除临时 noindex，设置为正常收录
+    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -107,11 +106,11 @@ export const LocationsPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 服务线路范围与节点选型指引
+            {BRAND_NAME}机场服务线路范围与节点选型指引
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            跨境网络连接受光纤物理距离、国际骨干网出口质量及运营商路由策略共同制约。本页面为您提供客观的节点选择参考与排错方法论，拒绝未经证实的虚构节点宣传。
+            跨境网络连接受光纤物理距离、国际骨干网出口质量及运营商路由策略共同制约。本页面为您提供隐形人机场节点选择参考、隐形人官网节点状态排查与排错方法论，拒绝未经证实的虚构节点宣传。
           </p>
         </div>
 

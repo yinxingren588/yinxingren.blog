@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <Logo showSubtitle={false} />
             <p className="text-xs text-slate-600 leading-relaxed">
-              {BRAND_NAME}（{BRAND_NAME_EN}）专注于提供客观的跨境网络连接服务指引与实用配置教程。
+              隐形人官网与隐形人机场（{BRAND_NAME_EN}）第三方服务指引与导航平台，专注于提供客观的跨境专线连接特性解析与实用配置教程。
             </p>
             <div className="p-3 rounded-lg bg-white border border-[#E9D5FF] text-[11px] text-slate-600 leading-relaxed shadow-subtle">
               <span className="font-semibold text-[#1E1B4B]">身份声明：</span>

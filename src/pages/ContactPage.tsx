@@ -41,7 +41,6 @@ import {
  */
 export const ContactPage: React.FC = () => {
   useEffect(() => {
-    document.title = `联系我们与社群支持 - ${BRAND_NAME}`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -76,11 +75,11 @@ export const ContactPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 支持中心与官方联系渠道
+            {BRAND_NAME}机场支持中心与官网联系渠道
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            为您清晰整理官方维护通知频道、交流群直达入口以及常见疑难排错路径。本站坚持真实透明原则，不提供不可靠的虚假联系方式或空头表单，协助您精准直达对应解决渠道。
+            为您清晰整理隐形人机场官方维护通知频道、社群直达入口以及隐形人官网客服工单排错路径。本站坚持真实透明原则，不提供不可靠的虚假联系方式或空头表单，协助您精准直达官方渠道。
           </p>
         </div>
 
