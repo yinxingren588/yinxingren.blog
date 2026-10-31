@@ -8,8 +8,14 @@ import {
   Download,
   CheckCircle2,
   ArrowRight,
+  ArrowDownToLine,
 } from 'lucide-react';
 import OfficialLink from '@/components/OfficialLink';
+import {
+  WINDOWS_CLIENT_DOWNLOAD_URL,
+  WINDOWS_CLIENT_VERSION,
+  WINDOWS_CLIENT_FILENAME,
+} from '@/config/site';
 
 export const ClientMatrixSection: React.FC = () => {
   const [activePlatform, setActivePlatform] = useState<string>('windows');
@@ -20,16 +26,18 @@ export const ClientMatrixSection: React.FC = () => {
       name: 'Windows',
       icon: Monitor,
       title: 'Windows 桌面客户端',
-      kernel: 'Clash Verge Rev / Sing-box / v2rayN',
+      kernel: '隐形人专属客户端 v3.0.0 (支持 Clash / Sing-box 内核)',
       compatibility: 'Windows 10 / 11 (64位 & ARM64)',
-      version: 'v1.7.7 官方稳定版',
+      version: WINDOWS_CLIENT_VERSION,
+      downloadUrl: WINDOWS_CLIENT_DOWNLOAD_URL,
+      filename: WINDOWS_CLIENT_FILENAME,
       features: [
         '内嵌 TUN 虚拟网卡模式，全面接管系统流量与游戏',
-        '多线路测速与智能故障自动切换',
-        '开机自启动与静默托盘运行',
+        '多线路测速与智能故障自动切换，原生支持 4K/8K 与 AI 加速',
+        '免繁琐安装，解压即用，开机自启动与静默托盘运行',
       ],
-      quickSteps: '1. 下载并安装客户端 -> 2. 进入官方控制台点击“一键导入 Clash 订阅” -> 3. 勾选“系统代理”即可极速连接。',
-      primaryAction: '进入官方控制台下载 Windows 配套',
+      quickSteps: '1. 点击“立即下载 Windows 客户端”获取 .zip 包 -> 2. 解压运行客户端 -> 3. 点击控制台“一键导入”或粘贴订阅链接即可极速连接。',
+      primaryAction: '立即下载 Windows 客户端 (v3.0.0)',
     },
     {
       id: 'macos',
@@ -205,12 +213,30 @@ export const ClientMatrixSection: React.FC = () => {
                 {currentPlat.quickSteps}
               </div>
 
-              {/* 主操作按钮 */}
-              <div className="pt-2">
-                <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-sm group">
-                  <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                  <span>{currentPlat.primaryAction}</span>
-                  <ArrowRight className="w-4 h-4" />
+              {/* 主操作按钮组 */}
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                {currentPlat.downloadUrl ? (
+                  <a
+                    href={currentPlat.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-500/20 group"
+                  >
+                    <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                    <span>立即下载 Windows 客户端 (.zip)</span>
+                    <ArrowDownToLine className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-sm group">
+                    <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                    <span>{currentPlat.primaryAction}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </OfficialLink>
+                )}
+
+                <OfficialLink className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs sm:text-sm border border-slate-200 transition-all">
+                  <span>进入官方控制台获取订阅</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
                 </OfficialLink>
               </div>
             </div>

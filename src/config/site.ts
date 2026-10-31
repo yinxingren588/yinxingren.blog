@@ -24,6 +24,13 @@ export const CRISP_WEBSITE_ID = 'fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用�
 export const CRISP_CHAT_URL = 'https://go.crisp.chat/chat/embed/?website_id=fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用户专属 Crisp 在线对话直连入口
 
 /**
+ * 官方客户端安装包直链配置
+ */
+export const WINDOWS_CLIENT_DOWNLOAD_URL = 'https://yinxing14.oss-ap-southeast-1.aliyuncs.com/v1.0.0/yinxingren-3.0.0-windows.zip';
+export const WINDOWS_CLIENT_VERSION = 'v3.0.0 官方直连版';
+export const WINDOWS_CLIENT_FILENAME = 'yinxingren-3.0.0-windows.zip';
+
+/**
  * 触发打开 Crisp 在线客服对话窗口
  */
 export function openCrispChat() {
