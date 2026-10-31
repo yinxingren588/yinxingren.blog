@@ -4,7 +4,7 @@
  */
 
 export const BRAND_NAME = '隐形人';
-export const BRAND_NAME_EN = 'Invisible';
+export const BRAND_NAME_EN = 'Invisible Network';
 export const SITE_URL = 'https://yinxingren.blog';
 export const OFFICIAL_URL = 'https://varnexa.invisibleaff.com/#/?code=JF4seZUy'; // 官方控制台与订阅中心
 

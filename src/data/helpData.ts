@@ -29,18 +29,18 @@ export interface HelpArticle {
 }
 
 export const HELP_ARTICLES: HelpArticle[] = [
-  // 1. 核心关键字：隐形人机场
+  // 1. 品牌介绍文章：隐形人机场是什么
   {
     id: 'yinxingren-jichang',
     category: 'brand',
     categoryName: '品牌专栏',
-    keyword: `${BRAND_NAME}机场`,
-    title: `${BRAND_NAME}机场官方评测：全系 IEPL 内网专线与 1.0x 真实倍率技术白皮书`,
-    summary: `深入解析${BRAND_NAME}机场（${BRAND_NAME_EN}）的企业级网络架构：电信级 BGP 边界入口清洗、端到端 IEPL 国际二层内网专线穿透、严格 1.0x 真实计费倍率承诺与 7×24 技术售后保障。`,
+    keyword: '隐形人机场是什么',
+    title: '隐形人机场是什么？官方介绍与服务说明',
+    summary: `深入介绍隐形人机场（${BRAND_NAME_EN}）的企业级网络架构：全系 IEPL 内网专线、1.0x 真实计费倍率与 7×24 技术售后保障。通过官方说明了解线路特性与服务定位。`,
     content: `${BRAND_NAME}机场（${BRAND_NAME_EN}）为官方直营企业级专线加速门户。全线部署 IEPL 物理专线，承诺 1.0x 真实倍率扣费，毫秒级跨网低延迟，原生支持 4K/8K 超高清流媒体与 AI 研发模型接入。`,
     updatedAt: '2026-10-31',
     readTime: '5 分钟',
-    tags: [`${BRAND_NAME}机场`, `${BRAND_NAME}官网`, 'IEPL内网专线', '1.0x真实倍率', 'BGP多线接入', '企业网络架构'],
+    tags: [`${BRAND_NAME}机场`, '隐形人机场是什么', `${BRAND_NAME}官网`, 'IEPL内网专线', '1.0x真实倍率', '官方介绍'],
     sections: [
       {
         heading: `一、什么是${BRAND_NAME}机场？官方定位与核心工程架构`,
@@ -96,12 +96,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: 'selection',
     categoryName: '选型指南',
     keyword: '机场推荐',
-    title: `${BRAND_NAME}机场推荐与选型指南：2026 如何甄别优质 IEPL 专线与避开虚标暗坑`,
-    summary: '2026 年度机场推荐权威选型白皮书：基于 C-P-R-S 选型评测模型，从物理链路架构、计费诚信度、晚高峰抗拥塞能力与工程售后服务四大维度，教您科学甄别真正稳定靠谱的专线机场。',
+    title: '2026 机场推荐指南：如何选择稳定专线服务 - 隐形人机场',
+    summary: '2026 年度稳定机场推荐与专线选型指南：基于 C-P-R-S 选型模型，从物理链路架构、计费诚信度、晚高峰抗拥塞能力与工程售后服务四大维度，教您如何选择稳定靠谱的专线服务。',
     content: '2026 挑选机场推荐的关键是拒绝虚浮噱头，重点考察：物理线路类型（IEPL专线优先）、倍率是否真实 1.0x、晚高峰 4K 流畅度与丢包率以及是否有真人在线技术客服。隐形人机场凭借企业专线与诚实计费位列行业推荐榜首。',
     updatedAt: '2026-10-31',
     readTime: '5 分钟',
-    tags: ['机场推荐', '专线机场推荐', '科学上网推荐', '稳定机场选型', 'IEPL专线评测', '机场避坑指南'],
+    tags: ['机场推荐', '专线机场推荐', '科学上网推荐', '稳定机场选型', 'IEPL专线评测', '隐形人机场'],
     sections: [
       {
         heading: '一、2026 机场推荐的核心选型评估模型（C-P-R-S 框架）',
@@ -138,18 +138,18 @@ export const HELP_ARTICLES: HelpArticle[] = [
     ],
   },
 
-  // 3. 核心关键字：为什么选择隐形人机场
+  // 3. 服务分析文章：隐形人机场怎么样
   {
     id: 'why-choose-yinxingren',
     category: 'selection',
     categoryName: '选型指南',
-    keyword: `为什么选择${BRAND_NAME}机场`,
-    title: `为什么选择${BRAND_NAME}机场？从网络架构、价格真实到售后保障的深度剖析`,
-    summary: `全面解析“为什么选择${BRAND_NAME}机场”：四大不可动摇的官方承诺、全系内网物理专线穿透、纯净白名单防风控机制与真人工程师在线客服的全天候守护。`,
+    keyword: '隐形人机场怎么样',
+    title: '隐形人机场怎么样？套餐、线路与服务详解',
+    summary: '隐形人机场怎么样？深度剖析隐形人机场的专线架构、套餐价格、全生态客户端支持及售后保障，全方位展现服务质量与技术口碑。',
     content: `选择${BRAND_NAME}机场的四大关键理由：1. 全系企业级 IEPL 内网专线，晚高峰 0 丢包；2. 统一 1.0x 真实倍率，绝不暗扣跑量；3. 全平台官方原生客户端直连；4. 7×24 官方直属在线技术售后保障。`,
     updatedAt: '2026-10-31',
     readTime: '4 分钟',
-    tags: [`为什么选择${BRAND_NAME}机场`, `${BRAND_NAME}优势`, '专线服务对比', '用户口碑', '企业出海加速'],
+    tags: ['隐形人机场怎么样', `${BRAND_NAME}机场`, `${BRAND_NAME}优势`, '专线服务对比', '套餐线路详解'],
     sections: [
       {
         heading: `一、为什么选择${BRAND_NAME}机场？四大不可替代的核心工程价值`,
@@ -187,12 +187,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: 'tech',
     categoryName: '技术科普',
     keyword: '梯子',
-    title: `${BRAND_NAME}机场梯子技术科普：从传统公网翻墙梯子到现代企业级专线穿透`,
-    summary: '从第一代传统公网梯子（PPTP/OpenVPN/Shadowsocks）到现代企业级 IEPL 专线隧道的二十五年技术演进史，详解为何传统翻墙梯子频遭封阻，而物理专线穿透能保持极致稳定。',
+    title: '梯子是什么？网络代理原理与使用指南 - 隐形人机场',
+    summary: '科普梯子是什么与网络代理技术演进史：从第一代传统 VPN、第二代应用层代理到现代企业级 IEPL 专线穿透，详细解析网络代理原理与科学使用方法。',
     content: '科普传统科学上网梯子的技术演进历程：从特征明显的初代 VPN、到应用层混淆协议（SS/SSR/Trojan/V2Ray），再到如今无需对抗公网防火墙的企业级 IEPL 内网专线穿透。了解专线梯子与普通梯子的根本区别。',
     updatedAt: '2026-10-31',
     readTime: '5 分钟',
-    tags: ['梯子', '科学上网梯子', '翻墙梯子', 'IEPL专线梯子', '梯子原理', '科学上网演进史'],
+    tags: ['梯子', '梯子是什么', '网络代理原理', '科学上网梯子', 'IEPL专线梯子', '隐形人机场'],
     sections: [
       {
         heading: '一、什么是“梯子”？科学上网工具的二十五年技术演变',
@@ -228,12 +228,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: 'tech',
     categoryName: '技术科普',
     keyword: 'vpn',
-    title: `${BRAND_NAME}机场 vs 传统 VPN：协议机制、规则分流与速度安全全方位对比`,
-    summary: '深度科普传统商业 VPN（Virtual Private Network）与现代专线机场的本质区别：协议工作层级、数据封装开销、规则分流能力、网络延迟及隐私安全全方位对比评测。',
+    title: 'VPN 与代理有什么区别？连接方式对比 - 隐形人机场',
+    summary: '深度科普传统 VPN 与代理的本质区别：协议工作层级、数据封装开销、规则分流能力、网络延迟及隐私安全全方位横向对比。',
     content: '详解传统 VPN 与现代专线机场的区别：VPN 工作在网络层进行全局虚拟网卡隧道封装，加密报头沉重且容易导致国内微信网银卡顿；专线机场结合规则分流与 IEPL 内网专线，国内直连、海外专线极速加速，是跨境办公与日常使用的更优解。',
     updatedAt: '2026-10-31',
     readTime: '4 分钟',
-    tags: ['vpn', 'vpn和机场区别', 'vpn推荐', '专线代理', '网络协议对比', '智能分流'],
+    tags: ['vpn', 'VPN与代理区别', '专线代理', '网络协议对比', '智能分流', '隐形人机场'],
     sections: [
       {
         heading: '一、概念厘清：VPN 与专线机场的技术本质',
@@ -279,12 +279,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: 'nodes',
     categoryName: '节点优化',
     keyword: '节点',
-    title: `${BRAND_NAME}机场专线节点深度解析与选优攻略：物理时延、BGP 调度与 4K/AI 节点推荐`,
-    summary: '专线节点全面解析与选用攻略：详解香港、日本、新加坡、美国、欧洲等核心 POP 节点的地理特性与业务匹配，掌握智能 BGP 调度策略，精准选用最优节点。',
+    title: '节点怎么选？延迟、线路与连接稳定性指南 - 隐形人机场',
+    summary: '专线节点怎么选？全面解析香港、日本、新加坡、美国、欧洲等核心区域节点的物理时延考量、BGP 智能调度策略及 4K/AI 业务匹配指南。',
     content: '全面解析专线节点的运作原理与选优方法：了解香港（HK）、日本（JP）、新加坡（SG）、美国（US）各节点在物理时延、流媒体解锁及 AI 大模型调用上的专属优势，教您合理配置客户端节点策略组。',
     updatedAt: '2026-10-31',
     readTime: '4 分钟',
-    tags: ['节点', '专线节点', '节点延迟优化', '节点选择', '香港节点', '日本节点', '美国节点'],
+    tags: ['节点', '节点怎么选', '专线节点', '节点延迟优化', '节点选择', '隐形人机场'],
     sections: [
       {
         heading: '一、什么是专线加速节点？POP 边缘网关的技术运作原理',
@@ -328,12 +328,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: 'client',
     categoryName: '客户端配置',
     keyword: 'clash',
-    title: `${BRAND_NAME}机场 Clash 配置教程：Clash Verge / Mihomo 从订阅导入到 TUN 模式分流进阶`,
-    summary: '全网最全 Clash 配置指南：详解 Clash Verge、Clash Meta (Mihomo)、Clash for Android 等内核客户端的专属订阅导入、规则分流、TUN 虚拟网卡全局接管与常见排障技巧。',
+    title: 'Clash Verge 配置教程：订阅导入与使用指南 - 隐形人机场',
+    summary: 'Clash Verge 全平台配置教程：从在官方控制台获取订阅链接、到客户端配置导入、规则分流模式设置、TUN 虚拟网卡接管及常见排障技巧。',
     content: '详尽图文教程指导 Clash 全系列客户端配置：从在官方控制台获取专属订阅 URL、到客户端配置导入、智能规则分流模式设置、TUN 模式全域流量接管及系统时钟同步故障排除。',
     updatedAt: '2026-10-31',
     readTime: '5 分钟',
-    tags: ['clash', 'clash配置教程', 'clash verge', 'mihomo', 'tun模式', 'clash订阅', '规则分流'],
+    tags: ['clash', 'Clash Verge 配置教程', 'clash verge', 'mihomo', 'tun模式', 'clash订阅', '隐形人机场'],
     sections: [
       {
         heading: '一、什么是 Clash？为什么它是当今最主流的代理工具？',

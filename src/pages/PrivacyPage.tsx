@@ -15,7 +15,7 @@ import {
  */
 export const PrivacyPage: React.FC = () => {
   useEffect(() => {
-    document.title = `${BRAND_NAME}机场用户隐私保护政策与数据合规 - ${BRAND_NAME}机场官网`;
+    document.title = '隐私政策 - 隐形人机场';
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -50,7 +50,7 @@ export const PrivacyPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 隐私政策与数据合规声明
+            用户隐私保护政策与数据合规声明
           </h1>
 
           <div className="flex items-center gap-4 text-xs text-slate-500 font-mono">

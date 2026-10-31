@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BRAND_NAME } from '@/config/site';
 import {
   AlertTriangle,
   Home,
@@ -15,7 +14,7 @@ export const NotFoundPage: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = `404 页面未找到 - ${BRAND_NAME}机场官网`;
+    document.title = '页面未找到 - 隐形人机场';
     let metaRobots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
     let created = false;
     if (!metaRobots) {

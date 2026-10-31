@@ -28,18 +28,18 @@ export function generateSchemaGraph(pathname: string): object | null {
         {
           '@type': 'Organization',
           '@id': `${SITE_URL}/#organization`,
-          name: `${BRAND_NAME}官方网站`,
-          alternateName: [`${BRAND_NAME}`, `${BRAND_NAME}官网`, `${BRAND_NAME}机场`, 'Invisible Official'],
+          name: '隐形人机场',
+          alternateName: ['Invisible Network', '隐形人官网'],
           url: `${SITE_URL}/`,
           logo: `${SITE_URL}/images/logo-mascot.png`,
-          description: '隐形人 (Invisible) 官方品牌与全球高速专线网络加速服务平台',
+          description: pageDescription,
         },
         {
           '@type': 'WebSite',
           '@id': `${SITE_URL}/#website`,
           url: `${SITE_URL}/`,
-          name: `${BRAND_NAME}官网｜${BRAND_NAME}机场`,
-          alternateName: [`${BRAND_NAME}机场`, `${BRAND_NAME}官网`, BRAND_NAME, `${BRAND_NAME}官方网站`, 'Invisible'],
+          name: '隐形人机场官网',
+          alternateName: ['Invisible Network', '隐形人官网'],
           publisher: {
             '@id': `${SITE_URL}/#organization`,
           },

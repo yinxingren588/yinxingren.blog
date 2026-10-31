@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, SITE_URL } from '@/config/site';
+import { SITE_URL } from '@/config/site';
 import {
   ChevronRight,
   Shield,
@@ -16,7 +16,7 @@ import {
  */
 export const TermsPage: React.FC = () => {
   useEffect(() => {
-    document.title = `${BRAND_NAME}机场服务条款与用户使用准则 - ${BRAND_NAME}机场官网`;
+    document.title = '服务条款 - 隐形人机场';
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -51,7 +51,7 @@ export const TermsPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 平台服务条款与合规声明
+            服务条款与用户使用准则
           </h1>
 
           <div className="flex items-center gap-4 text-xs text-slate-500 font-mono">

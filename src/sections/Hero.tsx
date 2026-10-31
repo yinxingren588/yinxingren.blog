@@ -1,5 +1,6 @@
 import React from 'react';
-import { BRAND_NAME, BRAND_NAME_EN, OFFICIAL_GUARANTEE_TEXT } from '@/config/site';
+import { Link } from 'react-router-dom';
+import { BRAND_NAME, OFFICIAL_GUARANTEE_TEXT } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import HeroVisual from '@/components/HeroVisual';
 import {
@@ -57,22 +58,17 @@ export const Hero: React.FC = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-1" />
             </div>
 
-            {/* 页面唯一 H1：清晰官方旗舰定位与 Bing/Google 核心关键词 */}
+            {/* 页面唯一主要 H1 */}
             <h1
               id="hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight"
             >
-              <span className="text-blue-600">
-                {BRAND_NAME}机场
-              </span>
-              <span className="block text-slate-900 mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold">
-                {BRAND_NAME}官网 · 全球专线加速与跨境互联官方服务平台
-              </span>
+              隐形人机场官网
             </h1>
 
             {/* Hero 副标题 */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
-              {BRAND_NAME}机场（{BRAND_NAME_EN}）官方直营控制台入口。全系部署 IEPL 企业级内网专线，承诺 1.0x 真实倍率，毫秒级跨网低延迟，原生支持 4K/8K 超高清流媒体与 AI 研发模型接入。隐形人官网正版直营，保障节点长效稳定。
+              隐形人机场（Invisible Network）提供基于 IEPL 专线的网络连接服务，支持多地区节点选择及灵活订阅方案。通过隐形人官网了解服务详情、套餐价格、客户端下载与官方技术支持。
             </p>
 
             {/* CTA 操作按钮组：大屏三按钮矩阵 */}
@@ -94,13 +90,41 @@ export const Hero: React.FC = () => {
               </a>
 
               {/* 客户端快捷入口 */}
-              <a
-                href="#client-matrix"
+              <Link
+                to="/downloads/"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-medium text-sm sm:text-base border border-slate-300 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30"
               >
                 <DownloadCloud className="w-4 h-4 text-slate-600" />
                 <span>客户端下载</span>
-              </a>
+              </Link>
+            </div>
+
+            {/* 快速直达内部链接导览 */}
+            <div className="pt-1 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-slate-500">
+              <span className="text-slate-400 font-medium">服务快捷导览:</span>
+              <Link to="/pricing/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                套餐价格
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link to="/downloads/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                客户端下载
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link to="/services/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                服务介绍
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link to="/locations/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                节点分布
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link to="/help/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                帮助中心
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link to="/contact/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+                官方客服
+              </Link>
             </div>
 
             {/* 官方正版保障承诺提示 */}

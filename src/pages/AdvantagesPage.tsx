@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
+import { BRAND_NAME_EN } from '@/config/site';
 import {
   ChevronRight,
   ShieldCheck,
@@ -110,7 +110,7 @@ export const AdvantagesPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 核心专线优势与官方架构价值
+            隐形人机场怎么样？IEPL 专线与服务优势解析
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

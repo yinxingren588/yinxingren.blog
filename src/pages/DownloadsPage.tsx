@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import ClientMatrixSection from '@/sections/ClientMatrixSection';
 import {
@@ -49,7 +48,7 @@ export const DownloadsPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 官方客户端下载与一键配置中心
+            隐形人机场客户端下载与官方配置指南
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

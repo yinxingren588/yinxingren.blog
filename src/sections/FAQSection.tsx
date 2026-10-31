@@ -116,12 +116,18 @@ export const FAQSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
             <Link
               to="/help/"
               className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors shadow-sm"
             >
               官方帮助文档
+            </Link>
+            <Link
+              to="/contact/"
+              className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors shadow-sm"
+            >
+              官方客服渠道
             </Link>
             <button
               type="button"

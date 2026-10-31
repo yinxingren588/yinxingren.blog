@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   OFFICIAL_PLANS,
   PricingPlan,
@@ -210,6 +211,19 @@ export const PricingGuideSection: React.FC<PricingGuideSectionProps> = ({ isPage
             );
           })}
         </div>
+
+        {/* 首页专享完整套餐页导览 */}
+        {!isPage && (
+          <div className="mt-8 text-center">
+            <Link
+              to="/pricing/"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              <span>查看全部 9 大官方套餐规格与流量选型指南</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        )}
 
         {/* 底部官方保障承诺 */}
         <div className="mt-12 text-center text-xs text-slate-500 max-w-2xl mx-auto space-y-1">

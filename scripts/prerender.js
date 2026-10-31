@@ -37,7 +37,7 @@ for (const route of REGISTERED_ROUTES) {
     const bodyHtml404 = render('/non-existent-route-404');
 
     let finalHtml404 = templateHtml;
-    finalHtml404 = finalHtml404.replace(/<title>.*?<\/title>/s, `<title>404 页面未找到 - ${BRAND_NAME}机场官网</title>`);
+    finalHtml404 = finalHtml404.replace(/<title>.*?<\/title>/s, `<title>页面未找到 - 隐形人机场</title>`);
     finalHtml404 = finalHtml404.replace(
       /<meta name="description" content=".*?" \/>/s,
       `<meta name="description" content="您访问的页面不存在或已被移除。" />\n    <meta name="robots" content="noindex, nofollow" />`

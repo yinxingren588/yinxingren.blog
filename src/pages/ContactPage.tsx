@@ -60,7 +60,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 官方支持中心与联络渠道
+            隐形人机场客服与官方技术支持
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

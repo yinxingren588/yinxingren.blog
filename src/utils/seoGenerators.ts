@@ -38,6 +38,10 @@ ${urlElements}
 export function generateRobotsTxt(): string {
   return `User-agent: *
 Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
 }

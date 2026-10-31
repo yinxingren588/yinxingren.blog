@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
+import { BRAND_NAME_EN } from '@/config/site';
 import {
   ChevronRight,
   ShieldCheck,
@@ -126,7 +126,7 @@ export const ServicesPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 服务概览与官方技术方案
+            专线网络服务与官方连接方案
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

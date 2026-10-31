@@ -27,7 +27,7 @@ export const HelpArticlePage: React.FC = () => {
 
   useEffect(() => {
     if (article) {
-      document.title = `${article.title} - ${BRAND_NAME}机场官方帮助中心`;
+      document.title = article.title;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute(
@@ -239,20 +239,69 @@ export const HelpArticlePage: React.FC = () => {
           ))}
         </div>
 
-        {/* 文章底部快捷导航组 */}
-        <div className="pt-6 pb-10 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-          <Link
-            to="/help/"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-all border border-slate-200"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>返回帮助中心文章列表</span>
-          </Link>
+        {/* 文章底部快捷导航组与上下文内链 */}
+        <div className="pt-6 pb-10 border-t border-slate-200 space-y-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all border border-slate-200"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>返回官方首页</span>
+            </Link>
 
-          <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm">
-            <span>进入官方控制台仪表盘</span>
-            <ArrowRight className="w-4 h-4" />
-          </OfficialLink>
+            <Link
+              to="/help/"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all border border-slate-200"
+            >
+              <span>帮助中心教程列表</span>
+            </Link>
+
+            {article.id === 'clash-tutorial' && (
+              <Link
+                to="/downloads/"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold transition-all border border-blue-200"
+              >
+                <span>前往客户端下载中心</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            )}
+
+            {article.id === 'node-selection-guide' && (
+              <Link
+                to="/locations/"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold transition-all border border-blue-200"
+              >
+                <span>查看全球节点分布与线路</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            )}
+
+            {(article.id === 'why-choose-yinxingren' || article.id === 'jichang-tuijian' || article.id === 'yinxingren-jichang') && (
+              <Link
+                to="/pricing/"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold transition-all border border-blue-200"
+              >
+                <span>查看官方套餐价格与规格</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            )}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2">
+            <Link
+              to="/help/"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-sm font-semibold transition-all border border-slate-200"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>浏览全部帮助文章</span>
+            </Link>
+
+            <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm">
+              <span>进入官方控制台仪表盘</span>
+              <ArrowRight className="w-4 h-4" />
+            </OfficialLink>
+          </div>
         </div>
 
         {/* 同类推荐指引模块 */}

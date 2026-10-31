@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME } from '@/config/site';
 import {
   ChevronRight,
   AlertCircle,
@@ -97,7 +96,7 @@ export const LocationsPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 服务线路范围与节点选型指引
+            全球节点分布与线路介绍
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

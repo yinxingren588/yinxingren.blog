@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
+import { BRAND_NAME_EN } from '@/config/site';
 import PricingGuideSection from '@/sections/PricingGuideSection';
 import { ChevronRight, HelpCircle, ShieldAlert, Sparkles } from 'lucide-react';
 
@@ -43,7 +43,7 @@ export const PricingPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 官方 9 大精选配套与订阅中心
+            隐形人机场套餐价格与官方订阅方案
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

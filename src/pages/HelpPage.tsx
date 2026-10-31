@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, openCrispChat } from '@/config/site';
+import { openCrispChat } from '@/config/site';
 import { HELP_ARTICLES, HelpArticle } from '@/data/helpData';
 import {
   ChevronRight,
@@ -23,7 +23,7 @@ export const HelpPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
-    document.title = `${BRAND_NAME}机场帮助中心与官方故障排查手册 - ${BRAND_NAME}机场官网`;
+    document.title = '隐形人机场帮助中心 - 使用教程与常见问题';
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -32,7 +32,7 @@ export const HelpPage: React.FC = () => {
     if (metaDesc) {
       metaDesc.setAttribute(
         'content',
-        `权威整理${BRAND_NAME}机场评测、高速稳定机场推荐指南、为什么选择隐形人机场、科学梯子与传统VPN区别、全球专线节点选择及Clash全平台配置教程。立足工程逻辑，拒绝无意义堆砌。`
+        '隐形人机场官方帮助中心与使用教程：提供新手极速接入、客户端订阅导入、IEPL 专线选型、节点延迟排查与日常故障诊断指南，助您快速掌握隐形人机场使用方法。'
       );
     }
   }, []);
@@ -106,7 +106,7 @@ export const HelpPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME}机场 帮助中心与技术专栏
+            隐形人机场帮助中心与使用教程
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

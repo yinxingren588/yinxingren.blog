@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Monitor,
   Apple,
@@ -301,6 +302,17 @@ export const ClientMatrixSection: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* 底部全量客户端下载中心指引 */}
+        <div className="mt-10 text-center">
+          <Link
+            to="/downloads/"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+          >
+            <span>前往客户端下载中心查看全部系统安装与一键配置手册</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </div>
     </section>
