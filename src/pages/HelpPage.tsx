@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME } from '@/config/site';
+import { BRAND_NAME, openCrispChat } from '@/config/site';
 import { HELP_ARTICLES, HelpArticle } from '@/data/helpData';
 import {
   ChevronRight,
@@ -275,7 +275,7 @@ export const HelpPage: React.FC = () => {
           </div>
         )}
 
-        {/* 底部引导区：跳转 /contact/ */}
+        {/* 底部引导区：唤起在线客服 */}
         <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1 max-w-xl">
             <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
@@ -283,17 +283,19 @@ export const HelpPage: React.FC = () => {
               <span>仍未排查出故障原因？</span>
             </h3>
             <p className="text-xs text-slate-500 leading-relaxed">
-              若遇到复杂的网络协议冲突或特定账户配置问题，您可以进入官方支持中心获取专属客服工单与官方技术支持。
+              若遇到复杂的网络协议冲突或特定账户配置问题，您可以直接发起在线咨询，官方技术客服实时为您排查。
             </p>
           </div>
 
-          <Link
-            to="/contact/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm flex-shrink-0"
+          <button
+            type="button"
+            onClick={openCrispChat}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span>前往官方支持与工单中心</span>
+            <MessageSquare className="w-4 h-4" />
+            <span>联系在线客服</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </button>
         </div>
       </div>
     </div>

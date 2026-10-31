@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FAQ_DATA } from '@/data/faqData';
-import { ChevronDown, HelpCircle, MessageSquareCode } from 'lucide-react';
+import { openCrispChat } from '@/config/site';
+import { ChevronDown, HelpCircle, MessageSquareCode, MessageSquare } from 'lucide-react';
 
 /**
  * 常见问题 FAQ 手风琴组件 (FAQSection) - 深色极客科技感暗黑紫主题
@@ -122,12 +123,14 @@ export const FAQSection: React.FC = () => {
             >
               官方帮助文档
             </Link>
-            <Link
-              to="/contact/"
-              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-all"
+            <button
+              type="button"
+              onClick={openCrispChat}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              提交官方工单
-            </Link>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>联系在线客服</span>
+            </button>
           </div>
         </div>
       </div>

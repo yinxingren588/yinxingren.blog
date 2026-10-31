@@ -24,6 +24,28 @@ export const CRISP_WEBSITE_ID = 'fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用�
 export const CRISP_CHAT_URL = 'https://go.crisp.chat/chat/embed/?website_id=fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用户专属 Crisp 在线对话直连入口
 
 /**
+ * 触发打开 Crisp 在线客服对话窗口
+ */
+export function openCrispChat() {
+  if (typeof window !== 'undefined') {
+    if ((window as any).$crisp) {
+      (window as any).$crisp.push(['do', 'chat:open']);
+      (window as any).$crisp.push(['do', 'chat:show']);
+      return;
+    }
+    if (CRISP_CHAT_URL) {
+      window.open(CRISP_CHAT_URL, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    if (CRISP_WEBSITE_ID) {
+      window.open(`https://go.crisp.chat/chat/embed/?website_id=${CRISP_WEBSITE_ID}`, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    window.open('https://go.crisp.chat/', '_blank', 'noopener,noreferrer');
+  }
+}
+
+/**
  * 站点官方身份认定
  */
 export const SITE_IDENTITY = {

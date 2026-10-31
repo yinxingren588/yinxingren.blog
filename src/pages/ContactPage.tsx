@@ -5,8 +5,7 @@ import {
   TELEGRAM_CHANNEL_URL,
   TELEGRAM_GROUP_URL,
   OFFICIAL_GUARANTEE_TEXT,
-  CRISP_WEBSITE_ID,
-  CRISP_CHAT_URL,
+  openCrispChat,
 } from '@/config/site';
 import {
   ChevronRight,
@@ -32,29 +31,6 @@ export const ContactPage: React.FC = () => {
       metaRobots.setAttribute('content', 'index, follow');
     }
   }, []);
-
-  const handleCrispChat = () => {
-    if (typeof window !== 'undefined') {
-      // 1. 若 Crisp SDK 已在页面就绪，直接打开聊天抽屉
-      if ((window as any).$crisp) {
-        (window as any).$crisp.push(['do', 'chat:open']);
-        (window as any).$crisp.push(['do', 'chat:show']);
-        return;
-      }
-      // 2. 若配置了专属 Crisp 聊天链接，直接新窗口打开
-      if (CRISP_CHAT_URL) {
-        window.open(CRISP_CHAT_URL, '_blank', 'noopener,noreferrer');
-        return;
-      }
-      // 3. 若配置了 Crisp Website ID，打开 Crisp 嵌入聊天页
-      if (CRISP_WEBSITE_ID) {
-        window.open(`https://go.crisp.chat/chat/embed/?website_id=${CRISP_WEBSITE_ID}`, '_blank', 'noopener,noreferrer');
-        return;
-      }
-      // 4. 默认打开 Crisp 官方客服入口
-      window.open('https://go.crisp.chat/', '_blank', 'noopener,noreferrer');
-    }
-  };
 
   return (
     <div className="py-8 sm:py-16 bg-white min-h-screen text-slate-800">
@@ -199,7 +175,7 @@ export const ContactPage: React.FC = () => {
             <div className="pt-4 border-t border-slate-100">
               <button
                 type="button"
-                onClick={handleCrispChat}
+                onClick={openCrispChat}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
