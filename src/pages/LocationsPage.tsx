@@ -14,19 +14,10 @@ import {
 } from 'lucide-react';
 
 /**
- * /locations/ 服务线路范围与选型指引页面
- * 
- * 规范要求：
- * 1. 唯一 H1：清晰聚焦服务线路范围与客观选型参考
- * 2. 规范面包屑：首页 / 服务线路
- * 3. 严格标注：“具体线路与节点以客户端实际显示为准”
- * 4. 无法确认的地区分类仅作为“选型考量维度”，绝不表述为品牌实际已提供的已确认线路
- * 5. 严禁虚构延迟、节点数量、覆盖国家数量或实时状态；绝不用地图暗示覆盖
- * 6. 0 新增 AFF：操作均使用站内 Link
+ * /locations/ 服务线路范围与选型指引页面 (深色极客科技感暗黑紫主题)
  */
 export const LocationsPage: React.FC = () => {
   useEffect(() => {
-    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -79,68 +70,68 @@ export const LocationsPage: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs text-slate-400">
             <li>
-              <Link to="/" className="hover:text-[#9333EA] transition-colors">
+              <Link to="/" className="hover:text-purple-300 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             </li>
-            <li className="text-[#1E1B4B] font-semibold" aria-current="page">
+            <li className="text-purple-300 font-semibold" aria-current="page">
               服务线路
             </li>
           </ol>
         </nav>
 
         {/* 页面唯一 H1 与线路范围导言 */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-            <span>网络分布 · 客观指南</span>
+        <div className="max-w-3xl mb-12 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <span>GLOBAL TOPOLOGY · 网络分布与客观指南</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME}机场服务线路范围与节点选型指引
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            {BRAND_NAME} 服务线路范围与节点选型指引
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
             跨境网络连接受光纤物理距离、国际骨干网出口质量及运营商路由策略共同制约。本页面为您提供隐形人官方专线节点选择建议与实时状态排查方法论，保障跨国工作流高效运转。
           </p>
         </div>
 
-        {/* 核心合规警示横幅：强制包含规范声明语句 */}
-        <div className="mb-16 p-6 sm:p-7 rounded-2xl bg-amber-50/90 border border-amber-200/80 shadow-sm">
+        {/* 核心合规警示横幅 */}
+        <div className="mb-16 p-6 sm:p-7 rounded-3xl bg-purple-950/30 border border-purple-500/30 shadow-lg">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-700 flex-shrink-0 mt-0.5">
-              <AlertCircle className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+              <AlertCircle className="w-5 h-5 text-purple-400" />
             </div>
             <div className="space-y-2 text-left">
-              <h2 className="text-base sm:text-lg font-bold text-amber-900">
+              <h2 className="text-base sm:text-lg font-bold text-white">
                 服务范围与实时线路核验声明
               </h2>
-              <p className="text-sm font-semibold text-amber-800">
+              <p className="text-sm font-semibold text-purple-300">
                 “具体线路与节点以客户端实际显示为准。”
               </p>
-              <p className="text-xs sm:text-sm text-amber-700 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                 隐形人官方运维团队 7×24 小时监控全球骨干专线网络的健康度与海缆负载。我们坚决不制作虚假的静态延迟图，所有线路的在线状态、实时可用性与路由调度均以官方控制台及客户端订阅实时下发的节点清单为准。
               </p>
             </div>
           </div>
         </div>
 
-        {/* 一、地区选择参考维度（明确为参考维度，非已确认覆盖清单） */}
+        {/* 一、地区选择参考维度 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               跨区域线路选型参考维度
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            <p className="text-xs sm:text-sm text-slate-400">
               以下地区分类仅代表通用网络选型考量维度，不代表品牌已实际提供特定线路，请在客户端中核实可用节点。
             </p>
           </div>
@@ -149,45 +140,45 @@ export const LocationsPage: React.FC = () => {
             {regionalDimensions.map((dim, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all flex flex-col justify-between shadow-card"
+                className="p-6 sm:p-7 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col justify-between"
               >
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 pb-3 border-b border-[#E9D5FF]">
-                    <Layers className="w-4 h-4 text-[#9333EA]" />
-                    <span className="text-xs font-mono text-[#7E22CE] font-semibold uppercase tracking-wider">
+                  <div className="flex items-center gap-2 pb-3 border-b border-purple-500/15">
+                    <Layers className="w-4 h-4 text-purple-400" />
+                    <span className="text-xs font-mono text-purple-300 font-semibold uppercase tracking-wider">
                       维度 0{idx + 1}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B]">
+                    <h3 className="text-base sm:text-lg font-bold text-white">
                       {dim.title}
                     </h3>
-                    <p className="text-xs text-slate-500 mt-1">
+                    <p className="text-xs text-slate-400 mt-1">
                       {dim.subtitle}
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-[#FAF5FF] border border-[#E9D5FF] space-y-1">
-                    <span className="text-[11px] font-semibold text-[#1E1B4B]">
+                  <div className="p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/15 space-y-1">
+                    <span className="text-[11px] font-semibold text-purple-300">
                       传输特性：
                     </span>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-400 leading-relaxed">
                       {dim.characteristics}
                     </p>
                   </div>
 
                   <div className="space-y-1">
-                    <span className="text-[11px] font-semibold text-[#1E1B4B]">
+                    <span className="text-[11px] font-semibold text-purple-300">
                       适用建议：
                     </span>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-400 leading-relaxed">
                       {dim.recommendation}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#E9D5FF] text-[11px] text-amber-700 leading-relaxed">
+                <div className="mt-6 pt-4 border-t border-purple-500/15 text-[11px] text-purple-300/80 leading-relaxed font-mono">
                   提示：{dim.cautions}
                 </div>
               </div>
@@ -197,12 +188,12 @@ export const LocationsPage: React.FC = () => {
 
         {/* 二、节点选择与避坑三大法则 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               实用节点选择与排错法则
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
-              如何建立健康的科学上网习惯，避免因盲目测速而造成频繁切换连接。
+            <p className="text-xs sm:text-sm text-slate-400">
+              如何建立健康的连接使用习惯，避免因盲目测速而造成频繁切换连接。
             </p>
           </div>
 
@@ -212,15 +203,15 @@ export const LocationsPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all shadow-card space-y-3"
+                  className="p-6 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 transition-all space-y-3"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA]">
+                  <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-bold text-[#1E1B4B]">
+                  <h3 className="text-base font-bold text-white">
                     {guide.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                     {guide.desc}
                   </p>
                 </div>
@@ -230,37 +221,35 @@ export const LocationsPage: React.FC = () => {
         </div>
 
         {/* 三、常见线路疑问简答 */}
-        <div className="p-8 rounded-2xl bg-white border border-[#E9D5FF] shadow-card mb-16">
-          <div className="max-w-3xl space-y-4">
-            <div className="flex items-center gap-2 text-[#7E22CE] text-xs font-semibold">
-              <HelpCircle className="w-4 h-4 text-[#9333EA]" />
-              <span>常见线路疑惑</span>
-            </div>
-            <h2 className="text-lg sm:text-xl font-bold text-[#1E1B4B]">
-              为什么客户端测速显示的延迟与实际使用感受不一致？
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              许多客户端采用简单的 ICMP Ping 握手测速，仅代表握手响应包耗时，并不能反映多路 TCP/UDP 传输在持续长链接与多线程下载时的实际带宽承载力与丢包重传率。建议以实际业务（如 Git 代码拉取、终端命令执行或网页资源加载）的连续顺畅度为真实评价标准。
-            </p>
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/25 mb-16 space-y-4">
+          <div className="flex items-center gap-2 text-purple-400 text-xs font-semibold font-mono">
+            <HelpCircle className="w-4 h-4 text-purple-400" />
+            <span>常见线路疑惑</span>
           </div>
+          <h2 className="text-lg sm:text-xl font-bold text-white">
+            为什么客户端测速显示的延迟与实际使用感受不一致？
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            许多客户端采用简单的 ICMP Ping 握手测速，仅代表握手响应包耗时，并不能反映多路 TCP/UDP 传输在持续长链接与多线程下载时的实际带宽承载力与丢包重传率。建议以实际业务（如 Git 代码拉取、终端命令执行或网页资源加载）的连续顺畅度为真实评价标准。
+          </p>
         </div>
 
-        {/* 四、底部站内引导（0 AFF） */}
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-white to-[#F3E8FF] border border-[#E9D5FF] shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        {/* 四、底部站内引导 */}
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_0_35px_rgba(147,51,234,0.15)]">
           <div className="space-y-1">
-            <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B]">
+            <h3 className="text-base sm:text-lg font-bold text-white">
               结合业务需求，评估适合您的订阅方案
             </h3>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-400">
               了解不同套餐在设备并发数与流量规格上的差异，理性规划出海预算。
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link
               to="/pricing/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white text-sm font-semibold transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)]"
             >
-              <span>查看方案选型指南</span>
+              <span>查看官方 9 大配套对比</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

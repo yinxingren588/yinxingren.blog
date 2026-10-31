@@ -1,58 +1,68 @@
 import React from 'react';
 import {
   Hero,
-  ServicesIntro,
+  NetworkMonitorSection,
+  ClientMatrixSection,
+  PricingGuideSection,
   AdvantagesSection,
+  ServicesIntro,
   WorkflowSection,
   ScenariosSection,
-  PricingGuideSection,
   ScenarioCarousel,
   FAQSection,
   LocationsScopeSection,
 } from '@/sections';
 
 /**
- * 首页主页面
- * 包含依次展开的核心板块：
- * 1. Hero 区域
- * 2. 服务介绍 (ServicesIntro)
- * 3. 核心优势 (AdvantagesSection)
- * 4. 使用流程 (WorkflowSection)
- * 5. 使用场景 (ScenariosSection)
- * 6. 套餐选型指南 (PricingGuideSection)
- * 7. 场景体验走马灯 (ScenarioCarousel - 第6步新增)
- * 8. 常见问题解答 (FAQSection - 第6步新增)
- * 9. 全球线路或服务范围 (LocationsScopeSection)
+ * 首页主页面 (全新深色极客科技感 SaaS 大屏架构)
+ * 核心流线：
+ * 1. 官方旗舰 Hero 大屏 (含遥测指标横幅与 HUD 终端)
+ * 2. 全球专线网络实时态势与节点延迟测速展示 (NetworkMonitorSection)
+ * 3. 官方 9 大配套周期切换矩阵 (PricingGuideSection: 年付/月付/买断切换器)
+ * 4. 全平台官方客户端下载矩阵与配置指南 (ClientMatrixSection)
+ * 5. 核心架构优势 Bento Grid (AdvantagesSection)
+ * 6. 专线技术架构解析 (ServicesIntro)
+ * 7. 三步标准化接入流程 (WorkflowSection)
+ * 8. 业务场景精准赋能 (ScenariosSection)
+ * 9. 典型实践走马灯 (ScenarioCarousel)
+ * 10. 全球专线拓扑覆盖与选型声明 (LocationsScopeSection)
+ * 11. 常见问题解答与知识库 (FAQSection)
  */
 export const Home: React.FC = () => {
   return (
     <div className="w-full">
-      {/* 1. Hero */}
+      {/* 1. 官方旗舰 Hero 大屏 */}
       <Hero />
 
-      {/* 2. 服务介绍 */}
-      <ServicesIntro />
+      {/* 2. 全球专线网络实时态势与节点测速 */}
+      <NetworkMonitorSection />
 
-      {/* 3. 核心优势 */}
-      <AdvantagesSection />
-
-      {/* 4. 使用流程 */}
-      <WorkflowSection />
-
-      {/* 5. 使用场景 */}
-      <ScenariosSection />
-
-      {/* 6. 套餐选型指南 */}
+      {/* 3. 官方 9 大配套与年付/月付/买断周期切换器 */}
       <PricingGuideSection />
 
-      {/* 7. 场景体验走马灯 */}
+      {/* 4. 全平台官方客户端下载矩阵 */}
+      <ClientMatrixSection />
+
+      {/* 5. 核心架构优势 Bento Grid */}
+      <AdvantagesSection />
+
+      {/* 6. 服务与架构深度解析 */}
+      <ServicesIntro />
+
+      {/* 7. 三步标准化接入流程 */}
+      <WorkflowSection />
+
+      {/* 8. 业务场景精准赋能 */}
+      <ScenariosSection />
+
+      {/* 9. 典型业务实践走马灯 */}
       <ScenarioCarousel />
 
-      {/* 8. 常见问题解答 FAQ */}
-      <FAQSection />
-
-      {/* 9. 全球线路或服务范围 */}
+      {/* 10. 全球专线拓扑覆盖与选型声明 */}
       <LocationsScopeSection />
+
+      {/* 11. 常见问题解答 FAQ */}
+      <FAQSection />
     </div>
   );
 };

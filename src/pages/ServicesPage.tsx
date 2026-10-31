@@ -16,17 +16,10 @@ import {
 } from 'lucide-react';
 
 /**
- * /services/ 服务概览与技术方案页面
- * 
- * 规范要求：
- * 1. 唯一 H1：清晰表达服务概览与技术方案主题
- * 2. 规范面包屑：首页 / 服务概览
- * 3. 涵盖：服务概览、已核实核心能力、使用流程、多平台选择与支持说明、/downloads/ 入口
- * 4. 0 新增 AFF：所有按钮与指引全部采用站内 Link
+ * /services/ 服务概览与技术方案页面 (深色极客科技感暗黑紫主题)
  */
 export const ServicesPage: React.FC = () => {
   useEffect(() => {
-    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -106,49 +99,49 @@ export const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs text-slate-400">
             <li>
-              <Link to="/" className="hover:text-[#9333EA] transition-colors">
+              <Link to="/" className="hover:text-purple-300 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             </li>
-            <li className="text-[#1E1B4B] font-semibold" aria-current="page">
+            <li className="text-purple-300 font-semibold" aria-current="page">
               服务概览
             </li>
           </ol>
         </nav>
 
         {/* 页面唯一 H1 与服务概览介绍 */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-            <span>服务体系 · 技术架构</span>
+        <div className="max-w-3xl mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <span>ARCHITECTURE & CAPABILITIES · 服务体系与技术架构</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME}机场服务概览与官网技术方案
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            {BRAND_NAME} 服务概览与官方技术方案
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
             深入解析隐形人（{BRAND_NAME_EN}）官方专线传输混淆机制、智能容灾分流规则与全生态终端支持。作为官方直营服务门户，我们协助您快速理解技术架构，打造顺畅无阻的跨国开发与出海协作通道。
           </p>
         </div>
 
         {/* 一、已核实的核心技术能力 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               已核实的核心技术特性
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
-              聚焦于真实可信的协议层能力，不宣称未经证实的夸大指标。
+            <p className="text-xs sm:text-sm text-slate-400">
+              聚焦于真实可信的协议层能力，全系承诺 1.0x 真实计费倍率，不宣称未经证实的夸大指标。
             </p>
           </div>
 
@@ -158,22 +151,22 @@ export const ServicesPage: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all flex flex-col justify-between shadow-card"
+                  className="p-6 sm:p-7 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#1E1B4B] mb-2.5">
+                    <h3 className="text-lg font-bold text-white mb-2.5">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-[#E9D5FF] text-[11px] text-slate-500 flex items-center gap-1.5 font-mono">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#9333EA]" />
-                    <span>协议规范支持</span>
+                  <div className="mt-6 pt-4 border-t border-purple-500/15 text-[11px] text-purple-300/80 flex items-center gap-1.5 font-mono">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>官方协议标准与 1.0x 真实保障</span>
                   </div>
                 </div>
               );
@@ -181,17 +174,17 @@ export const ServicesPage: React.FC = () => {
           </div>
         </div>
 
-        {/* 二、使用流程回顾（真实三步） */}
-        <div className="mb-20 p-8 rounded-2xl bg-white border border-[#E9D5FF] shadow-card">
-          <div className="max-w-2xl mb-8">
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#7E22CE] font-semibold uppercase tracking-wider mb-2">
-              <Workflow className="w-4 h-4 text-[#9333EA]" />
-              <span>标准使用路径</span>
+        {/* 二、使用流程回顾 */}
+        <div className="mb-20 p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/20 shadow-lg">
+          <div className="max-w-2xl mb-8 space-y-2">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-purple-300 font-semibold uppercase tracking-wider">
+              <Workflow className="w-4 h-4 text-purple-400" />
+              <span>标准接入流程</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               接入与使用流程规范
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+            <p className="text-xs sm:text-sm text-slate-400">
               隐形人官方直营，统一官方控制台管理，全流程加密保障账户安全。
             </p>
           </div>
@@ -200,13 +193,13 @@ export const ServicesPage: React.FC = () => {
             {workflowSteps.map((ws, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-xl bg-[#FAF5FF] border border-[#E9D5FF] space-y-2"
+                className="p-5 rounded-2xl bg-purple-950/20 border border-purple-500/15 space-y-2"
               >
-                <span className="text-lg font-mono font-bold text-[#9333EA]">
+                <span className="text-lg font-mono font-bold text-purple-400">
                   {ws.step}
                 </span>
-                <h3 className="text-sm font-bold text-[#1E1B4B]">{ws.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="text-sm font-bold text-white">{ws.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
                   {ws.desc}
                 </p>
               </div>
@@ -216,11 +209,11 @@ export const ServicesPage: React.FC = () => {
 
         {/* 三、多平台选择与支持说明 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               多平台客户端生态兼容说明
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            <p className="text-xs sm:text-sm text-slate-400">
               无论在办公工作站、移动设备还是网络网关中，均能通过主流协议配置实现平稳漫游。
             </p>
           </div>
@@ -229,13 +222,13 @@ export const ServicesPage: React.FC = () => {
             {platforms.map((plat, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all space-y-2 shadow-card"
+                className="p-5 rounded-2xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 transition-all space-y-2"
               >
                 <div className="flex items-center gap-2">
-                  <Monitor className="w-4 h-4 text-[#9333EA]" />
-                  <h3 className="text-sm font-bold text-[#1E1B4B]">{plat.name}</h3>
+                  <Monitor className="w-4 h-4 text-purple-400" />
+                  <h3 className="text-sm font-bold text-white">{plat.name}</h3>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   {plat.desc}
                 </p>
               </div>
@@ -243,14 +236,14 @@ export const ServicesPage: React.FC = () => {
           </div>
         </div>
 
-        {/* 四、/downloads/ 明确入口卡片（站内 Link，0 AFF） */}
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-white to-[#F3E8FF] border border-[#E9D5FF] shadow-card flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* 四、/downloads/ 明确入口卡片 */}
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_0_40px_rgba(147,51,234,0.15)]">
           <div className="space-y-2 max-w-2xl">
-            <h2 className="text-lg sm:text-xl font-bold text-[#1E1B4B] flex items-center gap-2">
-              <Download className="w-5 h-5 text-[#9333EA]" />
+            <h2 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+              <Download className="w-5 h-5 text-purple-400" />
               <span>准备好配置您的客户端了吗？</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               查阅我们整理的全平台通用客户端下载指引、订阅规则导入步骤与各系统常见报错排查手册。
             </p>
           </div>
@@ -258,7 +251,7 @@ export const ServicesPage: React.FC = () => {
           <div className="flex items-center gap-4 flex-shrink-0">
             <Link
               to="/downloads/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white text-sm font-semibold transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9333EA]/50"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)]"
             >
               <span>前往客户端下载中心</span>
               <ArrowRight className="w-4 h-4" />

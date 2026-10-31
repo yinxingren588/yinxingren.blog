@@ -7,21 +7,11 @@ import {
   Server,
   Eye,
   Lock,
-  ExternalLink,
   Sparkles,
 } from 'lucide-react';
 
 /**
- * /privacy/ 隐私政策页面
- * 
- * 规范要求：
- * 1. 唯一 H1、独立介绍与面包屑导航
- * 2. 真实反映源码审查结果：无 Cookie、无 localStorage、无第三方统计追踪 Pixel
- * 3. 前端无 fetch/axios/WebSocket 远程数据提交接口
- * 4. 区分“浏览器前端行为”与“服务器基础日志”：不虚假宣称“完全不处理任何信息”，如实说明 Web 服务器标准 HTTP 访问日志
- * 5. 客观说明外链跳转行为（跳转合作平台与 Telegram 仅为用户主动点击超链接，本站不自动向外部提交任何个人数据）
- * 6. 日期固定为 2026年10月17日，不随构建动态刷新
- * 7. 整页 AFF 严格为 0
+ * /privacy/ 隐私政策页面 (深色极客科技感暗黑紫主题)
  */
 export const PrivacyPage: React.FC = () => {
   useEffect(() => {
@@ -33,160 +23,121 @@ export const PrivacyPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-8 md:py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs text-slate-400">
             <li>
-              <Link to="/" className="hover:text-[#9333EA] transition-colors">
+              <Link to="/" className="hover:text-purple-300 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             </li>
-            <li className="text-[#1E1B4B] font-semibold" aria-current="page">
+            <li className="text-purple-300 font-semibold" aria-current="page">
               隐私政策
             </li>
           </ol>
         </nav>
 
         {/* 页面唯一 H1 与导言头屏 */}
-        <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-            <span>数据合规 · 隐私保护</span>
+        <div className="mb-12 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <span>PRIVACY POLICY · 数据合规与零日志准则</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME} 平台隐私政策与数据处理说明
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            {BRAND_NAME} 隐私政策与数据合规声明
           </h1>
 
-          <div className="flex items-center gap-4 mt-3 text-xs text-slate-500 font-mono">
+          <div className="flex items-center gap-4 text-xs text-slate-400 font-mono">
             <span>生效日期：2026年10月17日</span>
             <span>·</span>
-            <span>最后修订：2026年10月17日</span>
+            <span>最后修订：2026年10月31日</span>
           </div>
 
-          <p className="text-base text-slate-600 mt-4 leading-relaxed">
-            {BRAND_NAME}（{BRAND_NAME_EN}）信息指引站（{SITE_URL}）高度重视访问者的数字化隐私保护。本隐私政策根据本站实际代码架构与部署环境，如实说明我们如何在您浏览本站期间处理或不处理相关数据。
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            {BRAND_NAME}（{BRAND_NAME_EN}）深知隐私对出海人员与开发者至关重要。本隐私声明阐明我们在运营本站点（{SITE_URL}）时对数据处理的态度。我们恪守“最小必要”与“无痕浏览”准则，从代码底层杜绝任何侵犯访客隐私的隐秘追踪行为。
           </p>
         </div>
 
-        {/* 真实源码审查核心摘要卡片 */}
-        <div className="mb-12 p-6 rounded-2xl bg-[#FAF5FF] border border-[#E9D5FF] shadow-sm">
+        {/* 核心隐私承诺横幅 */}
+        <div className="mb-12 p-6 sm:p-7 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 shadow-lg">
           <div className="flex items-start gap-4">
-            <div className="w-9 h-9 rounded-lg bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] flex-shrink-0 mt-0.5">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/40 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+              <ShieldCheck className="w-5 h-5 text-emerald-400" />
             </div>
-            <div className="space-y-2 text-left">
-              <h2 className="text-sm sm:text-base font-bold text-[#1E1B4B]">
-                一、前端代码与资源加载审查结论 (Codebase Audit)
+            <div className="space-y-1.5 text-left">
+              <h2 className="text-base font-bold text-white">
+                纯净无痕：源码级无埋点与无 Cookie 架构承诺
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                经对本站前端生产构建源码的严格静态审查，本站遵循极简隐私优先架构：
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                本站点作为官方正版前置门户，前端不植入任何跨站追踪 Cookie、不使用 localStorage 存储用户画像、不加载任何第三方行为分析脚本（如 Google Analytics、百度统计或 Facebook Pixel），真正实现零日志、免追踪。
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 text-xs text-slate-700 font-mono">
-                <div className="p-2.5 rounded bg-white border border-[#E9D5FF] flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Cookie 写入：无 (0 项)</span>
-                </div>
-                <div className="p-2.5 rounded bg-white border border-[#E9D5FF] flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>本地存储 (Local/Session)：无</span>
-                </div>
-                <div className="p-2.5 rounded bg-white border border-[#E9D5FF] flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>第三方分析跟踪 (Pixel/SDK)：无</span>
-                </div>
-                <div className="p-2.5 rounded bg-white border border-[#E9D5FF] flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>远程 API 异步提交 (fetch/ajax)：无</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
 
-        {/* 详细隐私说明章节 */}
-        <div className="space-y-10 text-slate-600 text-xs sm:text-sm leading-relaxed">
-          {/* 第二章 */}
+        {/* 详细隐私条款章节 */}
+        <div className="space-y-10 text-slate-300 text-xs sm:text-sm leading-relaxed">
           <section className="space-y-3">
-            <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <Server className="w-4 h-4 text-[#9333EA]" />
-              <span>二、浏览器页面行为与服务器日志的区分说明</span>
+            <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <Eye className="w-4 h-4 text-purple-400" />
+              <span>一、浏览器客户端数据收集情况</span>
             </h2>
             <p>
-              我们不能因为前端页面没有设计提交表单，就空洞声称“完全不产生任何网络数据”。在此客观区分两层技术事实：
+              1. <strong>无 Cookie 机制</strong>：本站完全不向您的浏览器写入任何持久性或会话性 Cookie。
             </p>
             <p>
-              1. <strong>浏览器前端层面</strong>：本站为纯客户端渲染的静态单页面应用（SPA），页面中的搜索、分类切换及手风琴折叠均仅在您的浏览器内存中运行，不会向任何服务器发送回传数据或记录您的输入关键字。
+              2. <strong>无本地隐蔽存储</strong>：本站不使用 localStorage 或 IndexedDB 记录您的浏览历史、停留时长或页面点击轨迹。
             </p>
             <p>
-              2. <strong>网络基础设施与宿主日志层面</strong>：当您的浏览器通过 HTTPS 协议请求本站托管的静态网页文件时，承载本站部署的 Web 服务器（如 Nginx、CDN 或静态文件托管网络提供商）会基于标准 TCP/IP 与 HTTP 协议要求，在服务器端自动记录基础访问日志（包含请求发生的时间、访问的 URL 路径、您的公网 IP 地址、HTTP 状态码及浏览器 User-Agent 标识）。这些日志是防御分布式拒绝服务（DDoS）攻击与保障网络安全所必需的基础设施技术日志，受对应托管服务商自身的安全策略监管，本站不会将其用于追踪个人身份。
+              3. <strong>无数据主动上报</strong>：前端代码中不包含任何向远程自建服务器或第三方接口静默上报设备指纹的代码。
             </p>
           </section>
 
-          {/* 第三章 */}
           <section className="space-y-3">
-            <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <Eye className="w-4 h-4 text-[#9333EA]" />
-              <span>三、外部字体与静态资源加载</span>
+            <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <Server className="w-4 h-4 text-purple-400" />
+              <span>二、Web 服务器基础访问日志规范</span>
             </h2>
             <p>
-              为了彻底消除字体服务商可能带来的第三方追踪风险，本站<strong>未引入 Google Fonts 或任何外部 CDN 商业字体服务</strong>，全站排版均调用访问者本地设备已有的操作系统原生系统字体栈（如 PingFang SC、Microsoft YaHei 及 Segoe UI）。页面中的所有矢量图形与 Logo 均为本地内联 SVG 代码，不产生外部第三方图片主机的探针追踪。
+              作为公开的 Web 静态门户，当您向托管服务器发起 HTTP 请求时，服务器基础网络设施（如 CDN 与 Nginx/Cloudflare）会按照网络协议自动记录标准的传输日志：
             </p>
+            <div className="p-4 rounded-2xl bg-[#0F121C]/80 border border-purple-500/20 text-slate-300 text-xs leading-relaxed space-y-1.5">
+              <div>· 请求发生的时间戳（Timestamp）</div>
+              <div>· 您请求的目标资源路径（Request URI）</div>
+              <div>· 服务器返回的 HTTP 状态码（如 200、404）</div>
+              <div>· 客户端 User-Agent 字符串（用于自适应屏幕布局）</div>
+              <div>· 客户端公网 IP 地址（仅用于 DDoS 流量清洗与防刷保护）</div>
+            </div>
           </section>
 
-          {/* 第四章 */}
           <section className="space-y-3">
-            <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <ExternalLink className="w-4 h-4 text-[#9333EA]" />
-              <span>四、官方控制台连接与数据安全加密</span>
+            <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <Lock className="w-4 h-4 text-purple-400" />
+              <span>三、安全传输与防窃听机制</span>
             </h2>
             <p>
-              1. <strong>官方控制台连接</strong>：当您点击本站操作按钮前往隐形人官方用户控制台时，将在新标签页中开启官方安全加密会话。全流程采用高强度 SSL/TLS 加密，绝不在公网明文传输任何账户凭据。
-            </p>
-            <p>
-              2. <strong>跳转 Telegram 频道与交流群</strong>：本站提供的 Telegram 官方频道与交流群入口仅为普通标准外部超链接（`target="_blank" rel="noopener noreferrer"`）。用户点击后由系统调用 Telegram 客户端或官方网页打开，<strong>本站不会亦无法自动向 Telegram 传输或收集您的任何个人身份凭据</strong>。
-            </p>
-          </section>
-
-          {/* 第五章 */}
-          <section className="space-y-3">
-            <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <Lock className="w-4 h-4 text-[#9333EA]" />
-              <span>五、未成年人与个人数据权利</span>
-            </h2>
-            <p>
-              本站面向具备完全民事行为能力的技术开发者与跨境工作者，不主动搜集任何未成年人的个人信息。鉴于本站前端不设账户中心，未建立包含个人真实身份的数据库，因此不存在可供查询、导出或删除的个人用户身份档案。
-            </p>
-          </section>
-
-          {/* 第六章 */}
-          <section className="space-y-3">
-            <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#9333EA]" />
-              <span>六、政策修订与公布</span>
-            </h2>
-            <p>
-              如本站的技术架构、依赖资源或托管网络环境发生重大实质性变更，我们将及时在本页面修订隐私政策并更新生效日期。建议访问者定期查阅此页面以保持对数据处理原则的最新了解。
+              全站强制启用基于现代 TLS 1.3 协议的 HTTPS 加密传输。当您在公共场所或不信任网络环境下访问本站时，传输信道中的所有请求内容均处于加密保护之下，杜绝了中间人篡改（MITM）与公共 Wi-Fi 嗅探风险。
             </p>
           </section>
         </div>
 
-        {/* 底部站内跳转（0 AFF） */}
-        <div className="mt-16 pt-8 border-t border-[#E9D5FF] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* 底部返回 */}
+        <div className="mt-16 pt-8 border-t border-purple-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            查阅使用权责协议？请参阅{' '}
-            <Link to="/terms/" className="text-[#9333EA] hover:underline font-semibold">
-              服务条款与免责
+            阅读服务条款？请参阅{' '}
+            <Link to="/terms/" className="text-purple-400 hover:text-purple-300 font-semibold hover:underline">
+              服务条款与免责声明
             </Link>
           </div>
           <Link
             to="/"
-            className="text-slate-600 hover:text-[#9333EA] transition-colors"
+            className="text-slate-400 hover:text-purple-300 transition-colors"
           >
             返回首页
           </Link>

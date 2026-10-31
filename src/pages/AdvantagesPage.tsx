@@ -15,18 +15,10 @@ import {
 } from 'lucide-react';
 
 /**
- * /advantages/ 核心优势与选择价值页面
- * 
- * 规范要求：
- * 1. 唯一 H1：深度聚焦核心优势与选择价值
- * 2. 规范面包屑：首页 / 核心优势
- * 3. 涵盖：5 项有依据的核心优势、典型使用场景解析、客观选择建议
- * 4. 严禁虚构性能数值，严禁编造与竞品的虚假对比结论
- * 5. 0 新增 AFF：底部操作均使用站内 Link
+ * /advantages/ 核心优势与选择价值页面 (深色极客科技感暗黑紫主题)
  */
 export const AdvantagesPage: React.FC = () => {
   useEffect(() => {
-    // 确保为正常收录
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -36,7 +28,7 @@ export const AdvantagesPage: React.FC = () => {
   const advantagesList = [
     {
       icon: ShieldCheck,
-      badge: '隐私优先',
+      badge: '传输隐匿',
       title: '深层协议特征混淆与指纹伪装',
       desc: '不仅进行常规数据载荷加密，更针对握手数据包头与交互特征进行深度混淆处理，规避深度报文检测（DPI）算法的特征提取，在复杂信道中大幅降低干扰几率。',
     },
@@ -61,8 +53,8 @@ export const AdvantagesPage: React.FC = () => {
     {
       icon: ShieldCheck,
       badge: '官方正品',
-      title: '官方直营保障与 1x 真实倍率承诺',
-      desc: '隐形人官方直营保证，全线配备优质高速专线与统一 1x 真实计费倍率，杜绝暗扣虚标，提供官方专属技术售后与长期节点维护保障。',
+      title: '官方直营保障与 1.0x 真实倍率承诺',
+      desc: '隐形人官方直营保证，全线配备优质高速专线与统一 1.0x 真实计费倍率，杜绝暗扣虚标，提供官方专属技术售后与长期节点维护保障。',
     },
   ];
 
@@ -91,49 +83,49 @@ export const AdvantagesPage: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs text-slate-400">
             <li>
-              <Link to="/" className="hover:text-[#9333EA] transition-colors">
+              <Link to="/" className="hover:text-purple-300 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             </li>
-            <li className="text-[#1E1B4B] font-semibold" aria-current="page">
+            <li className="text-purple-300 font-semibold" aria-current="page">
               核心优势
             </li>
           </ol>
         </nav>
 
         {/* 页面唯一 H1 与优势导言 */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-            <span>核心价值 · 理性评估</span>
+        <div className="max-w-3xl mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <span>CORE VALUES & EVALUATION · 核心价值与理性评估</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME}机场核心优势与官网架构选择价值
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            {BRAND_NAME} 核心专线优势与官方架构价值
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
             我们不以虚构的测速数值或拉踩竞品为噱头，而是从协议隐匿性、专线架构容灾能力与多端易用性三个根本维度，阐述隐形人（{BRAND_NAME_EN}）官方专线如何从根本上解决出海数字工作流中的真实痛点，为全球跨国团队提供安全可靠的官方连接基座。
           </p>
         </div>
 
         {/* 一、5 项核心架构优势展板 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               五项立足实际的技术优势
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
-              真实可靠的协议特性与架构能力，不编造未经证实的极端测试数据。
+            <p className="text-xs sm:text-sm text-slate-400">
+              真实可靠的协议特性与架构能力，承诺 1.0x 真实倍率，不编造未经证实的极端测试数据。
             </p>
           </div>
 
@@ -143,22 +135,22 @@ export const AdvantagesPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 sm:p-8 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-card"
+                  className="p-6 sm:p-8 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
                 >
                   <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] flex-shrink-0 mt-1">
+                    <div className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0 mt-1">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-[11px] font-mono text-[#7E22CE] font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-[#FAF5FF] border border-[#E9D5FF]">
+                        <span className="text-[11px] font-mono text-purple-300 font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded bg-purple-950/80 border border-purple-500/30">
                           {item.badge}
                         </span>
-                        <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B]">
+                        <h3 className="text-base sm:text-lg font-bold text-white">
                           {item.title}
                         </h3>
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+                      <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-3xl">
                         {item.desc}
                       </p>
                     </div>
@@ -171,11 +163,11 @@ export const AdvantagesPage: React.FC = () => {
 
         {/* 二、典型场景的价值映射 */}
         <div className="mb-20">
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1E1B4B]">
+          <div className="mb-8 space-y-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
               在实际业务场景中的应用价值
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            <p className="text-xs sm:text-sm text-slate-400">
               抽象的技术特性如何转化为您日常工作中的效率与安全保障。
             </p>
           </div>
@@ -186,17 +178,17 @@ export const AdvantagesPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all flex flex-col justify-between shadow-card"
+                  className="p-6 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA]">
+                    <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-base font-bold text-[#1E1B4B]">{sc.role}</h3>
-                    <div className="text-[11px] font-mono text-slate-500 pb-2 border-b border-[#E9D5FF]">
+                    <h3 className="text-base font-bold text-white">{sc.role}</h3>
+                    <div className="text-[11px] font-mono text-purple-300/70 pb-2 border-b border-purple-500/15">
                       关注重点：{sc.focus}
                     </div>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-400 leading-relaxed">
                       {sc.value}
                     </p>
                   </div>
@@ -207,36 +199,34 @@ export const AdvantagesPage: React.FC = () => {
         </div>
 
         {/* 三、理性选择建议看板 */}
-        <div className="p-8 rounded-2xl bg-white border border-[#E9D5FF] shadow-card mb-16">
-          <div className="max-w-3xl space-y-4">
-            <div className="flex items-center gap-2 text-[#7E22CE] text-xs font-semibold">
-              <HelpCircle className="w-4 h-4 text-[#9333EA]" />
-              <span>给开发者的理性选型建议</span>
-            </div>
-            <h2 className="text-lg sm:text-xl font-bold text-[#1E1B4B]">
-              如何建立合理的网络连接预期？
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              任何跨国长途网络连接均无法逃脱物理世界的光纤传输延迟与公网拥堵规律。我们建议：在日常使用中避免对“全网零延迟”抱有不切实际的幻想；合理配置基于域名的按需分流规则；常备至少两条异地备用线路；在遇到网络波动时保持平常心态并及时更新节点。
-            </p>
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/25 mb-16 space-y-4">
+          <div className="flex items-center gap-2 text-purple-400 text-xs font-semibold font-mono">
+            <HelpCircle className="w-4 h-4 text-purple-400" />
+            <span>给开发者的理性选型建议</span>
           </div>
+          <h2 className="text-lg sm:text-xl font-bold text-white">
+            如何建立合理的网络连接预期？
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            任何跨国长途网络连接均无法逃脱物理世界的光纤传输延迟与公网拥堵规律。我们建议：在日常使用中避免对“全网零延迟”抱有不切实际的幻想；合理配置基于域名的按需分流规则；常备至少两条异地备用线路；在遇到网络波动时保持平常心态并及时更新节点。
+          </p>
         </div>
 
-        {/* 四、底部站内引导（0 AFF） */}
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-white to-[#F3E8FF] border border-[#E9D5FF] shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        {/* 四、底部站内引导 */}
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_0_35px_rgba(147,51,234,0.15)]">
           <div className="space-y-1">
-            <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B]">
+            <h3 className="text-base sm:text-lg font-bold text-white">
               了解方案对比，科学规划订阅
             </h3>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-400">
               根据您的设备数、流量消耗及试错周期，查阅客观的选型维度指引。
             </p>
           </div>
           <Link
             to="/pricing/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white text-sm font-semibold transition-all shadow-sm flex-shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] flex-shrink-0"
           >
-            <span>查阅方案对比指南</span>
+            <span>查阅官方 9 大配套指南</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

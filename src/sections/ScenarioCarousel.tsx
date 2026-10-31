@@ -11,15 +11,7 @@ import {
 } from 'lucide-react';
 
 /**
- * 场景体验走马灯组件 (ScenarioCarousel)
- * 
- * 规范实现：
- * 1. 桌面 3 项、平板 2 项、手机 1 项
- * 2. 支持 Prev/Next 按钮、触摸滑动 (Touch Swipe)、键盘方向键控制
- * 3. 悬停、聚焦、后台切屏时暂停
- * 4. 显式提供播放/暂停手动切换按钮 (A11y)
- * 5. prefers-reduced-motion 下强制关闭自动播放
- * 6. 无虚假评论、无假头像、无假评分，标注官方规范免责说明
+ * 场景体验走马灯组件 (ScenarioCarousel) - 深色极客科技感暗黑紫主题
  */
 export const ScenarioCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,38 +74,26 @@ export const ScenarioCarousel: React.FC = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   }, [maxIndex]);
 
-  // 自动播放逻辑：受控于悬停、聚焦、后台、用户手动暂停及 reduced-motion
+  // 自动播放时钟
   useEffect(() => {
-    const shouldPause =
-      isManualPaused ||
-      isHovered ||
-      isFocused ||
-      isPageHidden ||
-      prefersReducedMotion;
-
-    if (shouldPause) return;
+    if (prefersReducedMotion || isManualPaused || isHovered || isFocused || isPageHidden) {
+      return;
+    }
 
     const timer = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(timer);
-  }, [
-    isManualPaused,
-    isHovered,
-    isFocused,
-    isPageHidden,
-    prefersReducedMotion,
-    handleNext,
-  ]);
+  }, [prefersReducedMotion, isManualPaused, isHovered, isFocused, isPageHidden, handleNext]);
 
-  // 触摸滑动事件处理
+  // 触摸手势
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.targetTouches[0].clientX;
+    touchStartX.current = e.touches[0].clientX;
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
+    touchEndX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = () => {
@@ -145,24 +125,24 @@ export const ScenarioCarousel: React.FC = () => {
   return (
     <section
       aria-labelledby="scenarios-carousel-heading"
-      className="py-16 md:py-24 border-b border-[#E9D5FF] bg-[#FAF5FF]"
+      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 头部标题与控制按钮条 */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-          <div className="max-w-2xl text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-              <span>实际应用 · 经验参考</span>
+          <div className="max-w-2xl text-left space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+              <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+              <span>PRACTICE BENCHMARKS · 业务实践参考</span>
             </div>
             <h2
               id="scenarios-carousel-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
             >
-              典型业务场景体验示例
+              典型出海业务场景实践与体验
             </h2>
-            <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-              汇集不同跨境工作流在网络连接、多端协同与隐私防护方面的代表性实践示例。
+            <p className="text-sm text-slate-300 leading-relaxed">
+              汇集不同跨境工作流在专线连接、多端协同与隐私防护方面的代表性实践示例。
             </p>
           </div>
 
@@ -172,7 +152,7 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={() => setIsManualPaused((prev) => !prev)}
               aria-label={isManualPaused ? '开启自动播放' : '暂停自动播放'}
-              className="p-2.5 rounded-lg bg-white border border-[#E9D5FF] hover:border-[#C084FC] text-slate-700 hover:text-[#7E22CE] transition-colors focus:outline-none focus:ring-2 focus:ring-[#9333EA]"
+              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               {isManualPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
             </button>
@@ -181,7 +161,7 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={handlePrev}
               aria-label="查看上一组场景"
-              className="p-2.5 rounded-lg bg-white border border-[#E9D5FF] hover:border-[#C084FC] text-slate-700 hover:text-[#7E22CE] transition-colors focus:outline-none focus:ring-2 focus:ring-[#9333EA]"
+              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -190,16 +170,16 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={handleNext}
               aria-label="查看下一组场景"
-              className="p-2.5 rounded-lg bg-white border border-[#E9D5FF] hover:border-[#C084FC] text-slate-700 hover:text-[#7E22CE] transition-colors focus:outline-none focus:ring-2 focus:ring-[#9333EA]"
+              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
-        {/* 官方规范要求声明条：不冒充真实实名评价 */}
-        <div className="mb-8 p-3.5 rounded-lg bg-[#F3E8FF]/60 border border-[#E9D5FF] text-xs text-slate-600 text-left">
-          <span className="font-semibold text-[#1E1B4B]">声明：</span>
+        {/* 官方规范要求声明条 */}
+        <div className="mb-8 p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/20 text-xs text-slate-400 text-left">
+          <span className="font-semibold text-purple-300">声明：</span>
           {SCENARIO_DISCLAIMER}
         </div>
 
@@ -218,7 +198,7 @@ export const ScenarioCarousel: React.FC = () => {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="relative overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-[#9333EA] rounded-2xl"
+          className="relative overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-3xl"
         >
           <div
             className="flex transition-transform duration-500 ease-out"
@@ -235,32 +215,32 @@ export const ScenarioCarousel: React.FC = () => {
                 className="flex-shrink-0 px-3"
                 style={{ width: `${100 / itemsPerPage}%` }}
               >
-                <div className="h-full p-6 sm:p-7 rounded-2xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all flex flex-col justify-between text-left shadow-card">
+                <div className="h-full p-6 sm:p-7 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col justify-between text-left">
                   <div>
-                    <div className="flex items-center justify-between gap-2 pb-4 border-b border-[#E9D5FF] mb-5">
-                      <span className="text-[11px] font-mono text-[#7E22CE] font-semibold uppercase tracking-wider">
+                    <div className="flex items-center justify-between gap-2 pb-4 border-b border-purple-500/15 mb-5">
+                      <span className="text-[11px] font-mono text-purple-300 font-semibold uppercase tracking-wider">
                         {item.tag}
                       </span>
-                      <div className="w-7 h-7 rounded-md bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA]">
-                        <Briefcase className="w-3.5 h-3.5" />
+                      <div className="w-8 h-8 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                        <Briefcase className="w-4 h-4" />
                       </div>
                     </div>
 
-                    <h3 className="text-base font-bold text-[#1E1B4B] mb-2">
+                    <h3 className="text-base font-bold text-white mb-2">
                       {item.sceneName}
                     </h3>
 
-                    <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                    <p className="text-xs text-slate-400 leading-relaxed mb-4">
                       {item.experienceSummary}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-[#E9D5FF] space-y-1">
-                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#1E1B4B]">
-                      <Layers className="w-3.5 h-3.5 text-[#9333EA]" />
+                  <div className="mt-4 pt-4 border-t border-purple-500/15 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-200">
+                      <Layers className="w-3.5 h-3.5 text-purple-400" />
                       <span>{item.targetRole}</span>
                     </div>
-                    <p className="text-[10px] text-slate-500 leading-normal">
+                    <p className="text-[10px] text-slate-500 leading-normal font-mono">
                       {item.workflowContext}
                     </p>
                   </div>
@@ -270,7 +250,7 @@ export const ScenarioCarousel: React.FC = () => {
           </div>
         </div>
 
-        {/* 底部点状指示器 */}
+        {/* 底部指示器 */}
         <div className="flex items-center justify-center gap-2 mt-8">
           {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
             <button
@@ -280,8 +260,8 @@ export const ScenarioCarousel: React.FC = () => {
               aria-label={`跳转到第 ${idx + 1} 页`}
               className={`h-1.5 rounded-full transition-all ${
                 currentIndex === idx
-                  ? 'w-6 bg-[#9333EA]'
-                  : 'w-1.5 bg-[#E9D5FF] hover:bg-[#D8B4FE]'
+                  ? 'w-6 bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]'
+                  : 'w-1.5 bg-slate-800 hover:bg-purple-900'
               }`}
             />
           ))}

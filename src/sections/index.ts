@@ -1,4 +1,6 @@
 export { Hero } from './Hero';
+export { NetworkMonitorSection } from './NetworkMonitorSection';
+export { ClientMatrixSection } from './ClientMatrixSection';
 export { ServicesIntro } from './ServicesIntro';
 export { AdvantagesSection } from './AdvantagesSection';
 export { WorkflowSection } from './WorkflowSection';

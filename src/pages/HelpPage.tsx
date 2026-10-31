@@ -15,15 +15,7 @@ import {
 } from 'lucide-react';
 
 /**
- * /help/ 帮助中心与故障排错手册页面
- * 
- * 规范要求：
- * 1. 唯一 H1、独立介绍与面包屑导航
- * 2. 纯前端搜索与分类筛选，不产生动态 URL 路由污染
- * 3. 分类数量与搜索匹配结果数量基于实际数组动态计算
- * 4. 具有清晰的空结果提示与一键清除入口
- * 5. 全文内容直接在页内交互展开，不额外产生子路由
- * 6. 严格 0 AFF 入口
+ * /help/ 帮助中心与故障排错手册页面 (深色极客科技感暗黑紫主题)
  */
 export const HelpPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -59,11 +51,9 @@ export const HelpPage: React.FC = () => {
     const q = searchQuery.trim().toLowerCase();
 
     return HELP_ARTICLES.filter((article: HelpArticle) => {
-      // 分类筛选
       const matchCategory = selectedCategory === 'all' || article.category === selectedCategory;
       if (!matchCategory) return false;
 
-      // 文本搜索匹配
       if (!q) return true;
       const inTitle = article.title.toLowerCase().includes(q);
       const inContent = article.content.toLowerCase().includes(q);
@@ -83,37 +73,37 @@ export const HelpPage: React.FC = () => {
   };
 
   return (
-    <div className="py-8 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs text-slate-400">
             <li>
-              <Link to="/" className="hover:text-[#9333EA] transition-colors">
+              <Link to="/" className="hover:text-purple-300 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             </li>
-            <li className="text-[#1E1B4B] font-semibold" aria-current="page">
+            <li className="text-purple-300 font-semibold" aria-current="page">
               帮助中心
             </li>
           </ol>
         </nav>
 
         {/* 页面唯一 H1 与导言头屏 */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#9333EA]" />
-            <span>实用指南 · 知识库</span>
+        <div className="max-w-3xl mb-12 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <span>KNOWLEDGE BASE · 实用指南与排错手册</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight">
-            {BRAND_NAME}机场帮助中心与官网排错手册
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            {BRAND_NAME} 帮助中心与官方排错手册
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
             为您整理从入门使用、官方 9 大配套规格考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
           </p>
         </div>
@@ -122,7 +112,7 @@ export const HelpPage: React.FC = () => {
         <div className="mb-10 space-y-6">
           {/* 搜索框 */}
           <div className="relative max-w-2xl">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">
               <Search className="w-5 h-5" />
             </div>
             <input
@@ -130,24 +120,24 @@ export const HelpPage: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="搜索问题关键词、配置教程或排错方法（如：时间偏差、分流、多设备）..."
-              className="w-full pl-11 pr-10 py-3.5 rounded-xl bg-white border border-[#E9D5FF] text-sm text-[#1E1B4B] placeholder-slate-400 focus:outline-none focus:border-[#9333EA] focus:ring-1 focus:ring-[#9333EA] transition-all shadow-inner"
+              className="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-[#0F121C] border border-purple-500/30 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all shadow-inner"
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
                 aria-label="清除搜索关键字"
-                className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-[#1E1B4B]"
+                className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             )}
           </div>
 
-          {/* 分类筛选药丸标签（动态统计数量） */}
+          {/* 分类筛选药丸标签 */}
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs text-slate-500 flex items-center gap-1.5 mr-1 font-mono">
-              <Filter className="w-3.5 h-3.5" />
+            <span className="text-xs text-slate-400 flex items-center gap-1.5 mr-1 font-mono">
+              <Filter className="w-3.5 h-3.5 text-purple-400" />
               <span>主题筛选：</span>
             </span>
             {categoryStats.map((cat) => (
@@ -155,10 +145,10 @@ export const HelpPage: React.FC = () => {
                 key={cat.id}
                 type="button"
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
                   selectedCategory === cat.id
-                    ? 'bg-[#9333EA] text-white shadow-sm'
-                    : 'bg-white text-slate-600 hover:text-[#1E1B4B] border border-[#E9D5FF] hover:border-[#C084FC]'
+                    ? 'bg-purple-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)] border border-purple-400/40'
+                    : 'bg-[#0F121C] text-slate-400 hover:text-white border border-purple-500/15 hover:border-purple-500/30'
                 }`}
               >
                 <span>{cat.name}</span>
@@ -170,17 +160,17 @@ export const HelpPage: React.FC = () => {
           </div>
 
           {/* 实时匹配结果计数条 */}
-          <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-[#E9D5FF]">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-purple-500/15">
             <span>
               已为您匹配到{' '}
-              <strong className="text-[#1E1B4B] font-mono">{filteredArticles.length}</strong>{' '}
+              <strong className="text-purple-300 font-mono">{filteredArticles.length}</strong>{' '}
               篇相关指引
             </span>
             {(searchQuery || selectedCategory !== 'all') && (
               <button
                 type="button"
                 onClick={handleClearFilters}
-                className="text-[#9333EA] hover:text-[#7E22CE] font-semibold hover:underline inline-flex items-center gap-1"
+                className="text-purple-400 hover:text-purple-300 font-semibold hover:underline inline-flex items-center gap-1"
               >
                 <span>清除筛选条件</span>
                 <X className="w-3 h-3" />
@@ -200,7 +190,7 @@ export const HelpPage: React.FC = () => {
               return (
                 <div
                   key={article.id}
-                  className="rounded-xl bg-white border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-sm transition-all overflow-hidden"
+                  className="rounded-2xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/40 transition-all overflow-hidden"
                 >
                   <h2 className="text-base font-medium m-0">
                     <button
@@ -209,12 +199,12 @@ export const HelpPage: React.FC = () => {
                       aria-expanded={isExpanded}
                       aria-controls={panelId}
                       onClick={() => toggleArticle(article.id)}
-                      className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-[#1E1B4B] hover:text-[#7E22CE] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9333EA] transition-colors"
+                      className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-white hover:text-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 transition-colors"
                     >
                       <div className="flex items-start sm:items-center gap-3">
-                        <BookOpen className="w-4 h-4 text-[#9333EA] mt-0.5 sm:mt-0 flex-shrink-0" />
+                        <BookOpen className="w-4 h-4 text-purple-400 mt-0.5 sm:mt-0 flex-shrink-0" />
                         <div>
-                          <span className="text-xs font-mono text-[#7E22CE] font-semibold uppercase tracking-wider mr-2 px-1.5 py-0.5 rounded bg-[#FAF5FF] border border-[#E9D5FF]">
+                          <span className="text-xs font-mono text-purple-300 font-semibold uppercase tracking-wider mr-2 px-2 py-0.5 rounded bg-purple-950/80 border border-purple-500/30">
                             {article.categoryName}
                           </span>
                           <span className="text-sm sm:text-base font-semibold">
@@ -224,8 +214,8 @@ export const HelpPage: React.FC = () => {
                       </div>
 
                       <div
-                        className={`p-1 rounded-md bg-white border border-[#E9D5FF] text-slate-500 transition-transform duration-200 flex-shrink-0 ${
-                          isExpanded ? 'rotate-180 text-[#9333EA] bg-[#F3E8FF] border-[#C084FC]' : ''
+                        className={`p-1.5 rounded-lg bg-purple-950/60 border border-purple-500/30 text-purple-400 transition-transform duration-200 flex-shrink-0 ${
+                          isExpanded ? 'rotate-180 text-white bg-purple-800' : ''
                         }`}
                         aria-hidden="true"
                       >
@@ -244,8 +234,8 @@ export const HelpPage: React.FC = () => {
                         : 'max-h-0 pb-0 opacity-0 overflow-hidden'
                     }`}
                   >
-                    <div className="pt-3 border-t border-[#E9D5FF] space-y-3">
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <div className="pt-3 border-t border-purple-500/15 space-y-3">
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                         {article.content}
                       </p>
 
@@ -253,7 +243,7 @@ export const HelpPage: React.FC = () => {
                         {article.tags.map((tag, tIdx) => (
                           <span
                             key={tIdx}
-                            className="text-[10px] text-slate-500 px-2 py-0.5 rounded bg-[#FAF5FF] border border-[#E9D5FF]"
+                            className="text-[10px] font-mono text-purple-300 px-2 py-0.5 rounded bg-slate-900 border border-purple-500/20"
                           >
                             #{tag}
                           </span>
@@ -267,41 +257,41 @@ export const HelpPage: React.FC = () => {
           </div>
         ) : (
           /* 空结果提示面板 */
-          <div className="my-12 p-12 rounded-2xl bg-white border border-[#E9D5FF] text-center max-w-xl mx-auto space-y-4 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-[#F3E8FF] border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] mx-auto">
+          <div className="my-12 p-12 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 text-center max-w-xl mx-auto space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mx-auto">
               <Search className="w-6 h-6" />
             </div>
-            <h3 className="text-base font-bold text-[#1E1B4B]">未找到匹配的指引内容</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              抱歉，没有找到与“<span className="text-[#9333EA] font-semibold">{searchQuery}</span>”匹配的帮助文章。请尝试缩短关键词，或切换分类筛选。
+            <h3 className="text-base font-bold text-white">未找到匹配的指引内容</h3>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              抱歉，没有找到与“<span className="text-purple-400 font-semibold">{searchQuery}</span>”匹配的帮助文章。请尝试缩短关键词，或切换分类筛选。
             </p>
             <button
               type="button"
               onClick={handleClearFilters}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-[#F3E8FF] border border-[#E9D5FF] hover:border-[#C084FC] text-xs font-semibold text-[#1E1B4B] hover:text-[#7E22CE] transition-all shadow-subtle"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900/60 border border-purple-500/30 text-xs font-semibold text-purple-200 hover:text-white transition-all shadow-subtle"
             >
               <span>清除全部搜索与分类条件</span>
             </button>
           </div>
         )}
 
-        {/* 底部引导区：跳转 /contact/（站内 Link，0 AFF） */}
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-white to-[#F3E8FF] border border-[#E9D5FF] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-card">
+        {/* 底部引导区：跳转 /contact/ */}
+        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_0_35px_rgba(147,51,234,0.15)]">
           <div className="space-y-1 max-w-xl">
-            <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-[#9333EA]" />
+            <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-purple-400" />
               <span>仍未排查出故障原因？</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              若遇到复杂的网络协议冲突或特定账户配置问题，您可以进入官方支持中心获取专属客服工单与官方交流社群。
+            <p className="text-xs text-slate-400 leading-relaxed">
+              若遇到复杂的网络协议冲突或特定账户配置问题，您可以进入官方支持中心获取专属客服工单与官方技术支持。
             </p>
           </div>
 
           <Link
             to="/contact/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white text-sm font-semibold transition-all shadow-sm flex-shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] flex-shrink-0"
           >
-            <span>前往支持与联系中心</span>
+            <span>前往官方支持与工单中心</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
