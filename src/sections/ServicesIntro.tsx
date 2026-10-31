@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME_EN } from '@/config/site';
+import { BRAND_NAME, BRAND_NAME_EN } from '@/config/site';
 import { ArrowRight, ShieldCheck, Terminal, Cpu } from 'lucide-react';
 
 /**
  * 板块 1：服务介绍 (ServicesIntro) - 浅紫色紫罗兰主题
- * 结构：左右不对称分栏 (7:5) 图文互锁架构
- * 按钮：全部使用站内 Link，不新增 AFF
+ * 官方架构概览与专线服务体系
  */
 export const ServicesIntro: React.FC = () => {
   return (
@@ -19,22 +18,22 @@ export const ServicesIntro: React.FC = () => {
           {/* 左侧深度技术与服务阐述 (7列) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold shadow-subtle">
-              <span>架构概览 · 专线服务体系</span>
+              <span>架构概览 · 官方专线网络体系</span>
             </div>
 
             <h2
               id="services-heading"
               className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
             >
-              隐形人机场隐匿传输与敏捷连接服务解析
+              {BRAND_NAME} 隐匿传输与专线敏捷连接解析
             </h2>
 
             <p className="text-base text-slate-700 leading-relaxed font-normal">
-              隐形人机场（{BRAND_NAME_EN}）专注于为跨境团队与数字游民提供低感知、高鲁棒性的专线网络接入解决方案。通过底层混淆协议与多节点中继路由，有效抵御公共网络中的数据嗅探与特征识别，保障关键业务数据安全流转。
+              {BRAND_NAME}（{BRAND_NAME_EN}）专注于为跨境团队与出海人员提供低感知、高鲁棒性的全球专线网络接入解决方案。通过底层混淆协议与多节点中继冗余路由，有效规避公共网络中的数据嗅探与特征识别，保障关键业务数据安全流转。
             </p>
 
             <p className="text-sm text-slate-600 leading-relaxed">
-              本站作为中立的第三方使用指引平台，致力于为用户提供客观的技术特性解读、隐形人官网全平台配置手册以及理性选型建议。无论是跨国代码协同、云端开发环境调试，还是海外业务运营，均能获得清晰的实施指引。
+              作为官方直营服务门户，{BRAND_NAME}致力于为全球用户提供高标准的专线传输品质、全平台客户端官方接入教程以及专属技术支持。无论是跨国代码协同、云端开发调试，还是海外业务运营，均能获得官方级的长效连通保障。
             </p>
 
             <div className="pt-2">
@@ -42,7 +41,7 @@ export const ServicesIntro: React.FC = () => {
                 to="/services/"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#9333EA] hover:text-[#7E22CE] transition-colors group"
               >
-                <span>查看完整服务与协议解析</span>
+                <span>查看官方服务与协议架构详情</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -73,7 +72,7 @@ export const ServicesIntro: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-[#1E1B4B]">
-                    开发环境友好适配
+                    开发与企业环境适配
                   </h3>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                     全面支持主流代理协议与分流规则，轻松集成至终端命令行、Git 工具及容器开发环境中。
@@ -89,10 +88,10 @@ export const ServicesIntro: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-[#1E1B4B]">
-                    零冗余轻量客户端
+                    全平台零冗余客户端生态
                   </h3>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    主流系统适配简单配置订阅，资源占用极低，杜绝任何捆绑插件与多余后台进程。
+                    兼容主流全平台主流客户端，一键导入官方订阅，资源占用极低，杜绝任何第三方捆绑与插件。
                   </p>
                 </div>
               </div>

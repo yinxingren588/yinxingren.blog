@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Lock, Network, Smartphone, EyeOff } from 'lucide-react';
+import { ArrowRight, Network, Smartphone, EyeOff, ShieldCheck } from 'lucide-react';
+import { BRAND_NAME } from '@/config/site';
 
 /**
  * 板块 2：核心优势 (AdvantagesSection) - 浅紫色紫罗兰主题
- * 结构：2×2 错落网格
- * 按钮：全部使用站内 Link，不新增 AFF
+ * 官方 4 大核心专线网络优势
  */
 export const AdvantagesSection: React.FC = () => {
   const advantages = [
@@ -18,7 +18,7 @@ export const AdvantagesSection: React.FC = () => {
     },
     {
       icon: Network,
-      tag: '网络冗余',
+      tag: '专线冗余',
       title: '多节点动态负载与故障备用',
       description:
         '构建多可用区冗余路由，在特定骨干网络出现波动时能够平稳切换备用通道，保障核心团队长连接不中断。',
@@ -31,11 +31,11 @@ export const AdvantagesSection: React.FC = () => {
         '原生适配 Windows、macOS、Linux、iOS 及 Android 常见网络管理工具，一个订阅配置即可全设备无缝漫游。',
     },
     {
-      icon: Lock,
-      tag: '中立透明',
-      title: '客观真实的配置与选型指导',
+      icon: ShieldCheck,
+      tag: '官方直营',
+      title: '官方正版保障与 1x 真实倍率承诺',
       description:
-        '本站清晰标注推广与导航属性，绝无隐性消费绑架或虚高参数宣传，始终为出海用户提供可验证的实测参考。',
+        '隐形人官方直营，统一 1x 计费倍率，杜绝虚假跑量，提供官方专属技术售后与长期节点维护，保障您的连接体验。',
     },
   ];
 
@@ -48,63 +48,58 @@ export const AdvantagesSection: React.FC = () => {
         {/* 头部标题区 */}
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold mb-4 shadow-subtle">
-            <span>核心价值 · 架构优势</span>
+            <span>核心价值 · 官方架构优势</span>
           </div>
           <h2
             id="advantages-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
           >
-            为什么选择隐形人机场与专线方案？
+            为什么选择{BRAND_NAME}官方专线网络方案？
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-            摒弃繁琐多余的营销包装，聚焦于隐形人机场专线连接的私密性、多端通用性与长效稳定性，为现代数字出海工作流构建坚固防护。
+            摒弃繁琐多余的营销套路，聚焦于专线连接的私密性、多端通用性与长效稳定性，为现代数字出海工作流构建坚固防护。
           </p>
         </div>
 
         {/* 2×2 错落网格 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {advantages.map((item, index) => {
+          {advantages.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
-                key={index}
-                className="group relative p-6 sm:p-8 rounded-2xl bg-[#FAF5FF] border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-card-hover transition-all flex flex-col justify-between"
+                key={idx}
+                className="p-6 sm:p-8 rounded-2xl bg-[#FAF5FF] border border-[#E9D5FF] hover:border-[#C084FC] hover:shadow-md transition-all space-y-4"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-white border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] group-hover:scale-105 transition-transform shadow-subtle">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-[11px] font-mono tracking-wider uppercase px-2.5 py-1 rounded bg-white border border-[#E9D5FF] text-[#7E22CE] font-semibold">
-                      {item.tag}
-                    </span>
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E9D5FF] flex items-center justify-center text-[#9333EA] shadow-subtle">
+                    <Icon className="w-6 h-6" />
                   </div>
-
-                  <h3 className="text-lg font-bold text-[#1E1B4B] group-hover:text-[#9333EA] transition-colors mb-3">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <span className="px-2.5 py-1 rounded-full bg-white border border-[#E9D5FF] text-xs font-semibold text-[#7E22CE]">
+                    {item.tag}
+                  </span>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#E9D5FF] flex items-center text-xs font-medium text-slate-500">
-                  <span>架构特性已验证</span>
+                <div className="space-y-2">
+                  <h3 className="text-base sm:text-lg font-bold text-[#1E1B4B]">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* 底部站内跳转引导（0 AFF） */}
+        {/* 底部直达 */}
         <div className="mt-12 text-center">
           <Link
             to="/advantages/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-[#F3E8FF] border border-[#E9D5FF] hover:border-[#C084FC] text-sm font-medium text-slate-700 hover:text-[#9333EA] transition-all shadow-subtle"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#9333EA] hover:text-[#7E22CE] transition-colors group"
           >
-            <span>深入了解核心架构细节</span>
-            <ArrowRight className="w-4 h-4 text-[#9333EA]" />
+            <span>深入了解官方架构价值与技术评测</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

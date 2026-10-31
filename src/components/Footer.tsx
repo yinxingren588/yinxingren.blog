@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '@/components/Logo';
-import { BRAND_NAME, BRAND_NAME_EN, AFF_DISCLOSURE_TEXT } from '@/config/site';
+import { BRAND_NAME, BRAND_NAME_EN, OFFICIAL_GUARANTEE_TEXT } from '@/config/site';
 
 /**
- * 真实四栏页脚组件 (浅紫色紫罗兰主题)
- * 规则要求：
- * 1. 栏目一：品牌介绍（准确说明本站第三方身份与定位）
- * 2. 栏目二：产品与服务
- * 3. 栏目三：支持与帮助
- * 4. 栏目四：法律政策
- * 5. 页脚全部使用站内链接（Link），AFF 数量严格为 0。
+ * 官方四栏页脚组件 (浅紫色紫罗兰主题)
+ * 树立官方正品旗舰站权威形象
  */
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -19,15 +14,15 @@ export const Footer: React.FC = () => {
     <footer className="w-full border-t border-[#E9D5FF] bg-[#F5F3FF] text-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* 第1栏：品牌介绍与身份说明 */}
+          {/* 第1栏：品牌介绍与官方说明 */}
           <div className="space-y-4">
             <Logo showSubtitle={false} />
             <p className="text-xs text-slate-600 leading-relaxed">
-              隐形人官网与隐形人机场（{BRAND_NAME_EN}）第三方服务指引与导航平台，专注于提供客观的跨境专线连接特性解析与实用配置教程。
+              {BRAND_NAME}官网（{BRAND_NAME_EN}）专注于为出海团队、跨境开发者与数字游民提供安全、高速、稳定的全球专线网络连接服务。
             </p>
             <div className="p-3 rounded-lg bg-white border border-[#E9D5FF] text-[11px] text-slate-600 leading-relaxed shadow-subtle">
-              <span className="font-semibold text-[#1E1B4B]">身份声明：</span>
-              本站为第三方信息展示与使用指引导航站点，非官方自营或授权直营平台。
+              <span className="font-semibold text-[#7E22CE]">官方正版保证：</span>
+              本平台为{BRAND_NAME}（Invisible）官方直营站点，全系配备专线网络与统一 1x 计费倍率，提供官方技术售后保障。
             </div>
           </div>
 
@@ -42,7 +37,7 @@ export const Footer: React.FC = () => {
                   to="/services/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  服务介绍
+                  服务介绍与架构
                 </Link>
               </li>
               <li>
@@ -50,7 +45,7 @@ export const Footer: React.FC = () => {
                   to="/advantages/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  核心优势
+                  核心专线优势
                 </Link>
               </li>
               <li>
@@ -58,7 +53,7 @@ export const Footer: React.FC = () => {
                   to="/locations/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  服务线路
+                  全球节点分布
                 </Link>
               </li>
               <li>
@@ -66,7 +61,7 @@ export const Footer: React.FC = () => {
                   to="/downloads/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  客户端下载
+                  官方客户端下载
                 </Link>
               </li>
             </ul>
@@ -83,7 +78,7 @@ export const Footer: React.FC = () => {
                   to="/pricing/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  订阅套餐
+                  官方 9 大配套
                 </Link>
               </li>
               <li>
@@ -91,7 +86,7 @@ export const Footer: React.FC = () => {
                   to="/help/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  帮助中心
+                  帮助中心与手册
                 </Link>
               </li>
               <li>
@@ -99,7 +94,7 @@ export const Footer: React.FC = () => {
                   to="/contact/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  联系支持
+                  官方联系与支持
                 </Link>
               </li>
             </ul>
@@ -116,7 +111,7 @@ export const Footer: React.FC = () => {
                   to="/terms/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  服务条款与免责
+                  服务条款与准则
                 </Link>
               </li>
               <li>
@@ -124,29 +119,29 @@ export const Footer: React.FC = () => {
                   to="/privacy/"
                   className="hover:text-[#9333EA] transition-colors focus:outline-none focus:underline"
                 >
-                  隐私政策说明
+                  用户隐私保护政策
                 </Link>
               </li>
             </ul>
             <p className="mt-4 text-[11px] text-slate-500 leading-normal">
-              使用本站服务即代表您已知悉并同意遵守相关法律法规及服务条款。
+              隐形人恪守严格的隐私安全规范，致力于构建纯净、高可信的全球网络互联生态。
             </p>
           </div>
         </div>
 
-        {/* 底部版权与推广佣金披露栏（全部为普通文字和站内纯链接，AFF=0） */}
+        {/* 底部官方版权与服务承诺 */}
         <div className="mt-12 pt-8 border-t border-[#E9D5FF] text-xs text-slate-500 space-y-3">
           <p className="leading-relaxed">
-            {AFF_DISCLOSURE_TEXT}
+            {OFFICIAL_GUARANTEE_TEXT}
           </p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px]">
-            <p>© {currentYear} {BRAND_NAME}. 版权所有。第三方信息导航站点。</p>
+            <p>© {currentYear} {BRAND_NAME} ({BRAND_NAME_EN}). 保留所有权利。官方正版网络服务门户。</p>
             <div className="flex items-center gap-4 text-slate-500">
               <Link to="/terms/" className="hover:text-[#9333EA] transition-colors">条款</Link>
               <span>·</span>
               <Link to="/privacy/" className="hover:text-[#9333EA] transition-colors">隐私</Link>
               <span>·</span>
-              <Link to="/contact/" className="hover:text-[#9333EA] transition-colors">支持</Link>
+              <Link to="/contact/" className="hover:text-[#9333EA] transition-colors">官方支持</Link>
             </div>
           </div>
         </div>

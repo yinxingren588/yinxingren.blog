@@ -95,8 +95,8 @@ export const ServicesPage: React.FC = () => {
     },
     {
       step: '02',
-      title: '前往合作平台订阅',
-      desc: '通过本站导航直达合作服务平台收银台，在合作平台系统内安全结算并激活服务。',
+      title: '登录官方控制台订阅',
+      desc: '登录隐形人官方用户控制台，在线安全结算并实时激活专属专线节点凭证。',
     },
     {
       step: '03',
@@ -137,7 +137,7 @@ export const ServicesPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            深入解析隐形人机场（{BRAND_NAME_EN}）的专线传输混淆机制、容灾分流规则与全生态终端支持。作为中立的第三方使用指引平台，我们协助您全面理解隐形人官网提供的专线技术边界，打造顺畅的跨国开发与出海协作通道。
+            深入解析隐形人（{BRAND_NAME_EN}）官方专线传输混淆机制、智能容灾分流规则与全生态终端支持。作为官方直营服务门户，我们协助您快速理解技术架构，打造顺畅无阻的跨国开发与出海协作通道。
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export const ServicesPage: React.FC = () => {
               接入与使用流程规范
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              本站为第三方导航，无自有收费或账户系统，流程均通过标准化接口完成。
+              隐形人官方直营，统一官方控制台管理，全流程加密保障账户安全。
             </p>
           </div>
 

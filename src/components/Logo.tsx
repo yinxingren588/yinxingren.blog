@@ -9,21 +9,20 @@ interface LogoProps {
 
 /**
  * 品牌 Logo 组件 (浅紫色紫罗兰主题)
- * 规则：Logo 不能跳转 AFF，只跳转站内首页 '/'
- * 视觉母题：淡雅紫罗兰底色、双弧收敛、隐形微光节点
+ * 官方标识与唯一官方正版门户
  */
 export const Logo: React.FC<LogoProps> = ({ className = '', showSubtitle = true }) => {
   return (
     <Link
       to="/"
       className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9333EA] rounded-lg p-1 transition-opacity hover:opacity-90 ${className}`}
-      aria-label={`${BRAND_NAME}官网 · ${BRAND_NAME}机场 首页`}
+      aria-label={`${BRAND_NAME}官网 · 官方服务平台`}
     >
       {/* 品牌 Logo 图标：用户定制隐形人形象 */}
       <div className="relative w-9 h-9 rounded-lg bg-white border border-[#E9D5FF] flex items-center justify-center shadow-subtle group-hover:border-[#C084FC] transition-colors overflow-hidden p-0.5">
         <img
           src="/images/logo-mascot.png"
-          alt={`${BRAND_NAME}官网 · ${BRAND_NAME}机场标识`}
+          alt={`${BRAND_NAME}官方标识`}
           className="w-full h-full object-contain"
           width={36}
           height={36}
@@ -39,8 +38,9 @@ export const Logo: React.FC<LogoProps> = ({ className = '', showSubtitle = true 
           </span>
         </span>
         {showSubtitle && (
-          <span className="text-[11px] text-slate-500 mt-1 leading-none font-medium">
-            官网与机场导航
+          <span className="text-[11px] text-[#7E22CE] mt-1 leading-none font-medium flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
+            官方正版平台
           </span>
         )}
       </div>

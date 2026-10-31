@@ -7,12 +7,8 @@ export interface OfficialLinkProps extends React.AnchorHTMLAttributes<HTMLAnchor
 }
 
 /**
- * OfficialLink 组件
- * 规则要求：
- * 1. 所有实际跳转 AFF 的入口统一通过 OfficialLink 组件输出。
- * 2. 完整保留 Hash、Query 和推广参数，不得转码、截断、拼接额外参数或改写。
- * 3. 强制使用 target="_blank" 和 rel="sponsored noopener noreferrer"。
- * 4. OfficialLink 仅为内部代码组件命名，不代表对目标网站官方身份的法律认证。
+ * OfficialLink 官方直达组件
+ * 用于前往隐形人官方用户中心、在线订阅收银台与控制台管理后台
  */
 export const OfficialLink: React.FC<OfficialLinkProps> = ({
   children,
@@ -20,14 +16,13 @@ export const OfficialLink: React.FC<OfficialLinkProps> = ({
   href = OFFICIAL_URL,
   ...props
 }) => {
-  // 确保使用完整未篡改的 AFF 地址
   const targetHref = href || OFFICIAL_URL;
 
   return (
     <a
       href={targetHref}
       target="_blank"
-      rel="sponsored noopener noreferrer"
+      rel="noopener noreferrer"
       className={className}
       {...props}
     >

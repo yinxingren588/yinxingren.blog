@@ -143,10 +143,10 @@ export const PrivacyPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
               <ExternalLink className="w-4 h-4 text-[#9333EA]" />
-              <span>四、跳转外部合作平台与 Telegram 的行为定性</span>
+              <span>四、官方控制台连接与数据安全加密</span>
             </h2>
             <p>
-              1. <strong>跳转合作平台</strong>：当您点击本站标有推广属性的按钮前往合作平台时，浏览器将在新标签页中打开第三方独立网站。本站代码仅作为常规超链接导航，<strong>不会在跳转过程中截取、注入或向合作平台转交您的任何浏览历史或个人私密数据</strong>。您在合作平台所提交的信息完全遵循该平台独立的隐私政策。
+              1. <strong>官方控制台连接</strong>：当您点击本站操作按钮前往隐形人官方用户控制台时，将在新标签页中开启官方安全加密会话。全流程采用高强度 SSL/TLS 加密，绝不在公网明文传输任何账户凭据。
             </p>
             <p>
               2. <strong>跳转 Telegram 频道与交流群</strong>：本站提供的 Telegram 官方频道与交流群入口仅为普通标准外部超链接（`target="_blank" rel="noopener noreferrer"`）。用户点击后由系统调用 Telegram 客户端或官方网页打开，<strong>本站不会亦无法自动向 Telegram 传输或收集您的任何个人身份凭据</strong>。

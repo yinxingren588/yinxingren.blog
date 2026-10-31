@@ -5,7 +5,7 @@ import {
   PRICING_VERIFICATION,
   PricingPlan,
 } from '@/data/pricingData';
-import { AFF_DISCLOSURE_TEXT } from '@/config/site';
+import { OFFICIAL_GUARANTEE_TEXT } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import {
   ArrowRight,
@@ -415,7 +415,7 @@ export const PricingGuideSection: React.FC<PricingGuideSectionProps> = ({ isPage
                 “{PRICING_VERIFICATION.complianceNotice}”
               </p>
               <p className="text-xs text-slate-600 leading-relaxed pt-1">
-                核验信息：本站已完整同步官方公布的 9 大正式配套规格（包含 6 款周期循环订阅方案与 3 款永不过期买断流量包）。因国际汇率与平台限时优惠可能动态变动，最终计费货币与优惠券抵扣以合作平台收银台实时显示为准。
+                官方保障：隐形人官方直营 9 大正式配套规格（包含 6 款周期循环订阅方案与 3 款永不过期买断流量包），全系配备优质专线与 1x 真实计费倍率。最终计费货币与优惠券抵扣以官方控制台结账页面实时显示为准。
               </p>
             </div>
           </div>
@@ -467,10 +467,10 @@ export const PricingGuideSection: React.FC<PricingGuideSectionProps> = ({ isPage
           ))}
         </div>
 
-        {/* 底部推广佣金披露 */}
+        {/* 底部官方服务承诺 */}
         <div className="text-center max-w-xl mx-auto pt-2">
           <p className="text-xs text-slate-500 leading-relaxed">
-            {AFF_DISCLOSURE_TEXT}
+            {OFFICIAL_GUARANTEE_TEXT}
           </p>
         </div>
       </div>

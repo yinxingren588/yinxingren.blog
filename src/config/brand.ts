@@ -16,16 +16,16 @@ export const BRAND_DESIGN_SYSTEM = {
   nameZh: '隐形人',
 
   // 2. 品牌定位文案
-  positioning: '专注数字化隐私保护与高速网络边界连接的第三方信息指引与服务导航站，为跨境开发者、远程工作者及出海数字游民提供稳定、清晰、低调务实的接入指引与资源导航。',
+  positioning: '专注数字化隐私保护与高速网络专线连接的官方服务平台，为跨境开发者、出海团队及数字游民提供稳定、高速、安全可靠的全球网络接入方案与官方正品保障。',
 
   // 3. 目标用户描述
-  targetAudience: '面向需要跨境网络协作、海外开发调试、海外媒体运营、隐私数据加密传输及远程办公的专业技术人员、跨境创作者与数字游民群体。',
+  targetAudience: '面向需要跨境网络协作、海外开发调试、海外媒体运营、隐私数据加密传输及远程办公的专业技术人员、跨境创作者与出海企业团队。',
 
   // 4. 品牌口号
   slogan: '隐于无形，连接无界',
   sloganEn: 'Quiet Connection, Seamless Reach',
 
-  // 5. 核心卖点（杜绝虚假与未经证实承诺）
+  // 5. 核心卖点（官方品质承诺）
   sellingPoints: [
     {
       id: 'stealth-tunnel',
@@ -52,10 +52,10 @@ export const BRAND_DESIGN_SYSTEM = {
       badge: '全端覆盖',
     },
     {
-      id: 'transparent-guide',
-      title: '透明合规指引',
-      description: '明确标明第三方导航与推广合作关系，提供清晰的配置步骤与客观使用建议，拒绝虚夸宣传。',
-      badge: '真实客观',
+      id: 'official-guarantee',
+      title: '官方直营品质保证',
+      description: '隐形人官方正版直营，全线配备专线网络与统一 1x 真实计费倍率，提供官方专业售后与全天候维护。',
+      badge: '官方直营',
     },
   ] as SellingPoint[],
 

@@ -1,4 +1,4 @@
-import { BRAND_NAME, SITE_URL } from './site';
+import { BRAND_NAME, BRAND_NAME_EN, SITE_URL } from './site';
 
 export interface PageSEO {
   path: string;
@@ -14,81 +14,92 @@ export const SHARE_IMAGE_URL = `${SITE_URL}/images/og-share.png`;
 export const SEO_DATA: Record<string, PageSEO> = {
   '/': {
     path: '/',
-    title: `隐形人官网｜隐形人机场 - 官方节点服务、9大套餐选型与客户端配置指南`,
-    description: `隐形人官网与隐形人机场第三方服务导航平台。集中承接隐形人品牌信息、专线节点连接特性解析、9大精选套餐选型考量与多端客户端配置教程，为跨境出海人员提供清晰客观的使用指引与最新官网直达入口。`,
-    keywords: [BRAND_NAME, `${BRAND_NAME}官网`, `${BRAND_NAME}机场`, `${BRAND_NAME}机场官网`, `${BRAND_NAME}节点`, `${BRAND_NAME}套餐`, '跨境网络专线', '数字游民工具', '机场节点导航'],
+    title: `${BRAND_NAME}官网 - ${BRAND_NAME}官方网站｜全球高速专线网络加速与官方控制台`,
+    description: `${BRAND_NAME}（${BRAND_NAME_EN}）官方直营网站。专注提供企业级全球专线网络加速、端到端流量混淆保护、官方9大订阅配套直选及全平台正版客户端接入指引。全系专线1x真实倍率，官方专属技术售后保障。`,
+    keywords: [
+      `${BRAND_NAME}官网`,
+      BRAND_NAME,
+      `${BRAND_NAME}官方网站`,
+      `${BRAND_NAME}机场`,
+      `${BRAND_NAME}专线`,
+      `${BRAND_NAME}控制台`,
+      `${BRAND_NAME_EN}`,
+      '跨境网络专线',
+      '数字游民网络加速',
+      '官方正版专线',
+    ],
     canonical: `${SITE_URL}/`,
     ogType: 'website',
   },
   '/services/': {
     path: '/services/',
-    title: `隐形人机场服务介绍与专线传输架构方案解析 - 隐形人官网`,
-    description: `全面介绍隐形人机场的专线协议特征混淆、多路径容灾与细粒度规则分流等核心能力，说明隐形人官网全平台客户端生态适配规范与标准接入流程，协助出海团队构建稳定工作流。`,
-    keywords: [`${BRAND_NAME}服务`, `${BRAND_NAME}机场架构`, `${BRAND_NAME}官网`, '网络传输架构', '协议混淆', '多路径容灾', '开发分流规则'],
+    title: `服务架构与全球专线传输方案 - ${BRAND_NAME}官网`,
+    description: `深入解析${BRAND_NAME}（${BRAND_NAME_EN}）官方专线传输架构：高强度协议混淆封装、智能动态负载容灾与精细化分流规则。协助出海团队与跨境开发者构建高速稳定的生产级网络工作流。`,
+    keywords: [`${BRAND_NAME}服务`, `${BRAND_NAME}架构`, `${BRAND_NAME}官网`, '网络传输架构', '协议混淆', '专线容灾', '开发分流规则'],
     canonical: `${SITE_URL}/services/`,
     ogType: 'website',
   },
   '/advantages/': {
     path: '/advantages/',
-    title: `隐形人机场核心优势与专线架构价值客观解析 - 隐形人官网`,
-    description: `深入探讨隐形人机场在深层协议指纹伪装、专线网络低时延、多路径自动容灾及全生态设备一致漫游等维度的架构特性，为出海研发与跨国办公团队提供客观真实的隐形人官网选型参考。`,
-    keywords: [`${BRAND_NAME}优势`, `${BRAND_NAME}机场特色`, `${BRAND_NAME}官网`, '网络指纹伪装', '专线优势', '容灾切换', '跨境办公协作'],
+    title: `核心专线优势与官方架构解析 - ${BRAND_NAME}官网`,
+    description: `从协议深度隐匿伪装、骨干专线多路径容灾、全生态客户端无缝衔接到官方1x真实计费倍率承诺，全方位展现${BRAND_NAME}（${BRAND_NAME_EN}）作为官方正牌服务的核心技术价值。`,
+    keywords: [`${BRAND_NAME}优势`, `${BRAND_NAME}专线优势`, `${BRAND_NAME}官网`, '网络指纹伪装', '专线加速', '容灾切换', '跨境办公协作'],
     canonical: `${SITE_URL}/advantages/`,
     ogType: 'website',
   },
   '/locations/': {
     path: '/locations/',
-    title: `隐形人机场服务线路范围与节点选型指引 - 隐形人官网`,
-    description: `提供隐形人机场跨区域专线网络选型的物理时延规律、精细化域名分流策略与骨干网拥堵应急换线建议。具体线路、节点与可用服务以隐形人官网合作平台客户端实际显示为准。`,
-    keywords: [`${BRAND_NAME}线路`, `${BRAND_NAME}机场节点`, `${BRAND_NAME}官网`, '节点选型', '网络时延规律', '域名分流策略', '线路排错'],
+    title: `全球专线节点分布与智能调度指引 - ${BRAND_NAME}官网`,
+    description: `了解${BRAND_NAME}官方全球优质专线节点的物理时延考量、骨干网络动态调度机制与分流优化方法。具体实时可用节点与延迟以官方控制台及客户端订阅列表为准。`,
+    keywords: [`${BRAND_NAME}节点`, `${BRAND_NAME}线路`, `${BRAND_NAME}官网`, '专线节点分布', '网络时延优化', '域名分流策略'],
     canonical: `${SITE_URL}/locations/`,
     ogType: 'website',
   },
   '/pricing/': {
     path: '/pricing/',
-    title: `隐形人机场套餐价格与官网订阅方案选型指南 - 隐形人官网`,
-    description: `从工作负荷、设备并发数、月度流量配额及计费周期四个客观维度解析隐形人机场官方公布的9大精选订阅与买断方案（含星耀风暴、白银纪元、黄金序列、钻石穹顶、王者定制及一次性流量包）。价格与活动以隐形人官网合作平台当前结算显示为准。`,
-    keywords: [`${BRAND_NAME}套餐`, `${BRAND_NAME}机场套餐`, `${BRAND_NAME}官网订阅`, `${BRAND_NAME}价格`, '一次性流量包', '专线套餐选型'],
+    title: `官方 9 大精选配套与在线订阅中心 - ${BRAND_NAME}官网`,
+    description: `${BRAND_NAME}官方直营公布的9大精选正式配套：涵盖星耀风暴、白银纪元、黄金序列、钻石穹顶、王者定制等6款循环周期订阅方案，以及3款永不过期的一次性独立买断流量包。全系专线1x真实倍率，官方在线安全激活。`,
+    keywords: [`${BRAND_NAME}套餐`, `${BRAND_NAME}价格`, `${BRAND_NAME}官网订阅`, '一次性流量包', '专线套餐选型', `${BRAND_NAME}机场套餐`],
     canonical: `${SITE_URL}/pricing/`,
     ogType: 'website',
   },
   '/help/': {
     path: '/help/',
-    title: `隐形人机场使用帮助中心与故障排错手册 - 隐形人官网`,
-    description: `汇集隐形人机场新手快速上手流程、订阅节点链接导入步骤、多设备协同注意事项及系统时间偏差等常见网络故障排查方法，提供结构化可检索的隐形人官网技术知识库。`,
-    keywords: [`${BRAND_NAME}帮助`, `${BRAND_NAME}机场配置`, `${BRAND_NAME}官网教程`, '排错教程', '客户端配置', '时间同步排查', '节点超时'],
+    title: `帮助中心与官方故障排查手册 - ${BRAND_NAME}官网`,
+    description: `汇集${BRAND_NAME}新手三步极速接入、全平台客户端官方订阅导入、多设备协同管理及系统时钟同步等常见问题排查方案。提供官方直属知识库与一对一工单支持入口。`,
+    keywords: [`${BRAND_NAME}帮助`, `${BRAND_NAME}配置教程`, `${BRAND_NAME}官网手册`, '客户端配置', '时间同步排查', '网络故障排查'],
     canonical: `${SITE_URL}/help/`,
     ogType: 'website',
   },
   '/downloads/': {
     path: '/downloads/',
-    title: `隐形人机场客户端下载与多平台配置指引 - 隐形人官网`,
-    description: `汇总Windows、macOS、iOS与Android四大主流平台的隐形人机场客户端生态兼容规范与订阅配置指引。支持情况与获取方式以隐形人官网合作平台说明为准。`,
-    keywords: [`${BRAND_NAME}下载`, `${BRAND_NAME}机场客户端`, `${BRAND_NAME}官网下载`, '客户端获取', '多平台适配', 'Windows客户端', 'macOS配置'],
+    title: `官方客户端下载与订阅导入中心 - ${BRAND_NAME}官网`,
+    description: `汇总Windows、macOS、iOS与Android四大主流系统的${BRAND_NAME}官方客户端获取途径与配置导入指引。认准官方正版安全校验，保障端到端数据传输加密。`,
+    keywords: [`${BRAND_NAME}下载`, `${BRAND_NAME}客户端`, `${BRAND_NAME}官网下载`, '客户端获取', '多平台适配', 'Windows客户端', 'macOS配置'],
     canonical: `${SITE_URL}/downloads/`,
     ogType: 'website',
   },
   '/contact/': {
     path: '/contact/',
-    title: `隐形人机场支持中心与官方社群交流入口 - 隐形人官网`,
-    description: `提供隐形人机场Telegram官方公告频道与交流群直达入口，说明技术排错指引与隐形人官网在线工单客服路径，协助用户便捷获取最新通知与备用域名。`,
-    keywords: [`${BRAND_NAME}联系`, `${BRAND_NAME}官网入口`, `${BRAND_NAME}机场群`, 'Telegram官方频道', 'Telegram交流群', '客户支持', '问题反馈'],
+    title: `官方支持中心与在线客服工单 - ${BRAND_NAME}官网`,
+    description: `${BRAND_NAME}官方支持渠道汇总：提供官方在线技术工单通道、官方Telegram公告频道与官方技术交流群。官方直营售后团队全天候守护您的跨国连接顺畅。`,
+    keywords: [`${BRAND_NAME}联系`, `${BRAND_NAME}官网客服`, '官方工单', 'Telegram官方频道', 'Telegram交流群', '客户支持'],
     canonical: `${SITE_URL}/contact/`,
     ogType: 'website',
   },
   '/terms/': {
     path: '/terms/',
-    title: `隐形人平台服务条款与免责合规声明 - 隐形人官网`,
-    description: `说明隐形人第三方信息展示与导航站点的服务性质、推广佣金透明披露、第三方平台交易权责划分及合理的信息免责声明与用户合规准则。`,
-    keywords: ['服务条款', '免责声明', '第三方导航', '佣金披露', '合规使用准则', `${BRAND_NAME}官网`],
+    title: `服务条款与用户使用准则 - ${BRAND_NAME}官网`,
+    description: `${BRAND_NAME}官方网站服务条款。明确官方平台直营服务性质、正版用户权益保障、网络安全合规准则与合理免责边界。`,
+    keywords: ['服务条款', '官方正版', '用户准则', '网络合规', `${BRAND_NAME}官网`],
     canonical: `${SITE_URL}/terms/`,
     ogType: 'article',
   },
   '/privacy/': {
     path: '/privacy/',
-    title: `隐形人平台隐私政策与数据处理说明 - 隐形人官网`,
-    description: `详细阐明隐形人平台0 Cookie、0 存储、0 追踪的代码审查事实，客观区分浏览器前端执行与服务器底层安全日志，承诺尊重用户数据权益。`,
-    keywords: ['隐私政策', '数据合规', '源码审查', '服务器日志说明', '隐私保护', `${BRAND_NAME}官网`],
+    title: `用户隐私保护政策与数据合规 - ${BRAND_NAME}官网`,
+    description: `${BRAND_NAME}官方平台隐私政策。详细阐述0 Cookie、0 本地存储追踪、纯客户端渲染架构与官方严格的数据安全加密保护承诺。`,
+    keywords: ['隐私政策', '数据合规', '源码审查', '端到端加密', '隐私保护', `${BRAND_NAME}官网`],
     canonical: `${SITE_URL}/privacy/`,
     ogType: 'article',
   },
@@ -96,7 +107,6 @@ export const SEO_DATA: Record<string, PageSEO> = {
 
 /**
  * 客户端动态设置 TDK 辅助函数
- * 路由切换时保持与预渲染完全一致
  */
 export function updateClientSEO(pathname: string) {
   const cleanPath = pathname === '/' ? '/' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
@@ -104,8 +114,7 @@ export function updateClientSEO(pathname: string) {
 
   // 404 兜底处理
   if (!seo) {
-    document.title = `404 页面未找到 - ${BRAND_NAME}`;
-    // 移除 Canonical 与 OG 标签，防止 404 污染
+    document.title = `404 页面未找到 - ${BRAND_NAME}官方网站`;
     removeMetaTag('link[rel="canonical"]');
     removeMetaTag('meta[property^="og:"]');
     removeMetaTag('meta[name^="twitter:"]');
@@ -126,14 +135,14 @@ export function updateClientSEO(pathname: string) {
 
   // 设置 Open Graph
   setMetaTag('property', 'og:type', seo.ogType);
-  setMetaTag('property', 'og:site_name', `${BRAND_NAME}官网｜${BRAND_NAME}机场`);
+  setMetaTag('property', 'og:site_name', `${BRAND_NAME}官网｜${BRAND_NAME}官方网站`);
   setMetaTag('property', 'og:title', seo.title);
   setMetaTag('property', 'og:description', seo.description);
   setMetaTag('property', 'og:url', seo.canonical);
   setMetaTag('property', 'og:image', SHARE_IMAGE_URL);
   setMetaTag('property', 'og:image:width', '1200');
   setMetaTag('property', 'og:image:height', '630');
-  setMetaTag('property', 'og:image:alt', `${BRAND_NAME}官网与${BRAND_NAME}机场跨境专线服务指引`);
+  setMetaTag('property', 'og:image:alt', `${BRAND_NAME}官方网站全球高速专线服务`);
   setMetaTag('property', 'og:locale', 'zh_CN');
 
   // 设置 Twitter Card

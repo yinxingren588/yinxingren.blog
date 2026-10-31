@@ -47,11 +47,11 @@ export interface SelectionDimension {
 
 export const PRICING_VERIFICATION = {
   sourceUrl: 'https://varnexa.invisibleaff.com/#/?code=JF4seZUy',
-  verificationDate: '2026-10-17',
+  verificationDate: '2026-10-31',
   isVerifiedPublicData: true,
-  reason: '已核验官方公布的 9 大正式套餐规格（6 款周期订阅 + 3 款一次性买断流量包）。',
-  complianceNotice: '套餐、价格与实时活动以合作平台结算显示为准。',
-  ctaText: '立即订阅此套餐',
+  reason: '隐形人官方直营 9 大正式配套规格（6 款周期订阅 + 3 款一次性买断流量包）。',
+  complianceNotice: '套餐规格、价格与实时优惠以官方控制台收银台显示为准。',
+  ctaText: '立即在官方控制台订阅',
 } as const;
 
 /**

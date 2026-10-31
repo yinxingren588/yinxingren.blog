@@ -6,7 +6,6 @@ import {
   ShieldCheck,
   Zap,
   Network,
-  Lock,
   ArrowRight,
   Sparkles,
   HelpCircle,
@@ -60,10 +59,10 @@ export const AdvantagesPage: React.FC = () => {
       desc: '全面兼容主流个人桌面系统（Windows/macOS/Linux）与移动设备（iOS/Android），一个账户规格满足多终端日常交替协同，无论办公桌前还是旅途漫游皆可一致体验。',
     },
     {
-      icon: Lock,
-      badge: '中立透明',
-      title: '坚持客观真实的第三方导航原则',
-      desc: '本站清晰标注第三方推广合作属性，绝不为了赚取佣金而虚构不可信的“全网第一”或“永不掉线”承诺，始终提供真实、客观、经得起检验的技术指引与选型参考。',
+      icon: ShieldCheck,
+      badge: '官方正品',
+      title: '官方直营保障与 1x 真实倍率承诺',
+      desc: '隐形人官方直营保证，全线配备优质高速专线与统一 1x 真实计费倍率，杜绝暗扣虚标，提供官方专属技术售后与长期节点维护保障。',
     },
   ];
 
@@ -123,7 +122,7 @@ export const AdvantagesPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            我们不以虚构的测速数值或拉踩竞品为噱头，而是从协议隐匿性、专线架构容灾能力与多端易用性三个根本维度，阐述隐形人机场（{BRAND_NAME_EN}）如何真正解决出海数字工作流中的真实痛点，为用户提供清晰中立的隐形人官网选型指引。
+            我们不以虚构的测速数值或拉踩竞品为噱头，而是从协议隐匿性、专线架构容灾能力与多端易用性三个根本维度，阐述隐形人（{BRAND_NAME_EN}）官方专线如何从根本上解决出海数字工作流中的真实痛点，为全球跨国团队提供安全可靠的官方连接基座。
           </p>
         </div>
 

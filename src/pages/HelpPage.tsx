@@ -114,7 +114,7 @@ export const HelpPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            为您整理从入门使用、隐形人机场套餐选型考量、多端客户端导入到隐形人官网常见网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
+            为您整理从入门使用、官方 9 大配套规格考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
           </p>
         </div>
 
@@ -293,7 +293,7 @@ export const HelpPage: React.FC = () => {
               <span>仍未排查出故障原因？</span>
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              若遇到复杂的网络协议冲突或特定账户工单问题，您可以查阅联系中心获取官方社群交流入口与合作平台客服指引。
+              若遇到复杂的网络协议冲突或特定账户配置问题，您可以进入官方支持中心获取专属客服工单与官方交流社群。
             </p>
           </div>
 

@@ -6,7 +6,7 @@ import { ArrowRight, AlertCircle, Compass, Radio, Shuffle } from 'lucide-react';
  * 板块 5：全球线路或服务范围 (LocationsScopeSection)
  * 结构：合规公示告示看板 + 3 维度客观选型指南（Notice Board + 3 Dimension Guidelines）
  * 规则要求：
- * 1. 严格统一标注：“具体线路、节点与可用服务以合作平台客户端实际显示为准。”
+ * 1. 严格统一标注：“具体线路、节点与可用服务以官方控制台与客户端实时显示为准。”
  * 2. 严禁虚构节点数量、延迟、专线类型或覆盖国家数量。
  * 3. 严禁使用世界地图或地区列表暗示已确认覆盖。
  * 4. 底部按钮使用站内 Link，不新增 AFF。
@@ -44,10 +44,10 @@ export const LocationsScopeSection: React.FC = () => {
                 服务范围与实时线路核验声明
               </h3>
               <p className="text-xs sm:text-sm font-semibold text-amber-800">
-                “具体线路、节点与可用服务以合作平台客户端实际显示为准。”
+                “具体专线节点与实时网络可用性以官方控制台及客户端清单为准。”
               </p>
               <p className="text-xs text-amber-700 leading-relaxed pt-1">
-                本站作为第三方信息导航，不虚构未经验证的节点规模、物理延迟或跨国专线类型。合作平台的节点维护与线路调度具备动态性，请以最新订阅获取的实际节点清单为准。
+                隐形人官方持续对全球核心骨干节点进行健康度监测与动态负载调度。为保障连接质量与合规性，具体可用节点与实时网络延迟请以官方控制台及客户端订阅列表为准。
               </p>
             </div>
           </div>

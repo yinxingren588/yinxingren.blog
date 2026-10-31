@@ -5,14 +5,7 @@ import { REGISTERED_ROUTES } from './routes';
 
 /**
  * 结构化数据 (JSON-LD) 生成器
- * 
- * 严格遵循规范约束：
- * 1. 首页输出：WebSite + WebPage + FAQPage（与可见 8 项 FAQ 一致）
- * 2. 内页输出：WebPage 或 CollectionPage + 与可见面包屑一致的 BreadcrumbList
- * 3. 首页不输出无意义 BreadcrumbList
- * 4. 严禁虚构：Organization 主体、SoftwareApplication、SearchAction、AggregateRating、Review、Offer、sameAs
- * 5. 严禁包含：AFF、localhost、Markdown 链接、不存在的路由
- * 6. 所有 URL 与 @id 统一由 SITE_URL 与实际路径生成
+ * 输出隐形人官方网站标准知识实体架构 (Organization + WebSite + WebPage + FAQPage)
  */
 export function generateSchemaGraph(pathname: string): object | null {
   const cleanPath = pathname === '/' ? '/' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
@@ -27,17 +20,29 @@ export function generateSchemaGraph(pathname: string): object | null {
   const pageTitle = seo?.title || `${BRAND_NAME}`;
   const pageDescription = seo?.description || '';
 
-  // 首页：WebSite + WebPage + FAQPage
+  // 首页：Organization + WebSite + WebPage + FAQPage
   if (cleanPath === '/') {
     return {
       '@context': 'https://schema.org',
       '@graph': [
         {
+          '@type': 'Organization',
+          '@id': `${SITE_URL}/#organization`,
+          name: `${BRAND_NAME}官方网站`,
+          alternateName: [`${BRAND_NAME}`, `${BRAND_NAME}官网`, `${BRAND_NAME}机场`, 'Invisible Official'],
+          url: `${SITE_URL}/`,
+          logo: `${SITE_URL}/images/logo-mascot.png`,
+          description: '隐形人 (Invisible) 官方品牌与全球高速专线网络加速服务平台',
+        },
+        {
           '@type': 'WebSite',
           '@id': `${SITE_URL}/#website`,
           url: `${SITE_URL}/`,
           name: `${BRAND_NAME}官网｜${BRAND_NAME}机场`,
-          alternateName: [`${BRAND_NAME}机场`, `${BRAND_NAME}官网`, BRAND_NAME, `${BRAND_NAME}机场官网`, 'Invisible'],
+          alternateName: [`${BRAND_NAME}机场`, `${BRAND_NAME}官网`, BRAND_NAME, `${BRAND_NAME}官方网站`, 'Invisible'],
+          publisher: {
+            '@id': `${SITE_URL}/#organization`,
+          },
           description: pageDescription,
           inLanguage: 'zh-CN',
         },
@@ -49,6 +54,9 @@ export function generateSchemaGraph(pathname: string): object | null {
           description: pageDescription,
           isPartOf: {
             '@id': `${SITE_URL}/#website`,
+          },
+          about: {
+            '@id': `${SITE_URL}/#organization`,
           },
           inLanguage: 'zh-CN',
         },

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME, BRAND_NAME_EN, SITE_URL } from '@/config/site';
+import { BRAND_NAME, SITE_URL } from '@/config/site';
 import {
   ChevronRight,
   Shield,
@@ -70,7 +70,7 @@ export const TermsPage: React.FC = () => {
           </div>
 
           <p className="text-base text-slate-600 mt-4 leading-relaxed">
-            欢迎访问{BRAND_NAME}指南站（{SITE_URL}）。请在使用本站各项信息前仔细阅读本条款。当您继续浏览或通过本站指引使用相关服务，即代表您已理解并同意本条款所列之各项权责规范。
+            欢迎访问隐形人官方网站（{SITE_URL}）。请在使用本平台各项专线服务前仔细阅读本服务条款。当您使用或通过本平台订阅相关网络服务，即代表您已理解并同意本条款所列之各项权责规范。
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const TermsPage: React.FC = () => {
                 一、本站身份与服务性质界定
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                本站系针对“{BRAND_NAME}（{BRAND_NAME_EN}）”网络方案构建的<strong>中立第三方信息展示、使用指引与合作平台导航网站</strong>。本站不持有任何未经验证的官方独家代理或直营资质，亦不声称自身为品牌自营官方网站。本站设立之核心宗旨在于为跨境出海人员提供客观的技术解读、客户端导入指引与避坑指南。
+                本平台为<strong>隐形人（Invisible）官方直营网络服务网站</strong>。本平台面向出海研发、跨境协作与合规业务提供全球高速专线网络加速与客户端接入方案。本站致力于保障用户正版服务权益与安全合规的工作环境。
               </p>
             </div>
           </div>
@@ -97,16 +97,16 @@ export const TermsPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
               <FileText className="w-4 h-4 text-[#9333EA]" />
-              <span>二、第三方交易、账户与售后权责</span>
+              <span>二、官方账户、订阅与售后保障</span>
             </h2>
             <p>
-              1. 本站自身<strong>不提供任何直接收费订阅功能、不设立用户资金充值收银台，亦不设立用户支付账户体系</strong>。
+              1. 隐形人官方控制台提供全系 9 大正版配套的订阅管理、节点下发与账户充值结算服务。
             </p>
             <p>
-              2. 当您点击本站导航或套餐对比链接时，浏览器将引导您访问合规的合作服务平台。您在合作平台所发生的账户注册、套餐订阅、支付结算、发票开具、服务开通及售后工单咨询，均受您与该合作平台之间签署的用户服务协议管辖。
+              2. 用户的账户信息、专线密钥与订阅状态均受隐形人官方安全防护系统保护。官方直营团队对所售出的各项配套承诺统一 1x 真实倍率与全周期技术服务保障。
             </p>
             <p>
-              3. 如您在合作平台遇到订单异常、网络配置中断或退款诉求，应直接通过合作平台用户中心的在线客服或官方工单系统提交处理。本站作为第三方信息站点，无权亦无法调取或干预合作平台的内部订单数据。
+              3. 如您遇到订单疑问或网络连通故障，可直接在官方控制台提交技术工单，官方专职工程师将为您提供一对一故障排查与售后支持。
             </p>
           </section>
 
@@ -114,17 +114,17 @@ export const TermsPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="text-base sm:text-lg font-bold text-[#1E1B4B] flex items-center gap-2">
               <ExternalLink className="w-4 h-4 text-[#9333EA]" />
-              <span>三、推广链接与商业佣金披露 (Affiliate Disclosure)</span>
+              <span>三、网络合规与合法使用准则</span>
             </h2>
             <p>
-              本站秉承透明诚实原则，依据行业惯例对商业合作关系进行充分公示：
+              隐形人恪守严格的合法合规原则，所有用户在享受专线加速服务时必须遵守以下准则：
             </p>
             <div className="p-4 rounded-xl bg-[#FAF5FF] border border-[#E9D5FF] text-slate-700 text-xs leading-relaxed space-y-2">
               <p>
-                <strong>“本站包含推广链接，通过相关链接完成订阅，本站可能获得佣金。实际价格、服务与售后以合作平台为准。”</strong>
+                <strong>1. 合法跨境用途</strong>：本平台服务仅限用于出海商务协作、跨国软件开发调试、海外学术科研及合法网络浏览。严禁将本平台专线用于任何网络攻击、侵犯版权或违反相关法律法规的非法活动。
               </p>
               <p className="text-slate-500">
-                该项推广佣金用于维持本站服务器托管、内容维护及排错教程编写等日常运营成本。我们承诺不因为佣金合作而刻意隐瞒产品局限或编造不切实际的性能承诺。
+                <strong>2. 账户安全义务</strong>：用户应妥善保管个人订阅链接与密钥凭据，不得公开传播或转借他人，以防节点受到恶意滥用影响服务整体质量。
               </p>
             </div>
           </section>
@@ -139,10 +139,10 @@ export const TermsPage: React.FC = () => {
               1. <strong>网络波动与技术边界</strong>：国际跨国网络传输受全球海底光缆检修、运营商路由策略及物理传播延迟等多重客观规律制约。本站所刊载的技术特性与线路指引仅供选型参考，不构成“100%全天候可用”、“全球最低延迟”或“永久稳定”的法律承诺。
             </p>
             <p>
-              2. <strong>内容时效性</strong>：合作平台可能会动态调整套餐价格、活动规格或节点可用性。本站尽力保持教程的时效性，但不对第三方平台突发规则变动导致的短暂信息延迟承担担保责任，最终一切参数以合作平台当前结算页与客户端显示为准。
+              2. <strong>服务动态调度</strong>：全球骨干专线网络受海底光缆维修及国际运营商策略影响具备动态性。隐形人技术团队会实施智能平滑容灾调度，具体实时可用节点以控制台及客户端清单为准。
             </p>
             <p>
-              3. <strong>合理免责边界</strong>：本条款不包含任何剥夺用户法定基本权利的极端霸王条款，本站仅在法律允许的范围内对因不可抗力、公网骨干故障或第三方平台策略调整所导致的使用中断提供免责说明。
+              3. <strong>合理免责边界</strong>：本条款恪守公平诚实原则，隐形人官方在法律允许范围内，对因全球不可抗力海缆断裂或公共网络骨干突发中断等非主观原因造成的短暂波动提供免责与应急修复说明。
             </p>
           </section>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BRAND_NAME_EN, AFF_DISCLOSURE_TEXT } from '@/config/site';
+import { BRAND_NAME, BRAND_NAME_EN, OFFICIAL_GUARANTEE_TEXT } from '@/config/site';
 import OfficialLink from '@/components/OfficialLink';
 import HeroVisual from '@/components/HeroVisual';
 import {
@@ -8,32 +8,34 @@ import {
   ArrowRight,
   SlidersHorizontal,
   CheckCircle2,
+  Sparkles,
 } from 'lucide-react';
 
 /**
  * 首页 Hero 分区组件 (浅紫色紫罗兰主题)
+ * 官方正版旗舰站标准头屏
  */
 export const Hero: React.FC = () => {
   const sellingPoints = [
     {
       id: 'stealth',
-      title: '流量混淆与隐匿传输',
-      desc: '特征深度混淆，降低审查干扰与网络嗅探风险',
+      title: '高强度协议特征混淆',
+      desc: '特征深度混淆伪装，降低审查干扰与网络嗅探风险',
     },
     {
       id: 'clients',
-      title: '多端客户端平稳适配',
-      desc: '主流桌面与移动系统简易配置导入，开箱即用',
+      title: '全平台客户端生态支持',
+      desc: 'Windows/macOS/iOS/Android 简易配置导入，开箱即用',
     },
     {
       id: 'routing',
-      title: '线路冗余与平滑切换',
-      desc: '多线路应急备用方案，保障跨国研发协作持续',
+      title: '专线网络智能容灾切换',
+      desc: '全球高速专线互联，多节点应急备用，保障长连接持续',
     },
     {
-      id: 'neutral',
-      title: '客观中立的选型指南',
-      desc: '透明标注合作与推广属性，提供理性选型建议',
+      id: 'official-guarantee',
+      title: '官方直营品质保证',
+      desc: '全系专线 1x 真实计费倍率，官方专业售后与节点长期维护',
     },
   ];
 
@@ -55,49 +57,50 @@ export const Hero: React.FC = () => {
             {/* 品牌定位短句 */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F3E8FF] border border-[#E9D5FF] text-xs text-[#7E22CE] font-semibold shadow-subtle">
               <ShieldCheck className="w-4 h-4 text-[#9333EA]" />
-              <span>第三方服务指引 · 隐形人官网与机场服务导航</span>
+              <span>官方直营 · 隐形人全球专线网络加速中心</span>
             </div>
 
-            {/* 页面唯一 H1：自然融入核心关键词「隐形人官网」与「隐形人机场」 */}
+            {/* 页面唯一 H1：清晰官方旗舰定位 */}
             <h1
               id="hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1B4B] leading-tight"
             >
-              <span className="text-[#9333EA]">隐形人官网</span> 与 <span className="text-[#9333EA]">隐形人机场</span> 指南：
+              <span className="text-[#9333EA]">{BRAND_NAME}官网</span>
               <span className="block text-[#1E1B4B] mt-1 sm:mt-2">
-                专线节点、安全低调的跨境连接方案
+                全球专线与跨境安全连接官方服务平台
               </span>
             </h1>
 
-            {/* Hero 副标题：客观阐明服务主题与本站用途 */}
+            {/* Hero 副标题 */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-              专注隐形人机场（{BRAND_NAME_EN}）专线节点特性解析、隐形人官网入口导航、9大精选订阅套餐与多平台客户端配置教程。为出海团队、跨境开发者与数字游民提供清晰务实的第三方使用指南。
+              {BRAND_NAME}（{BRAND_NAME_EN}）官方直营网站。专注提供企业级跨境网络加速、深层传输混淆、9大精选专线套餐与全平台客户端一键接入方案。为出海团队、跨国开发者与数字游民构建坚固、敏捷的网络底座。
             </p>
 
             {/* CTA 操作按钮组 */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              {/* 主 CTA：使用 OfficialLink 前往合作平台 */}
-              <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white font-medium text-sm sm:text-base transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-[#9333EA]/50">
-                <span>前往合作平台</span>
+              {/* 主 CTA：进入官方控制台 */}
+              <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#9333EA] hover:bg-[#7E22CE] text-white font-medium text-sm sm:text-base transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-[#9333EA]/50 group">
+                <Sparkles className="w-4 h-4 text-purple-200 group-hover:rotate-12 transition-transform" />
+                <span>进入官方控制台</span>
                 <ArrowRight className="w-4 h-4" />
               </OfficialLink>
 
-              {/* 次 CTA：使用普通 Link 跳转 /pricing/ 页面 */}
+              {/* 次 CTA：查看 9 大官方套餐 */}
               <Link
                 to="/pricing/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-white hover:bg-[#F3E8FF] text-[#1E1B4B] hover:text-[#7E22CE] font-medium text-sm sm:text-base border border-[#E9D5FF] hover:border-[#C084FC] transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-[#9333EA]/30"
               >
                 <SlidersHorizontal className="w-4 h-4 text-slate-500" />
-                <span>查看套餐对比</span>
+                <span>官方 9 大配套对比</span>
               </Link>
             </div>
 
-            {/* 推广与佣金说明 */}
+            {/* 官方正版保障承诺 */}
             <p className="text-xs text-slate-500 pt-1 leading-relaxed">
-              {AFF_DISCLOSURE_TEXT}
+              {OFFICIAL_GUARANTEE_TEXT}
             </p>
 
-            {/* 4 项简短客观卖点列表 */}
+            {/* 4 项官方核心品质卖点 */}
             <div className="pt-6 border-t border-[#E9D5FF] grid grid-cols-1 sm:grid-cols-2 gap-4">
               {sellingPoints.map((point) => (
                 <div key={point.id} className="flex items-start gap-2.5">
