@@ -20,8 +20,8 @@ export const TELEGRAM_GROUP_URL = 'https://t.me/+YnHn1D4JK7c2Yjg1'; // 官方交
  * 可配置 Crisp Website ID (UUID 格式，例如 '12345678-1234-1234-1234-123456789abc')
  * 或配置 Crisp 专属在线聊天链接 CRISP_CHAT_URL
  */
-export const CRISP_WEBSITE_ID = ''; // 填入您的 Crisp Website ID
-export const CRISP_CHAT_URL = ''; // 填入您的 Crisp 专属链接 (若有)
+export const CRISP_WEBSITE_ID = 'fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用户专属 Crisp Website ID
+export const CRISP_CHAT_URL = 'https://go.crisp.chat/chat/embed/?website_id=fbb79e33-e3df-4f5a-8210-ec7028286eca'; // 用户专属 Crisp 在线对话直连入口
 
 /**
  * 站点官方身份认定
