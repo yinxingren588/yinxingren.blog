@@ -5,8 +5,9 @@ import {
   TELEGRAM_CHANNEL_URL,
   TELEGRAM_GROUP_URL,
   OFFICIAL_GUARANTEE_TEXT,
+  CRISP_WEBSITE_ID,
+  CRISP_CHAT_URL,
 } from '@/config/site';
-import OfficialLink from '@/components/OfficialLink';
 import {
   ChevronRight,
   Send,
@@ -18,10 +19,11 @@ import {
   AlertCircle,
   Sparkles,
   ShieldCheck,
+  MessageSquare,
 } from 'lucide-react';
 
 /**
- * /contact/ 官方支持中心与联系渠道页面 (深色极客科技感暗黑紫主题)
+ * /contact/ 官方支持中心与联系渠道页面
  */
 export const ContactPage: React.FC = () => {
   useEffect(() => {
@@ -30,6 +32,29 @@ export const ContactPage: React.FC = () => {
       metaRobots.setAttribute('content', 'index, follow');
     }
   }, []);
+
+  const handleCrispChat = () => {
+    if (typeof window !== 'undefined') {
+      // 1. 若 Crisp SDK 已在页面就绪，直接打开聊天抽屉
+      if ((window as any).$crisp) {
+        (window as any).$crisp.push(['do', 'chat:open']);
+        (window as any).$crisp.push(['do', 'chat:show']);
+        return;
+      }
+      // 2. 若配置了专属 Crisp 聊天链接，直接新窗口打开
+      if (CRISP_CHAT_URL) {
+        window.open(CRISP_CHAT_URL, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      // 3. 若配置了 Crisp Website ID，打开 Crisp 嵌入聊天页
+      if (CRISP_WEBSITE_ID) {
+        window.open(`https://go.crisp.chat/chat/embed/?website_id=${CRISP_WEBSITE_ID}`, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      // 4. 默认打开 Crisp 官方客服入口
+      window.open('https://go.crisp.chat/', '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <div className="py-8 sm:py-16 bg-white min-h-screen text-slate-800">
@@ -154,17 +179,17 @@ export const ContactPage: React.FC = () => {
             </div>
           </div>
 
-          {/* 渠道 3：官方工单客服支持 */}
+          {/* 渠道 3：Crisp 官方在线客服支持 */}
           <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-5">
                 <Headphones className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
-                官方在线技术工单
+                Crisp 官方在线客服
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
-                涉及您的账户订单、网络节点连通诊断或专属技术咨询，请登录官方控制中心提交在线服务工单。
+                涉及您的账户订单、网络节点连通诊断或专属技术咨询，点击即可发起 Crisp 在线即时对话，联系官方在线客服。
               </p>
               <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-700 mb-6 leading-relaxed">
                 官方直属技术工程师为您提供端到端排错支持与 7×24 快速处理。
@@ -172,10 +197,15 @@ export const ContactPage: React.FC = () => {
             </div>
 
             <div className="pt-4 border-t border-slate-100">
-              <OfficialLink className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm">
-                <span>进入控制台提交工单</span>
+              <button
+                type="button"
+                onClick={handleCrispChat}
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>联系 Crisp 在线客服</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </OfficialLink>
+              </button>
             </div>
           </div>
         </div>

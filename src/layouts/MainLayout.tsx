@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { updateClientSEO } from '@/config/seo';
 import { updateClientSchema } from '@/config/schema';
+import { CRISP_WEBSITE_ID } from '@/config/site';
 
 /**
  * MainLayout 基础布局组件 (以官方 Logo 纯白基底与科技蓝为核心的现代 SaaS 风格)
@@ -17,6 +18,20 @@ export const MainLayout: React.FC = () => {
     updateClientSEO(location.pathname);
     updateClientSchema(location.pathname);
   }, [location.pathname]);
+
+  // Crisp 在线客服 SDK 初始化 (当配置了 CRISP_WEBSITE_ID 时生效)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && CRISP_WEBSITE_ID) {
+      if (!(window as any).$crisp) {
+        (window as any).$crisp = [];
+        (window as any).CRISP_WEBSITE_ID = CRISP_WEBSITE_ID;
+        const s = document.createElement('script');
+        s.src = 'https://client.crisp.chat/l.js';
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    }
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-800 selection:bg-blue-600 selection:text-white relative overflow-hidden">

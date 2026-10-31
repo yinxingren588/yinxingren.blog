@@ -16,6 +16,14 @@ export const TELEGRAM_CHANNEL_URL = 'https://t.me/+diFXhmhTx-E4Mjc1'; // 官方�
 export const TELEGRAM_GROUP_URL = 'https://t.me/+YnHn1D4JK7c2Yjg1'; // 官方交流群
 
 /**
+ * Crisp 在线客服系统配置
+ * 可配置 Crisp Website ID (UUID 格式，例如 '12345678-1234-1234-1234-123456789abc')
+ * 或配置 Crisp 专属在线聊天链接 CRISP_CHAT_URL
+ */
+export const CRISP_WEBSITE_ID = ''; // 填入您的 Crisp Website ID
+export const CRISP_CHAT_URL = ''; // 填入您的 Crisp 专属链接 (若有)
+
+/**
  * 站点官方身份认定
  */
 export const SITE_IDENTITY = {
