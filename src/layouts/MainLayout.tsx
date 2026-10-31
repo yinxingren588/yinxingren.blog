@@ -6,9 +6,9 @@ import { updateClientSEO } from '@/config/seo';
 import { updateClientSchema } from '@/config/schema';
 
 /**
- * MainLayout 基础布局组件 (深色极客科技感暗黑紫主题)
+ * MainLayout 基础布局组件 (以官方 Logo 纯白基底与科技蓝为核心的现代 SaaS 风格)
  * 结构：Navbar -> main -> Outlet -> Footer
- * 全局暗色高科技背景网格与环境微光
+ * 全局采用纯净白与浅灰微质感背景，彻底告别紫色暗色系
  */
 export const MainLayout: React.FC = () => {
   const location = useLocation();
@@ -19,14 +19,14 @@ export const MainLayout: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#08090E] text-slate-200 selection:bg-purple-600 selection:text-white relative overflow-hidden">
-      {/* 全局暗色极客环境光晕 */}
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 selection:bg-blue-600 selection:text-white relative overflow-hidden">
+      {/* 极简自然的环境柔和微光 (呼应 Logo 围巾天蓝色系) */}
       <div
-        className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-purple-900/20 via-indigo-950/10 to-transparent blur-[140px] pointer-events-none -z-10"
+        className="fixed top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[550px] bg-gradient-to-b from-blue-50/80 via-sky-50/40 to-transparent blur-[140px] pointer-events-none -z-10"
         aria-hidden="true"
       />
       <div
-        className="fixed bottom-0 right-0 w-[600px] h-[400px] bg-fuchsia-950/15 blur-[150px] pointer-events-none -z-10"
+        className="fixed bottom-0 right-0 w-[600px] h-[400px] bg-slate-100/60 blur-[130px] pointer-events-none -z-10"
         aria-hidden="true"
       />
 
@@ -38,7 +38,7 @@ export const MainLayout: React.FC = () => {
         <Outlet />
       </main>
 
-      {/* 四栏页脚 */}
+      {/* 页脚 */}
       <Footer />
     </div>
   );

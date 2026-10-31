@@ -23,21 +23,21 @@ export const FAQSection: React.FC = () => {
   return (
     <section
       aria-labelledby="faq-section-heading"
-      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
+      className="py-16 sm:py-24 border-b border-slate-200 bg-white relative overflow-hidden"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <HelpCircle className="w-3.5 h-3.5 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+            <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
             <span>KNOWLEDGE BASE & FAQ · 官方常见问答</span>
           </div>
           <h2
             id="faq-section-heading"
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight"
           >
             常见问题与官方服务指南 (FAQ)
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             关于隐形人官方专线方案选型、客户端配置、1.0x 真实倍率保障与官方控制台登录的精选解答。
           </p>
         </div>
@@ -52,7 +52,7 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className="rounded-2xl bg-[#0F121C]/80 border border-purple-500/20 overflow-hidden transition-all hover:border-purple-400/40 shadow-sm"
+                className="rounded-2xl bg-white border border-slate-200 overflow-hidden transition-all hover:border-blue-400 shadow-sm"
               >
                 <h3 className="text-base font-medium m-0">
                   <button
@@ -61,10 +61,10 @@ export const FAQSection: React.FC = () => {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleItem(item.id)}
-                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-white hover:text-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 transition-colors"
+                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-slate-800 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-xs font-mono text-purple-400 font-bold w-6">
+                      <span className="text-xs font-mono text-blue-600 font-bold w-6">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <span className="text-sm sm:text-base font-semibold">
@@ -73,8 +73,8 @@ export const FAQSection: React.FC = () => {
                     </div>
 
                     <div
-                      className={`w-7 h-7 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 transition-transform duration-200 flex-shrink-0 ${
-                        isOpen ? 'rotate-180 bg-purple-900/60 text-purple-200' : ''
+                      className={`w-7 h-7 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 transition-transform duration-200 flex-shrink-0 ${
+                        isOpen ? 'rotate-180 bg-blue-50 text-blue-600 border-blue-200' : ''
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -90,7 +90,7 @@ export const FAQSection: React.FC = () => {
                     isOpen ? 'block' : 'hidden'
                   }`}
                 >
-                  <div className="p-5 sm:p-6 pt-0 border-t border-purple-500/15 text-xs sm:text-sm text-slate-300 leading-relaxed text-left space-y-3">
+                  <div className="p-5 sm:p-6 pt-0 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed text-left space-y-3">
                     <p>{item.answer}</p>
                   </div>
                 </div>
@@ -100,16 +100,16 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* 底部知识库指引 */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#0F121C]/60 border border-purple-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+        <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 flex-shrink-0">
               <MessageSquareCode className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-sm font-bold text-white">
+              <div className="text-sm font-bold text-slate-900">
                 未找到您需要的解答？
               </div>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5">
                 欢迎查阅官方详尽使用知识库，或直接在控制台提交 7×24 官方技术工单。
               </p>
             </div>
@@ -118,13 +118,13 @@ export const FAQSection: React.FC = () => {
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link
               to="/help/"
-              className="px-4 py-2 rounded-xl bg-purple-950/60 hover:bg-purple-900 text-purple-200 text-xs font-semibold border border-purple-500/30 transition-colors"
+              className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors shadow-sm"
             >
               官方帮助文档
             </Link>
             <Link
               to="/contact/"
-              className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all"
+              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-all"
             >
               提交官方工单
             </Link>

@@ -8,36 +8,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        cyber: {
-          bg: '#08090E',
-          surface: '#0F121C',
-          card: '#131726',
-          cardHover: '#181E31',
-          border: '#242B42',
-          borderGlow: '#6D28D9',
-          neonViolet: '#8B5CF6',
-          neonPurple: '#A855F7',
-          neonCyan: '#06B6D4',
-          neonEmerald: '#10B981',
-          neonRose: '#F43F5E',
-          muted: '#94A3B8',
-          text: '#F1F5F9',
-        },
         brand: {
-          bg: '#08090E',
-          surface: '#0F121C',
-          elevated: '#181E31',
-          primary: '#8B5CF6',
-          secondary: '#A855F7',
-          accent: '#A855F7',
-          'accent-hover': '#9333EA',
-          border: '#242B42',
-          'border-hover': '#8B5CF6',
+          bg: '#FFFFFF',
+          surface: '#F8FAFC',
+          elevated: '#F1F5F9',
+          primary: '#1E3A8A', // 隐形人书法深宝蓝
+          secondary: '#2563EB', // 科技蓝
+          accent: '#3B82F6', // 围巾天蓝
+          gold: '#F59E0B', // 纸飞机与星星金黄
+          border: '#E2E8F0',
+          'border-hover': '#93C5FD',
           text: {
-            heading: '#F8FAFC',
-            body: '#CBD5E1',
-            muted: '#94A3B8',
-            subtle: '#64748B',
+            heading: '#0F172A',
+            body: '#334155',
+            muted: '#64748B',
+            subtle: '#94A3B8',
           }
         }
       },
@@ -63,17 +48,14 @@ export default {
         ],
       },
       boxShadow: {
-        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.3)',
-        'card': '0 4px 20px -2px rgba(0, 0, 0, 0.5)',
-        'card-hover': '0 8px 30px -4px rgba(168, 85, 247, 0.25)',
-        'neon-purple': '0 0 25px rgba(168, 85, 247, 0.35)',
-        'neon-cyan': '0 0 25px rgba(6, 182, 212, 0.35)',
-        'neon-emerald': '0 0 20px rgba(16, 185, 129, 0.35)',
+        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
+        'card': '0 4px 20px -2px rgba(15, 23, 42, 0.06)',
+        'card-hover': '0 10px 30px -4px rgba(37, 99, 235, 0.12)',
+        'blue-glow': '0 0 25px rgba(37, 99, 235, 0.25)',
       },
       animation: {
         'pulse-slow': 'pulse 9.6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'spin-slow': 'spin 24s linear infinite',
-        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
     },
   },

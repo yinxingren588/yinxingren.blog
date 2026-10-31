@@ -33,21 +33,21 @@ export const ScenariosSection: React.FC = () => {
   return (
     <section
       aria-labelledby="scenarios-heading"
-      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
+      className="py-16 sm:py-24 border-b border-slate-200 bg-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12 text-left space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <Layers className="w-3.5 h-3.5 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+            <Layers className="w-3.5 h-3.5 text-blue-600" />
             <span>BUSINESS USE SCENARIOS · 核心业务场景</span>
           </div>
           <h2
             id="scenarios-heading"
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight"
           >
             多元化跨境数字工作流场景赋能
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             不同业务场景对网络连接的考量各异。隐形人连接方案通过精细化分流与纯净 IEPL 隧道，量身支撑不同出海工作流。
           </p>
         </div>
@@ -59,18 +59,18 @@ export const ScenariosSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 p-6 sm:p-7 flex flex-col justify-between hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all text-left"
+                className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-7 flex flex-col justify-between hover:border-blue-400 shadow-sm hover:shadow-md transition-all text-left"
               >
                 <div>
-                  <div className="flex items-center gap-3 pb-5 border-b border-purple-500/15">
-                    <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                  <div className="flex items-center gap-3 pb-5 border-b border-slate-100">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white">
+                      <h3 className="text-base font-bold text-slate-900">
                         {item.role}
                       </h3>
-                      <p className="text-[11px] text-purple-300/70 font-mono">
+                      <p className="text-[11px] text-blue-600 font-mono">
                         {item.target}
                       </p>
                     </div>
@@ -78,31 +78,31 @@ export const ScenariosSection: React.FC = () => {
 
                   {/* 痛点对比 */}
                   <div className="mt-5 space-y-4">
-                    <div className="p-3.5 rounded-xl bg-rose-950/20 border border-rose-500/20">
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-300 mb-1.5">
-                        <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
+                    <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200">
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-700 mb-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
                         <span>常见网络瓶颈与痛点</span>
                       </div>
-                      <p className="text-xs text-rose-200/80 leading-relaxed">
+                      <p className="text-xs text-rose-600 leading-relaxed">
                         {item.pain}
                       </p>
                     </div>
 
                     {/* 方案呈现 */}
-                    <div className="p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/25">
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-purple-300 mb-1.5">
-                        <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+                    <div className="p-3.5 rounded-xl bg-blue-50/60 border border-blue-200">
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-800 mb-1.5">
+                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
                         <span>隐形人官方专线解决方案</span>
                       </div>
-                      <p className="text-xs text-slate-300 leading-relaxed">
+                      <p className="text-xs text-slate-700 leading-relaxed">
                         {item.solution}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-purple-500/15">
-                  <span className="text-xs font-mono text-purple-300/70">
+                <div className="mt-6 pt-4 border-t border-slate-100">
+                  <span className="text-xs font-mono text-slate-500">
                     全节点 1.0x 真实倍率 · 毫秒级智能调度
                   </span>
                 </div>

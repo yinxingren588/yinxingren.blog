@@ -125,23 +125,23 @@ export const ScenarioCarousel: React.FC = () => {
   return (
     <section
       aria-labelledby="scenarios-carousel-heading"
-      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
+      className="py-16 sm:py-24 border-b border-slate-200 bg-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 头部标题与控制按钮条 */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div className="max-w-2xl text-left space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-              <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
               <span>PRACTICE BENCHMARKS · 业务实践参考</span>
             </div>
             <h2
               id="scenarios-carousel-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight"
             >
               典型出海业务场景实践与体验
             </h2>
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed">
               汇集不同跨境工作流在专线连接、多端协同与隐私防护方面的代表性实践示例。
             </p>
           </div>
@@ -152,7 +152,7 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={() => setIsManualPaused((prev) => !prev)}
               aria-label={isManualPaused ? '开启自动播放' : '暂停自动播放'}
-              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 text-slate-600 hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             >
               {isManualPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
             </button>
@@ -161,7 +161,7 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={handlePrev}
               aria-label="查看上一组场景"
-              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 text-slate-600 hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -170,7 +170,7 @@ export const ScenarioCarousel: React.FC = () => {
               type="button"
               onClick={handleNext}
               aria-label="查看下一组场景"
-              className="p-2.5 rounded-xl bg-[#0F121C] border border-purple-500/20 hover:border-purple-400 text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 text-slate-600 hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -178,8 +178,8 @@ export const ScenarioCarousel: React.FC = () => {
         </div>
 
         {/* 官方规范要求声明条 */}
-        <div className="mb-8 p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/20 text-xs text-slate-400 text-left">
-          <span className="font-semibold text-purple-300">声明：</span>
+        <div className="mb-8 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 text-left">
+          <span className="font-semibold text-slate-900">声明：</span>
           {SCENARIO_DISCLAIMER}
         </div>
 
@@ -198,7 +198,7 @@ export const ScenarioCarousel: React.FC = () => {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="relative overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-3xl"
+          className="relative overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-3xl"
         >
           <div
             className="flex transition-transform duration-500 ease-out"
@@ -215,29 +215,29 @@ export const ScenarioCarousel: React.FC = () => {
                 className="flex-shrink-0 px-3"
                 style={{ width: `${100 / itemsPerPage}%` }}
               >
-                <div className="h-full p-6 sm:p-7 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col justify-between text-left">
+                <div className="h-full p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
                   <div>
-                    <div className="flex items-center justify-between gap-2 pb-4 border-b border-purple-500/15 mb-5">
-                      <span className="text-[11px] font-mono text-purple-300 font-semibold uppercase tracking-wider">
+                    <div className="flex items-center justify-between gap-2 pb-4 border-b border-slate-100 mb-5">
+                      <span className="text-[11px] font-mono text-blue-600 font-semibold uppercase tracking-wider">
                         {item.tag}
                       </span>
-                      <div className="w-8 h-8 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                         <Briefcase className="w-4 h-4" />
                       </div>
                     </div>
 
-                    <h3 className="text-base font-bold text-white mb-2">
+                    <h3 className="text-base font-bold text-slate-900 mb-2">
                       {item.sceneName}
                     </h3>
 
-                    <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">
                       {item.experienceSummary}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-purple-500/15 space-y-1">
-                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-200">
-                      <Layers className="w-3.5 h-3.5 text-purple-400" />
+                  <div className="mt-4 pt-4 border-t border-slate-100 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-800">
+                      <Layers className="w-3.5 h-3.5 text-blue-600" />
                       <span>{item.targetRole}</span>
                     </div>
                     <p className="text-[10px] text-slate-500 leading-normal font-mono">
@@ -260,8 +260,8 @@ export const ScenarioCarousel: React.FC = () => {
               aria-label={`跳转到第 ${idx + 1} 页`}
               className={`h-1.5 rounded-full transition-all ${
                 currentIndex === idx
-                  ? 'w-6 bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]'
-                  : 'w-1.5 bg-slate-800 hover:bg-purple-900'
+                  ? 'w-6 bg-blue-600 shadow-sm'
+                  : 'w-1.5 bg-slate-300 hover:bg-slate-400'
               }`}
             />
           ))}

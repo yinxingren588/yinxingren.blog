@@ -42,22 +42,22 @@ export const AdvantagesSection: React.FC = () => {
   return (
     <section
       aria-labelledby="advantages-heading"
-      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
+      className="py-16 sm:py-24 border-b border-slate-200 bg-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 头部标题区 */}
         <div className="max-w-3xl mb-12 text-left space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <Zap className="w-3.5 h-3.5 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+            <Zap className="w-3.5 h-3.5 text-blue-600" />
             <span>CORE ARCHITECTURE ADVANTAGES · 官方核心架构优势</span>
           </div>
           <h2
             id="advantages-heading"
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight"
           >
             为什么选择 {BRAND_NAME} 官方专线网络？
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             摒弃繁琐虚标的营销套路，聚焦于专线连接的极速低延迟、1.0x 真实倍率、多端通用性与 99.9% 长效稳定性，为现代数字出海工作流构建坚固防护。
           </p>
         </div>
@@ -69,22 +69,22 @@ export const AdvantagesSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="p-6 sm:p-8 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 shadow-[0_4px_25px_rgba(0,0,0,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all space-y-4 text-left group"
+                className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-md transition-all space-y-4 text-left group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:text-purple-300 group-hover:border-purple-400/60 shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-slate-900 border border-purple-500/20 text-xs font-mono font-semibold text-purple-300">
+                  <span className="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono font-semibold text-slate-700">
                     {item.tag}
                   </span>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export const AdvantagesSection: React.FC = () => {
         <div className="mt-12 text-center">
           <Link
             to="/advantages/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group"
           >
             <span>深入了解官方技术架构与节点分布优势</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -118,21 +118,21 @@ export const ClientMatrixSection: React.FC = () => {
   return (
     <section
       id="client-matrix"
-      className="py-16 sm:py-24 border-b border-purple-500/20 bg-[#08090E] relative overflow-hidden"
+      className="py-16 sm:py-24 border-b border-slate-200 bg-slate-50/60 relative overflow-hidden"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 标题说明 */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <Download className="w-3.5 h-3.5 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+            <Download className="w-3.5 h-3.5 text-blue-600" />
             <span>CROSS-PLATFORM CLIENT MATRIX · 全生态客户端下载</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
             全平台官方客户端下载与一键配置
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base text-slate-600">
             支持 Windows、macOS、iOS、Android、Linux 及全系软路由。官方提供全套标准化一键订阅协议，开箱即用，0 门槛秒速接入。
           </p>
         </div>
@@ -149,8 +149,8 @@ export const ClientMatrixSection: React.FC = () => {
                 onClick={() => setActivePlatform(p.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                   isSelected
-                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] border border-purple-400/40'
-                    : 'bg-[#0F121C] text-slate-400 hover:text-white border border-purple-500/15 hover:border-purple-500/30'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300 shadow-sm'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -161,19 +161,19 @@ export const ClientMatrixSection: React.FC = () => {
         </div>
 
         {/* 选中平台的详细参数与下载面板 */}
-        <div className="mt-8 p-6 sm:p-10 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 shadow-[0_0_50px_rgba(147,51,234,0.15)] backdrop-blur-xl text-left">
+        <div className="mt-8 p-6 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm text-left">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* 左侧客户端信息 (7列) */}
             <div className="lg:col-span-7 space-y-5">
               <div className="flex items-center gap-3">
-                <span className="p-3 rounded-2xl bg-purple-950/60 border border-purple-500/30 text-purple-300">
+                <span className="p-3 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600">
                   <currentPlat.icon className="w-6 h-6" />
                 </span>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                     {currentPlat.title}
                   </h3>
-                  <div className="text-xs font-mono text-purple-300/80 mt-1">
+                  <div className="text-xs font-mono text-blue-600 mt-1">
                     推荐内核: {currentPlat.kernel}
                   </div>
                 </div>
@@ -181,10 +181,10 @@ export const ClientMatrixSection: React.FC = () => {
 
               {/* 兼容性与版本 */}
               <div className="flex flex-wrap items-center gap-3 text-xs font-mono">
-                <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-purple-500/20 text-slate-300">
+                <span className="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700">
                   兼容系统: {currentPlat.compatibility}
                 </span>
-                <span className="px-2.5 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/30 text-emerald-300">
+                <span className="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold">
                   {currentPlat.version}
                 </span>
               </div>
@@ -192,22 +192,22 @@ export const ClientMatrixSection: React.FC = () => {
               {/* 特性清单 */}
               <div className="space-y-2.5 pt-2">
                 {currentPlat.features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600">
+                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </div>
                 ))}
               </div>
 
               {/* 简易接入步骤 */}
-              <div className="p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/15 text-xs text-slate-300">
-                <span className="font-bold text-purple-300 block mb-1">⚡ 极速接入指南：</span>
+              <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+                <span className="font-bold text-blue-700 block mb-1">⚡ 极速接入指南：</span>
                 {currentPlat.quickSteps}
               </div>
 
               {/* 主操作按钮 */}
               <div className="pt-2">
-                <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-sm transition-all shadow-[0_0_20px_rgba(147,51,234,0.4)] border border-purple-400/30 group">
+                <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-sm group">
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
                   <span>{currentPlat.primaryAction}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -216,30 +216,30 @@ export const ClientMatrixSection: React.FC = () => {
             </div>
 
             {/* 右侧客户端配置示意终端 (5列) */}
-            <div className="lg:col-span-5 p-5 rounded-2xl bg-black/60 border border-purple-500/20 font-mono text-xs text-slate-300 space-y-3 shadow-inner">
-              <div className="flex items-center justify-between pb-3 border-b border-purple-500/15 text-[11px] text-slate-400">
+            <div className="lg:col-span-5 p-5 rounded-2xl bg-slate-900 border border-slate-800 font-mono text-xs text-slate-300 space-y-3 shadow-inner">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-[11px] text-slate-400">
                 <span>CONFIG GENERATOR // AUTO-SYNC</span>
-                <span className="text-emerald-400 flex items-center gap-1">
+                <span className="text-emerald-400 flex items-center gap-1 font-semibold">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   READY
                 </span>
               </div>
 
               <div className="space-y-2 text-slate-400 text-[11px]">
-                <div className="text-purple-300"># 官方订阅核心接口标准</div>
+                <div className="text-blue-400"># 官方订阅核心接口标准</div>
                 <div>订阅协议: Clash / Sing-box / V2Ray / Surge</div>
                 <div>加密算法: ChaCha20-Poly1305 / TLS 1.3</div>
                 <div>规则模式: 智能分流 (Rule-based Routing)</div>
                 <div>节点过滤: 自动剔除离线备用，动态保活</div>
               </div>
 
-              <div className="pt-3 border-t border-purple-500/15">
+              <div className="pt-3 border-t border-slate-800">
                 <div className="text-[10px] text-slate-400 mb-1.5">官方控制台订阅导入示范：</div>
-                <div className="p-2.5 rounded-lg bg-slate-900 border border-purple-500/20 text-purple-300 flex items-center justify-between overflow-hidden">
+                <div className="p-2.5 rounded-lg bg-slate-800 border border-slate-700 text-blue-300 flex items-center justify-between overflow-hidden">
                   <span className="truncate mr-2 text-[11px]">
                     https://api.yinxingren.blog/sub?token=official_sub_key...
                   </span>
-                  <OfficialLink className="flex-shrink-0 text-[10px] px-2 py-1 rounded bg-purple-800 hover:bg-purple-700 text-white transition-colors">
+                  <OfficialLink className="flex-shrink-0 text-[10px] px-2.5 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white transition-colors font-sans font-semibold">
                     获取订阅
                   </OfficialLink>
                 </div>

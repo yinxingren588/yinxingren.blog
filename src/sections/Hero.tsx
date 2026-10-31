@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 /**
- * 首页 Hero 核心分区组件 (深色极客科技感暗黑紫主题)
+ * 首页 Hero 核心分区组件 (以官方纯白与品牌蓝为基准的现代 SaaS 风格)
  * 升级为国际顶级 SaaS / 官方网络加速大屏框架
  */
 export const Hero: React.FC = () => {
@@ -33,28 +33,28 @@ export const Hero: React.FC = () => {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-purple-500/20 bg-[#08090E]"
+      className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-200 bg-white"
     >
-      {/* 极客网格与环境微光背景 */}
-      <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" aria-hidden="true" />
+      {/* 极简网格与纯净环境微光背景 */}
+      <div className="absolute inset-0 subtle-grid opacity-60 pointer-events-none" aria-hidden="true" />
       <div
-        className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-purple-600/15 blur-[140px] pointer-events-none rounded-full"
+        className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-100/40 blur-[140px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
       <div
-        className="absolute top-1/2 right-10 w-[500px] h-[300px] bg-indigo-600/10 blur-[130px] pointer-events-none rounded-full"
+        className="absolute top-1/2 right-10 w-[500px] h-[300px] bg-sky-100/30 blur-[130px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
 
-      {/* 官方形象背景微光水印 */}
+      {/* 官方形象背景轻水印 */}
       <div
-        className="absolute -right-16 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.04] pointer-events-none rounded-full overflow-hidden blur-[1px]"
+        className="absolute -right-16 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none rounded-full overflow-hidden"
         aria-hidden="true"
       >
         <img
           src="/images/hero-visual.png"
           alt=""
-          className="w-full h-full object-contain filter invert"
+          className="w-full h-full object-contain"
         />
       </div>
 
@@ -63,61 +63,61 @@ export const Hero: React.FC = () => {
           {/* 左侧文字与操作区 (7列) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* 官方正版旗舰定位标签 */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-semibold shadow-[0_0_15px_rgba(168,85,247,0.25)]">
-              <ShieldCheck className="w-4 h-4 text-purple-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-semibold shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-blue-600" />
               <span>官方直营 · {BRAND_NAME}全球专线网络加速中心</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse ml-1" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-1" />
             </div>
 
             {/* 页面唯一 H1：清晰官方旗舰定位与 Bing/Google 核心关键词 */}
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-300">
+              <span className="text-blue-600">
                 {BRAND_NAME}官网
               </span>
-              <span className="block text-slate-100 mt-2 text-2xl sm:text-3xl lg:text-4xl">
+              <span className="block text-slate-900 mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold">
                 全球专线加速与跨境互联官方服务平台
               </span>
             </h1>
 
             {/* Hero 副标题 */}
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-normal">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
               {BRAND_NAME}（{BRAND_NAME_EN}）官方直营控制台入口。全系部署 IEPL 企业级内网专线，承诺 1.0x 真实倍率，毫秒级跨网低延迟，原生支持 4K/8K 超高清流媒体与 AI 研发模型接入。官方正版直营，保障节点长效稳定。
             </p>
 
             {/* CTA 操作按钮组：大屏三按钮矩阵 */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               {/* 主 CTA：进入官方控制台 */}
-              <OfficialLink className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 bg-[length:200%_auto] hover:bg-right text-white font-semibold text-sm sm:text-base transition-all duration-300 shadow-[0_0_25px_rgba(147,51,234,0.4)] hover:shadow-[0_0_35px_rgba(168,85,247,0.7)] border border-purple-400/40 focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-                <Zap className="w-4 h-4 text-purple-200 group-hover:rotate-12 transition-transform" />
+              <OfficialLink className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 group">
+                <Zap className="w-4 h-4 text-blue-100 group-hover:rotate-12 transition-transform" />
                 <span>进入官方控制台</span>
-                <ArrowRight className="w-4 h-4 text-purple-200" />
+                <ArrowRight className="w-4 h-4 text-blue-100" />
               </OfficialLink>
 
               {/* 次 CTA：查看专线测速 */}
               <a
                 href="#network-monitor"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-purple-950/50 text-slate-200 hover:text-white font-medium text-sm sm:text-base border border-purple-500/25 hover:border-purple-400/50 transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-purple-500/30"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-medium text-sm sm:text-base border border-slate-300 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30"
               >
-                <Activity className="w-4 h-4 text-purple-400" />
+                <Activity className="w-4 h-4 text-blue-600" />
                 <span>专线实时态势</span>
               </a>
 
               {/* 客户端快捷入口 */}
               <a
                 href="#client-matrix"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-purple-950/50 text-slate-200 hover:text-white font-medium text-sm sm:text-base border border-purple-500/25 hover:border-purple-400/50 transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-purple-500/30"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-medium text-sm sm:text-base border border-slate-300 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30"
               >
-                <DownloadCloud className="w-4 h-4 text-indigo-400" />
+                <DownloadCloud className="w-4 h-4 text-slate-600" />
                 <span>客户端下载</span>
               </a>
             </div>
 
             {/* 官方正版保障承诺提示 */}
-            <div className="flex items-center gap-2 pt-1 text-xs text-purple-300/80 font-mono">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+            <div className="flex items-center gap-2 pt-1 text-xs text-slate-600 font-mono">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
               <span>{OFFICIAL_GUARANTEE_TEXT}</span>
             </div>
           </div>
@@ -129,25 +129,25 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* 大屏 SaaS 遥测数据横幅 (4大实时核心指标) */}
-        <div className="mt-14 pt-8 border-t border-purple-500/20">
+        <div className="mt-14 pt-8 border-t border-slate-200">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {metrics.map((item, index) => (
               <div
                 key={index}
-                className="p-4 sm:p-5 rounded-xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-500/40 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-left group"
+                className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md text-left group"
               >
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight group-hover:text-purple-300 transition-colors">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
                     {item.value}
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-purple-400 font-mono">
+                  <span className="text-xs sm:text-sm font-bold text-blue-600 font-mono">
                     {item.unit}
                   </span>
                 </div>
-                <div className="text-xs font-semibold text-slate-200 mt-1">
+                <div className="text-xs font-semibold text-slate-800 mt-1">
                   {item.label}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-0.5">
+                <div className="text-[11px] text-slate-500 mt-0.5">
                   {item.desc}
                 </div>
               </div>
@@ -160,13 +160,13 @@ export const Hero: React.FC = () => {
           {features.map((feat, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl bg-[#0F121C]/50 border border-purple-500/15 text-left"
+              className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-left"
             >
-              <div className="text-xs font-bold text-purple-300 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+              <div className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                 {feat.title}
               </div>
-              <p className="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
+              <p className="text-[11px] text-slate-600 mt-1.5 leading-relaxed">
                 {feat.desc}
               </p>
             </div>

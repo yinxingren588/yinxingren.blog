@@ -70,20 +70,20 @@ export const LocationsPage: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 sm:py-16 bg-[#08090E] min-h-screen text-slate-200">
+    <div className="py-8 sm:py-16 bg-white min-h-screen text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* 面包屑导航 */}
         <nav aria-label="面包屑导航" className="mb-8">
-          <ol className="flex items-center space-x-2 text-xs text-slate-400">
+          <ol className="flex items-center space-x-2 text-xs text-slate-500">
             <li>
-              <Link to="/" className="hover:text-purple-300 transition-colors">
+              <Link to="/" className="hover:text-blue-600 transition-colors">
                 首页
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
+              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             </li>
-            <li className="text-purple-300 font-semibold" aria-current="page">
+            <li className="text-blue-600 font-semibold" aria-current="page">
               服务线路
             </li>
           </ol>
@@ -91,34 +91,34 @@ export const LocationsPage: React.FC = () => {
 
         {/* 页面唯一 H1 与线路范围导言 */}
         <div className="max-w-3xl mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>GLOBAL TOPOLOGY · 网络分布与客观指南</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
             {BRAND_NAME} 服务线路范围与节点选型指引
           </h1>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             跨境网络连接受光纤物理距离、国际骨干网出口质量及运营商路由策略共同制约。本页面为您提供隐形人官方专线节点选择建议与实时状态排查方法论，保障跨国工作流高效运转。
           </p>
         </div>
 
         {/* 核心合规警示横幅 */}
-        <div className="mb-16 p-6 sm:p-7 rounded-3xl bg-purple-950/30 border border-purple-500/30 shadow-lg">
+        <div className="mb-16 p-6 sm:p-7 rounded-3xl bg-blue-50/70 border border-blue-200 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
-              <AlertCircle className="w-5 h-5 text-purple-400" />
+            <div className="w-10 h-10 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700 flex-shrink-0 mt-0.5">
+              <AlertCircle className="w-5 h-5 text-blue-600" />
             </div>
             <div className="space-y-2 text-left">
-              <h2 className="text-base sm:text-lg font-bold text-white">
+              <h2 className="text-base sm:text-lg font-bold text-slate-900">
                 服务范围与实时线路核验声明
               </h2>
-              <p className="text-sm font-semibold text-purple-300">
+              <p className="text-sm font-semibold text-blue-700">
                 “具体线路与节点以客户端实际显示为准。”
               </p>
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 隐形人官方运维团队 7×24 小时监控全球骨干专线网络的健康度与海缆负载。我们坚决不制作虚假的静态延迟图，所有线路的在线状态、实时可用性与路由调度均以官方控制台及客户端订阅实时下发的节点清单为准。
               </p>
             </div>
@@ -128,10 +128,10 @@ export const LocationsPage: React.FC = () => {
         {/* 一、地区选择参考维度 */}
         <div className="mb-20">
           <div className="mb-8 space-y-2">
-            <h2 className="text-xl sm:text-2xl font-bold text-white">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               跨区域线路选型参考维度
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-slate-500">
               以下地区分类仅代表通用网络选型考量维度，不代表品牌已实际提供特定线路，请在客户端中核实可用节点。
             </p>
           </div>
@@ -140,45 +140,45 @@ export const LocationsPage: React.FC = () => {
             {regionalDimensions.map((dim, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all flex flex-col justify-between"
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 pb-3 border-b border-purple-500/15">
-                    <Layers className="w-4 h-4 text-purple-400" />
-                    <span className="text-xs font-mono text-purple-300 font-semibold uppercase tracking-wider">
+                  <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
+                    <Layers className="w-4 h-4 text-blue-600" />
+                    <span className="text-xs font-mono text-blue-700 font-semibold uppercase tracking-wider">
                       维度 0{idx + 1}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-white">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900">
                       {dim.title}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-1">
+                    <p className="text-xs text-slate-500 mt-1">
                       {dim.subtitle}
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-purple-950/20 border border-purple-500/15 space-y-1">
-                    <span className="text-[11px] font-semibold text-purple-300">
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                    <span className="text-[11px] font-semibold text-blue-700">
                       传输特性：
                     </span>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       {dim.characteristics}
                     </p>
                   </div>
 
                   <div className="space-y-1">
-                    <span className="text-[11px] font-semibold text-purple-300">
+                    <span className="text-[11px] font-semibold text-blue-700">
                       适用建议：
                     </span>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       {dim.recommendation}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-purple-500/15 text-[11px] text-purple-300/80 leading-relaxed font-mono">
+                <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-500 leading-relaxed font-mono">
                   提示：{dim.cautions}
                 </div>
               </div>
@@ -189,10 +189,10 @@ export const LocationsPage: React.FC = () => {
         {/* 二、节点选择与避坑三大法则 */}
         <div className="mb-20">
           <div className="mb-8 space-y-2">
-            <h2 className="text-xl sm:text-2xl font-bold text-white">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               实用节点选择与排错法则
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-slate-500">
               如何建立健康的连接使用习惯，避免因盲目测速而造成频繁切换连接。
             </p>
           </div>
@@ -203,15 +203,15 @@ export const LocationsPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-3xl bg-[#0F121C]/80 border border-purple-500/20 hover:border-purple-400/50 transition-all space-y-3"
+                  className="p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm transition-all space-y-3"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-bold text-white">
+                  <h3 className="text-base font-bold text-slate-900">
                     {guide.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {guide.desc}
                   </p>
                 </div>
@@ -221,33 +221,33 @@ export const LocationsPage: React.FC = () => {
         </div>
 
         {/* 三、常见线路疑问简答 */}
-        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/25 mb-16 space-y-4">
-          <div className="flex items-center gap-2 text-purple-400 text-xs font-semibold font-mono">
-            <HelpCircle className="w-4 h-4 text-purple-400" />
+        <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 mb-16 space-y-4">
+          <div className="flex items-center gap-2 text-blue-600 text-xs font-semibold font-mono">
+            <HelpCircle className="w-4 h-4 text-blue-600" />
             <span>常见线路疑惑</span>
           </div>
-          <h2 className="text-lg sm:text-xl font-bold text-white">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900">
             为什么客户端测速显示的延迟与实际使用感受不一致？
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             许多客户端采用简单的 ICMP Ping 握手测速，仅代表握手响应包耗时，并不能反映多路 TCP/UDP 传输在持续长链接与多线程下载时的实际带宽承载力与丢包重传率。建议以实际业务（如 Git 代码拉取、终端命令执行或网页资源加载）的连续顺畅度为真实评价标准。
           </p>
         </div>
 
         {/* 四、底部站内引导 */}
-        <div className="p-8 rounded-3xl bg-[#0F121C]/90 border border-purple-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_0_35px_rgba(147,51,234,0.15)]">
+        <div className="p-8 rounded-3xl bg-white border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1">
-            <h3 className="text-base sm:text-lg font-bold text-white">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900">
               结合业务需求，评估适合您的订阅方案
             </h3>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500">
               了解不同套餐在设备并发数与流量规格上的差异，理性规划出海预算。
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link
               to="/pricing/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm"
             >
               <span>查看官方 9 大配套对比</span>
               <ArrowRight className="w-4 h-4" />
