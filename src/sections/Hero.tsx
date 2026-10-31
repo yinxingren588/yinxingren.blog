@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
                 {BRAND_NAME}机场
               </span>
               <span className="block text-slate-900 mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold">
-                全球专线加速与跨境互联官方服务平台
+                {BRAND_NAME}官网 · 全球专线加速与跨境互联官方服务平台
               </span>
             </h1>
 
