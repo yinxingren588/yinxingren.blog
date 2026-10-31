@@ -1,12 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.resolve(rootDir, 'dist');
+const distSsrDir = path.resolve(rootDir, 'dist-ssr');
 const publicDir = path.resolve(rootDir, 'public');
 
 // IndexNow 基础配置（与 src/config/indexnow.ts 严格一致）
@@ -109,11 +110,8 @@ async function runIndexNow() {
   }
   console.log(`✓ Key 文件确认: public/${INDEXNOW_KEY_FILE} & dist/${INDEXNOW_KEY_FILE}`);
 
-  // 2. 动态读取 10 个正式可索引页面
-  const state = loadState();
-
-  // 正式 10 路由清单
-  const officialPaths = [
+  // 2. 动态读取全站正式可索引页面（统一路由体系单一事实来源）
+  let officialPaths = [
     '/',
     '/services/',
     '/advantages/',
@@ -126,6 +124,17 @@ async function runIndexNow() {
     '/privacy/',
   ];
 
+  try {
+    const entryServerPath = pathToFileURL(path.join(distSsrDir, 'entry-server.js')).href;
+    const { getIndexableRoutes, REGISTERED_ROUTES } = await import(entryServerPath);
+    if (getIndexableRoutes && REGISTERED_ROUTES) {
+      officialPaths = getIndexableRoutes(REGISTERED_ROUTES).map((r) => r.path);
+    }
+  } catch (err) {
+    console.warn('⚠️ 读取 dist-ssr 统一路由异常，使用基础路由');
+  }
+
+  const state = loadState();
   const currentUrls = officialPaths.map((p) => (p === '/' ? `${SITE_URL}/` : `${SITE_URL}${p}`));
 
   const pendingAdditions = [];

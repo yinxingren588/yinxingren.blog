@@ -1,4 +1,5 @@
 import { SITE_URL, SITE_IDENTITY } from './site';
+import { HELP_ARTICLES } from '../data/helpData';
 
 /**
  * 统一路由条目定义
@@ -106,6 +107,19 @@ export const REGISTERED_ROUTES: RouteItem[] = [
     isNav: true,
     lastmod: undefined, // 未设独立修订时间戳，严格省略
   },
+  // 帮助中心 14 篇标准化独立文章页面 (一个文章一个页面)
+  ...HELP_ARTICLES.map((article) => ({
+    id: `help-${article.id}`,
+    path: `/help/${article.id}/`,
+    canonical: `${SITE_URL}/help/${article.id}/`,
+    breadcrumbTitle: article.title,
+    schemaType: 'WebPage' as const,
+    indexable: true,
+    hasActualContent: true,
+    showAff: true,
+    isNav: false,
+    lastmod: article.updatedAt || '2026-10-31',
+  })),
   {
     id: 'downloads',
     path: '/downloads/',

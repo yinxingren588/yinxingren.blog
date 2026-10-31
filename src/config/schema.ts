@@ -96,24 +96,67 @@ export function generateSchemaGraph(pathname: string): object | null {
 
   // 内页与可见面包屑完全一致的 BreadcrumbList
   if (route.breadcrumbTitle) {
-    graph.push({
-      '@type': 'BreadcrumbList',
-      '@id': `${route.canonical}#breadcrumb`,
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: '首页',
-          item: `${SITE_URL}/`,
+    const isHelpArticle = cleanPath.startsWith('/help/') && cleanPath !== '/help/';
+
+    if (isHelpArticle) {
+      graph.push({
+        '@type': 'BreadcrumbList',
+        '@id': `${route.canonical}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '帮助中心',
+            item: `${SITE_URL}/help/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: route.breadcrumbTitle,
+            item: route.canonical,
+          },
+        ],
+      });
+
+      // 独立技术支持与排错文章 Schema
+      graph.push({
+        '@type': 'TechArticle',
+        '@id': `${route.canonical}#article`,
+        headline: pageTitle,
+        description: pageDescription,
+        url: route.canonical,
+        isPartOf: {
+          '@id': `${SITE_URL}/#website`,
         },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: route.breadcrumbTitle,
-          item: route.canonical,
-        },
-      ],
-    });
+        inLanguage: 'zh-CN',
+        dateModified: route.lastmod || '2026-10-31',
+      });
+    } else {
+      graph.push({
+        '@type': 'BreadcrumbList',
+        '@id': `${route.canonical}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: route.breadcrumbTitle,
+            item: route.canonical,
+          },
+        ],
+      });
+    }
   }
 
   return {

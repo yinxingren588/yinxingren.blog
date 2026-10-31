@@ -1,4 +1,5 @@
 import { BRAND_NAME, BRAND_NAME_EN, SITE_URL } from './site';
+import { HELP_ARTICLES } from '../data/helpData';
 
 export interface PageSEO {
   path: string;
@@ -104,6 +105,25 @@ export const SEO_DATA: Record<string, PageSEO> = {
     ogType: 'article',
   },
 };
+
+// 为所有帮助中心独立文章动态注入专业 SEO TDK
+HELP_ARTICLES.forEach((article) => {
+  const path = `/help/${article.id}/`;
+  SEO_DATA[path] = {
+    path,
+    title: `${article.title} - ${BRAND_NAME}帮助中心与官方排错手册`,
+    description: `${article.summary} 了解更多${article.categoryName}实用技巧与${BRAND_NAME}官方专线接入指引。`,
+    keywords: [
+      article.title,
+      ...article.tags,
+      `${BRAND_NAME}帮助`,
+      `${BRAND_NAME}排错教程`,
+      `${BRAND_NAME}官网`,
+    ],
+    canonical: `${SITE_URL}${path}`,
+    ogType: 'article',
+  };
+});
 
 /**
  * 客户端动态设置 TDK 辅助函数

@@ -6,26 +6,34 @@ import {
   ChevronRight,
   Search,
   X,
-  BookOpen,
   Filter,
-  ChevronDown,
   Sparkles,
   MessageSquare,
   ArrowRight,
+  Clock,
+  Calendar,
 } from 'lucide-react';
 
 /**
- * /help/ 帮助中心与故障排错手册页面 (深色极客科技感暗黑紫主题)
+ * /help/ 帮助中心文章导航与检索中心
+ * 展示全站 14 篇标准化排错与使用指引文章卡片，点击独立跳转至专属详情页
  */
 export const HelpPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [expandedArticleId, setExpandedArticleId] = useState<string | null>(HELP_ARTICLES[0].id);
 
   useEffect(() => {
+    document.title = `${BRAND_NAME} 帮助中心与官方排错手册 - ${BRAND_NAME}官网`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        'content',
+        `汇集${BRAND_NAME}新手三步极速接入、全平台客户端官方订阅导入、多设备协同管理及系统时钟同步等常见问题排查方案。提供官方直属知识库与一对一工单支持入口。`
+      );
     }
   }, []);
 
@@ -56,16 +64,13 @@ export const HelpPage: React.FC = () => {
 
       if (!q) return true;
       const inTitle = article.title.toLowerCase().includes(q);
+      const inSummary = article.summary.toLowerCase().includes(q);
       const inContent = article.content.toLowerCase().includes(q);
       const inTags = article.tags.some((tag) => tag.toLowerCase().includes(q));
 
-      return inTitle || inContent || inTags;
+      return inTitle || inSummary || inContent || inTags;
     });
   }, [searchQuery, selectedCategory]);
-
-  const toggleArticle = (id: string) => {
-    setExpandedArticleId((prev) => (prev === id ? null : id));
-  };
 
   const handleClearFilters = () => {
     setSearchQuery('');
@@ -96,7 +101,7 @@ export const HelpPage: React.FC = () => {
         <div className="max-w-3xl mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>KNOWLEDGE BASE · 实用指南与排错手册</span>
+            <span>KNOWLEDGE BASE · 实用指南与官方排错手册</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
@@ -104,7 +109,7 @@ export const HelpPage: React.FC = () => {
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            为您整理从入门使用、官方 9 大配套规格考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，协助您快速排除疑问，顺畅建立连接。
+            为您整理从入门使用、官方 9 大配套规格考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，每个主题均配备独立图文页面，协助您快速排除疑问，顺畅建立连接。
           </p>
         </div>
 
@@ -179,81 +184,60 @@ export const HelpPage: React.FC = () => {
           </div>
         </div>
 
-        {/* 文章手风琴展示区 */}
+        {/* 文章卡片网格列表 (每个卡片独立链接到专属文章页面) */}
         {filteredArticles.length > 0 ? (
-          <div className="space-y-4 mb-16">
-            {filteredArticles.map((article: HelpArticle) => {
-              const isExpanded = expandedArticleId === article.id;
-              const headingId = `help-h-${article.id}`;
-              const panelId = `help-p-${article.id}`;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
+            {filteredArticles.map((article: HelpArticle) => (
+              <Link
+                key={article.id}
+                to={`/help/${article.id}/`}
+                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-mono text-blue-700 font-semibold px-2.5 py-0.5 rounded-md bg-blue-50 border border-blue-200">
+                      {article.categoryName}
+                    </span>
 
-              return (
-                <div
-                  key={article.id}
-                  className="rounded-2xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm transition-all overflow-hidden"
-                >
-                  <h2 className="text-base font-medium m-0">
-                    <button
-                      id={headingId}
-                      type="button"
-                      aria-expanded={isExpanded}
-                      aria-controls={panelId}
-                      onClick={() => toggleArticle(article.id)}
-                      className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left text-slate-800 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-colors"
-                    >
-                      <div className="flex items-start sm:items-center gap-3">
-                        <BookOpen className="w-4 h-4 text-blue-600 mt-0.5 sm:mt-0 flex-shrink-0" />
-                        <div>
-                          <span className="text-xs font-mono text-blue-700 font-semibold uppercase tracking-wider mr-2 px-2 py-0.5 rounded bg-blue-50 border border-blue-200">
-                            {article.categoryName}
-                          </span>
-                          <span className="text-sm sm:text-base font-semibold">
-                            {article.title}
-                          </span>
-                        </div>
-                      </div>
+                    <span className="flex items-center gap-1 text-[11px] text-slate-400 font-mono">
+                      <Clock className="w-3 h-3" />
+                      <span>{article.readTime}阅读</span>
+                    </span>
 
-                      <div
-                        className={`p-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-600 transition-transform duration-200 flex-shrink-0 ${
-                          isExpanded ? 'rotate-180 text-blue-600 bg-blue-50 border-blue-200' : ''
-                        }`}
-                        aria-hidden="true"
-                      >
-                        <ChevronDown className="w-4 h-4" />
-                      </div>
-                    </button>
+                    <span className="flex items-center gap-1 text-[11px] text-slate-400 font-mono">
+                      <Calendar className="w-3 h-3" />
+                      <span>{article.updatedAt}</span>
+                    </span>
+                  </div>
+
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                    {article.title}
                   </h2>
 
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={headingId}
-                    className={`px-5 sm:px-6 transition-all duration-200 ease-in-out ${
-                      isExpanded
-                        ? 'max-h-[600px] pb-5 sm:pb-6 opacity-100'
-                        : 'max-h-0 pb-0 opacity-0 overflow-hidden'
-                    }`}
-                  >
-                    <div className="pt-3 border-t border-slate-100 space-y-3">
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        {article.content}
-                      </p>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2">
+                    {article.summary}
+                  </p>
+                </div>
 
-                      <div className="flex flex-wrap items-center gap-1.5 pt-2">
-                        {article.tags.map((tag, tIdx) => (
-                          <span
-                            key={tIdx}
-                            className="text-[10px] font-mono text-slate-600 px-2 py-0.5 rounded bg-slate-100 border border-slate-200"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {article.tags.slice(0, 3).map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-100"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 group-hover:text-blue-700 flex-shrink-0 ml-2">
+                    <span>阅读全文</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              );
-            })}
+              </Link>
+            ))}
           </div>
         ) : (
           /* 空结果提示面板 */

@@ -7,6 +7,7 @@ import AdvantagesPage from '@/pages/AdvantagesPage';
 import LocationsPage from '@/pages/LocationsPage';
 import PricingPage from '@/pages/PricingPage';
 import HelpPage from '@/pages/HelpPage';
+import HelpArticlePage from '@/pages/HelpArticlePage';
 import DownloadsPage from '@/pages/DownloadsPage';
 import ContactPage from '@/pages/ContactPage';
 import TermsPage from '@/pages/TermsPage';
@@ -38,6 +39,8 @@ export const App: React.FC = () => {
           {/* 帮助、下载与支持页面 */}
           <Route path="help" element={<HelpPage />} />
           <Route path="help/" element={<HelpPage />} />
+          <Route path="help/:id" element={<HelpArticlePage />} />
+          <Route path="help/:id/" element={<HelpArticlePage />} />
 
           <Route path="downloads" element={<DownloadsPage />} />
           <Route path="downloads/" element={<DownloadsPage />} />
