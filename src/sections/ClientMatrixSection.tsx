@@ -9,9 +9,11 @@ import {
   CheckCircle2,
   ArrowRight,
   ArrowDownToLine,
+  Headphones,
 } from 'lucide-react';
 import OfficialLink from '@/components/OfficialLink';
 import {
+  openCrispChat,
   WINDOWS_CLIENT_DOWNLOAD_URL,
   WINDOWS_CLIENT_VERSION,
   WINDOWS_CLIENT_FILENAME,
@@ -71,13 +73,14 @@ export const ClientMatrixSection: React.FC = () => {
       kernel: 'Shadowrocket (小火箭) / Quantumult X / Loon / Stash',
       compatibility: 'iOS 14.0+ (iPhone 与 iPad 全系适配)',
       version: 'App Store 正版生态',
+      isCrisp: true,
       features: [
-        '支持使用海外 Apple ID 在 App Store 安装 Shadowrocket',
+        '官方客服提供全流程一对一安装指导与海外 Apple ID 协助',
         '官方控制台扫码即刻完成订阅配置注入',
         '原生低功耗后台常驻，锁屏不断连',
       ],
-      quickSteps: '1. 打开海外 Apple ID 登录 App Store 安装小火箭 -> 2. 扫描控制台配置二维码 -> 3. 点击一键连接。',
-      primaryAction: '进入控制台获取 iOS 订阅扫码',
+      quickSteps: '1. 点击“点击前往官方客服获取”联系在线客服获取安装指引与海外 ID -> 2. 控制台扫码或导入订阅 -> 3. 一键开启极速连接。',
+      primaryAction: '点击前往官方客服获取',
     },
     {
       id: 'android',
@@ -238,6 +241,16 @@ export const ClientMatrixSection: React.FC = () => {
                     </span>
                     <ArrowDownToLine className="w-4 h-4" />
                   </a>
+                ) : currentPlat.isCrisp ? (
+                  <button
+                    type="button"
+                    onClick={openCrispChat}
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-500/20 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <Headphones className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                    <span>{currentPlat.primaryAction}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 ) : (
                   <OfficialLink className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-sm group">
                     <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
