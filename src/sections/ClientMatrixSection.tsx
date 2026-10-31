@@ -18,6 +18,9 @@ import {
   MACOS_CLIENT_DOWNLOAD_URL,
   MACOS_CLIENT_VERSION,
   MACOS_CLIENT_FILENAME,
+  ANDROID_CLIENT_DOWNLOAD_URL,
+  ANDROID_CLIENT_VERSION,
+  ANDROID_CLIENT_FILENAME,
 } from '@/config/site';
 
 export const ClientMatrixSection: React.FC = () => {
@@ -80,17 +83,19 @@ export const ClientMatrixSection: React.FC = () => {
       id: 'android',
       name: 'Android',
       icon: Smartphone,
-      title: 'Android 安卓手机平板',
-      kernel: 'Clash Meta for Android / v2rayNG / Sing-box',
-      compatibility: 'Android 8.0+ (适配华为、小米、OPPO、vivo、三星等)',
-      version: 'v2.10.1 官方直链版',
+      title: 'Android 安卓客户端',
+      kernel: '隐形人专属客户端 v3.0.0 (支持 Clash / Sing-box 内核)',
+      compatibility: 'Android 8.0+ (适配华为、小米、OPPO、vivo、荣耀、三星等全机型)',
+      version: ANDROID_CLIENT_VERSION,
+      downloadUrl: ANDROID_CLIENT_DOWNLOAD_URL,
+      filename: ANDROID_CLIENT_FILENAME,
       features: [
-        '防系统休眠与保活机制，避免微信消息收发延迟',
+        '防系统休眠与后台保活机制，避免微信/Telegram 消息收发延迟',
         '按应用独立分流设置（国内应用直连，海外应用专线加速）',
-        '官方提供安全无毒 APK 原生直链下载',
+        '官方直连 APK 原生无毒安装包，一键安装极速连接',
       ],
-      quickSteps: '1. 下载 APK 安装包 -> 2. 控制台点击“导入到 Clash” -> 3. 启动开关即可使用。',
-      primaryAction: '进入官方控制台下载 Android 配套',
+      quickSteps: '1. 点击“立即下载 Android 客户端”获取 .apk 安装包 -> 2. 安装并启动 -> 3. 控制台点击“一键导入”或粘贴订阅链接即可极速连接。',
+      primaryAction: '立即下载 Android 客户端 (APK)',
     },
     {
       id: 'linux',
@@ -228,7 +233,9 @@ export const ClientMatrixSection: React.FC = () => {
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-500/20 group"
                   >
                     <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                    <span>立即下载 {currentPlat.name} 客户端 (.zip)</span>
+                    <span>
+                      立即下载 {currentPlat.name} 客户端 ({currentPlat.filename?.endsWith('.apk') ? '.apk' : '.zip'})
+                    </span>
                     <ArrowDownToLine className="w-4 h-4" />
                   </a>
                 ) : (

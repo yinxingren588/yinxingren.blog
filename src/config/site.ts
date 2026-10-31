@@ -34,6 +34,10 @@ export const MACOS_CLIENT_DOWNLOAD_URL = 'https://yinxing14.oss-ap-southeast-1.a
 export const MACOS_CLIENT_VERSION = 'v3.0.0 Universal 通用版';
 export const MACOS_CLIENT_FILENAME = 'yinxingren-3.0.0-macos.zip';
 
+export const ANDROID_CLIENT_DOWNLOAD_URL = 'https://app.invisibleattt.sbs/v1.0.0/yinxingren-3.0.0-universal.apk';
+export const ANDROID_CLIENT_VERSION = 'v3.0.0 官方通用版 (APK)';
+export const ANDROID_CLIENT_FILENAME = 'yinxingren-3.0.0-universal.apk';
+
 /**
  * 触发打开 Crisp 在线客服对话窗口
  */
