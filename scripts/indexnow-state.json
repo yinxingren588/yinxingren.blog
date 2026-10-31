@@ -2,152 +2,110 @@
   "apiKey": "d9452cd9711928e37afd10002997d50e",
   "host": "yinxingren.blog",
   "keyLocation": "https://yinxingren.blog/d9452cd9711928e37afd10002997d50e.txt",
-  "lastRun": "2026-10-31T07:43:09.539Z",
-  "lastSubmittedAt": "2026-10-31T07:43:09.539Z",
+  "lastRun": "2026-10-31T07:52:03.525Z",
+  "lastSubmittedAt": "2026-10-31T07:52:03.525Z",
   "pages": {
     "https://yinxingren.blog/": {
-      "contentHash": "4c7eee51ced6778aa7fc26051fc5ac7762707fe3a6fc54968d8e3f59d16f1c69",
+      "contentHash": "a32ef664a06b0699102531e7f9604defc6ce4644bcd8e3976a526385a66bc54f",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.125Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.884Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/services/": {
-      "contentHash": "dca3ea94b1e7a8f3d29525d4ea233cb3d0bd4004cf768444f3bc017ecb36af64",
+      "contentHash": "bff306658b4d0a6f1432d20af69cbd0a5072881dd33432c477ed2ed5dae30e96",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.130Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.886Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/advantages/": {
-      "contentHash": "1aef97cea2410ce22bdfbd87f662ed18d2f8df9673aeb9a6780a4af856d9b7c0",
+      "contentHash": "154af2006bac1313e3350dc4c324457fe19e79256dec1f0ca119286111cf0b70",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.139Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.887Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/locations/": {
-      "contentHash": "cf5f34b22660ac9b1fda6d3994e4a30d03a12bb6386364e61b07cfd2aefd7d25",
+      "contentHash": "bece14339e695981479aaf0dc402a9e12149e49e21c348330e39d100b59bcaf6",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.142Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.888Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/pricing/": {
-      "contentHash": "7eeb00aaec3b0ac086e6df90d648a4b5ff220305b39076d5fc3e5d79a345bcf9",
+      "contentHash": "abc6e1f426fb797f3d981190a2197c3f2edb8bdf85a7f4f8affd84b8ccd9a7ab",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.144Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.889Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/help/": {
-      "contentHash": "b3596948a4cadf4c1a1f69d4d41fe17e900120be653d479c12b89d5142bcfeb7",
+      "contentHash": "0ca87c2621589a99cb8770d011077606975ce71204ef213fe14b1c77d4a00303",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.145Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.890Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/downloads/": {
-      "contentHash": "7da2bbb707e2072d85cd55cdcad2b76f93006ad17599e5601a1b5ea8f8bc9c58",
+      "contentHash": "3d00939036733bcf013ef33695c7520dc850e3935e64033dcf6677a734c0cf0e",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.146Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.901Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/contact/": {
-      "contentHash": "32c0293fc34811405e76abb08422e24652cb3c3a9e9085af6c21e517869dd6db",
+      "contentHash": "edefc3a97f2151d9020362f8c0a511593103c2b78ac25689b10263a55e0a832a",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.151Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.902Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/terms/": {
-      "contentHash": "1ae1e338a41d7b1e656bef056351cbe4eb8954b0e2475e04cba84d2bb217e8ff",
+      "contentHash": "173f7d67f30c8deb0ae502348d4d4af3116dd7b236477d7aa10dd31ee7c172ff",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.152Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.903Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
     "https://yinxingren.blog/privacy/": {
-      "contentHash": "c03508a1564b422cceda5b1f0532274aef48991d32b5db77a4359567cdc54ddb",
+      "contentHash": "a91cc10d064d82cf5d22e0bbcbd3cc954f2f657a5670bc94f097daaf2c7d8304",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:42:24.154Z",
-      "lastSubmittedAt": "2026-10-31T07:42:24.821Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.904Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/intro-guide/": {
-      "contentHash": "a5c48b652d82983730d8f8a65ee89db1b35e8dc95ce99e3555d584a9736f9a1d",
+    "https://yinxingren.blog/help/yinxingren-jichang/": {
+      "contentHash": "d64cbe397d438bd43ec89da20917dedf953db875f7eaba57a7fbd177bfe7130b",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.604Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.891Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/verify-entry/": {
-      "contentHash": "0910f5db4e30cc936c4f07810d787516b019136c3301aff763ffeaac48abe13d",
+    "https://yinxingren.blog/help/jichang-tuijian/": {
+      "contentHash": "9e98a156f1e408fce5f7f29ad3525c3fa6eca5f771186e7ae7d0305c96797662",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.606Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.892Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/quick-start-3steps/": {
-      "contentHash": "49627a38fff7fe290c0d6e458e32b269730534ebf2f9878f4f265e78795eee89",
+    "https://yinxingren.blog/help/why-choose-yinxingren/": {
+      "contentHash": "21a236ca2208468acba9a85c36c837eace8f6c4ae694fe6a7dbd86fcc31b7292",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.607Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.893Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/choose-right-plan/": {
-      "contentHash": "dbea825a5ded83a7a8754098d8c82a567a67ca835b52fb41e667a36ab6d8dcf9",
+    "https://yinxingren.blog/help/tizi-guide/": {
+      "contentHash": "58eaebffbb97d3354cb6c12119571ba126556c2c8b7c9d91c7efd11a202b65ac",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.608Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.893Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/traffic-reset-rules/": {
-      "contentHash": "b004946c1cbd4f5a42a55f491da99c9daa93d6a205772f7380e7ebd9a7ef5912",
+    "https://yinxingren.blog/help/vpn-vs-proxy/": {
+      "contentHash": "25517b9ea2fa1adc5ca38c49329f402e9d50c50110524c3d801c15a190af1a8f",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.609Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.896Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/billing-disclaimer/": {
-      "contentHash": "688708f91eeca84be144eec9e8206f28c1ec7ecd8bf8de4c255ee01704cb1d9f",
+    "https://yinxingren.blog/help/node-selection-guide/": {
+      "contentHash": "505cb9cea2e1de1c387aac8fb192e442507b43376d9e6c48d5be0fc06e79933a",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.610Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.897Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     },
-    "https://yinxingren.blog/help/client-get-guide/": {
-      "contentHash": "eff882bd995b8d96362eea7e46bcb08f80221e90730a5742f7ae212167c7aa48",
+    "https://yinxingren.blog/help/clash-tutorial/": {
+      "contentHash": "71c20386d51d8d1670567b3dd8dd9b04b2f268e344cbbbec1b1c210f17fdfaa6",
       "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.611Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/subscription-import/": {
-      "contentHash": "98cd4c9a4cf9dcbdcab1dbeb85a9821bfffa9304e78ed06d642e7b6b3a8ef76e",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.612Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/split-routing-mode/": {
-      "contentHash": "07f4df20d473fe0524eadf5cdbeb069a7a471d89552c5038fb1c6c115e7c95e1",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.613Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/multi-device-concurrency/": {
-      "contentHash": "a069d3512adcc5daa665ab280ac509cfebd7c37d3472f4c985eff60902a5a4f8",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.613Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/router-deployment/": {
-      "contentHash": "0345cb83d0b2bb64bf3003a5de29db172ace4c1ba8555c38310854a63465779a",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.615Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/time-sync-error/": {
-      "contentHash": "9c4f2bf38e9990553622d75d9ae952bb2ae4d43935bb2068e41c747447562bf6",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.616Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/dns-leak-prevention/": {
-      "contentHash": "47411a23e81d57e77c95646b561e1edc47c6ed42b99e97d0b9a570d1c903db4d",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.616Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
-    },
-    "https://yinxingren.blog/help/node-failover-tips/": {
-      "contentHash": "f2c8534814a00ae430f0c3fc9b4f5c999356d5314ee40217e88c336d69b75bb8",
-      "status": "submitted",
-      "lastDetectedAt": "2026-10-31T07:43:08.617Z",
-      "lastSubmittedAt": "2026-10-31T07:43:09.539Z"
+      "lastDetectedAt": "2026-10-31T07:52:02.900Z",
+      "lastSubmittedAt": "2026-10-31T07:52:03.525Z"
     }
   },
   "deletedPages": []

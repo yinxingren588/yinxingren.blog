@@ -109,6 +109,10 @@ export const HelpArticlePage: React.FC = () => {
               <span>{article.categoryName}</span>
             </span>
 
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-xs font-bold text-blue-800 font-mono">
+              #{article.keyword}
+            </span>
+
             <span className="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
               <Calendar className="w-3.5 h-3.5 text-slate-400" />
               <span>更新时间: {article.updatedAt}</span>

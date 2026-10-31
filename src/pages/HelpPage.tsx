@@ -16,14 +16,14 @@ import {
 
 /**
  * /help/ 帮助中心文章导航与检索中心
- * 展示全站 14 篇标准化排错与使用指引文章卡片，点击独立跳转至专属详情页
+ * 围绕“隐形人机场、机场推荐、为什么选择隐形人机场、梯子、vpn、节点、clash”核心关键词打造的权威深度专栏
  */
 export const HelpPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
-    document.title = `${BRAND_NAME} 帮助中心与官方排错手册 - ${BRAND_NAME}官网`;
+    document.title = `${BRAND_NAME} 帮助中心与官方排错手册 - 专线机场推荐与科学技术指南`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -32,7 +32,7 @@ export const HelpPage: React.FC = () => {
     if (metaDesc) {
       metaDesc.setAttribute(
         'content',
-        `汇集${BRAND_NAME}新手三步极速接入、全平台客户端官方订阅导入、多设备协同管理及系统时钟同步等常见问题排查方案。提供官方直属知识库与一对一工单支持入口。`
+        `权威整理${BRAND_NAME}机场评测、高速稳定机场推荐指南、为什么选择隐形人机场、科学梯子与传统VPN区别、全球专线节点选择及Clash全平台配置教程。立足工程逻辑，拒绝无意义堆砌。`
       );
     }
   }, []);
@@ -45,12 +45,12 @@ export const HelpPage: React.FC = () => {
     });
 
     return [
-      { id: 'all', name: '全部指引', count: counts.all },
-      { id: 'getting-started', name: '新手入门', count: counts['getting-started'] || 0 },
-      { id: 'plan-selection', name: '套餐与订阅', count: counts['plan-selection'] || 0 },
-      { id: 'client-setup', name: '客户端配置', count: counts['client-setup'] || 0 },
-      { id: 'multi-device', name: '多设备协同', count: counts['multi-device'] || 0 },
-      { id: 'troubleshooting', name: '排错与网络', count: counts['troubleshooting'] || 0 },
+      { id: 'all', name: '全部专栏', count: counts.all },
+      { id: 'brand', name: '品牌专栏', count: counts['brand'] || 0 },
+      { id: 'selection', name: '选型指南', count: counts['selection'] || 0 },
+      { id: 'tech', name: '技术科普', count: counts['tech'] || 0 },
+      { id: 'nodes', name: '节点优化', count: counts['nodes'] || 0 },
+      { id: 'client', name: '客户端配置', count: counts['client'] || 0 },
     ];
   }, []);
 
@@ -63,12 +63,13 @@ export const HelpPage: React.FC = () => {
       if (!matchCategory) return false;
 
       if (!q) return true;
+      const inKeyword = article.keyword.toLowerCase().includes(q);
       const inTitle = article.title.toLowerCase().includes(q);
       const inSummary = article.summary.toLowerCase().includes(q);
       const inContent = article.content.toLowerCase().includes(q);
       const inTags = article.tags.some((tag) => tag.toLowerCase().includes(q));
 
-      return inTitle || inSummary || inContent || inTags;
+      return inKeyword || inTitle || inSummary || inContent || inTags;
     });
   }, [searchQuery, selectedCategory]);
 
@@ -101,15 +102,15 @@ export const HelpPage: React.FC = () => {
         <div className="max-w-3xl mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-mono">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>KNOWLEDGE BASE · 实用指南与官方排错手册</span>
+            <span>KNOWLEDGE BASE · 核心技术专栏与排错手册</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 帮助中心与官方排错手册
+            {BRAND_NAME} 帮助中心与技术专栏
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            为您整理从入门使用、官方 9 大配套规格考量、多端客户端导入到日常网络排错的详尽指南。所有内容立足于真实通用的工程逻辑，每个主题均配备独立图文页面，协助您快速排除疑问，顺畅建立连接。
+            围绕 <strong className="text-slate-900 font-semibold">隐形人机场、机场推荐、为什么选择隐形人机场、梯子、VPN、节点与 Clash</strong> 等核心主题打造的高规格技术专题。拒绝低质堆砌，每篇文章皆为立足于工程实践的深度指南，为您提供硬核、严谨、实用的网络指引。
           </p>
         </div>
 
@@ -124,7 +125,7 @@ export const HelpPage: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="搜索问题关键词、配置教程或排错方法（如：时间偏差、分流、多设备）..."
+              placeholder="搜索核心关键词：隐形人机场、机场推荐、梯子、vpn、节点、clash..."
               className="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all shadow-sm"
             />
             {searchQuery && (
@@ -169,7 +170,7 @@ export const HelpPage: React.FC = () => {
             <span>
               已为您匹配到{' '}
               <strong className="text-blue-600 font-mono">{filteredArticles.length}</strong>{' '}
-              篇相关指引
+              篇专属核心指南
             </span>
             {(searchQuery || selectedCategory !== 'all') && (
               <button
@@ -195,7 +196,11 @@ export const HelpPage: React.FC = () => {
               >
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono text-blue-700 font-semibold px-2.5 py-0.5 rounded-md bg-blue-50 border border-blue-200">
+                    <span className="text-xs font-mono font-bold text-blue-700 px-2.5 py-0.5 rounded-md bg-blue-50 border border-blue-200">
+                      #{article.keyword}
+                    </span>
+
+                    <span className="text-[11px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-100">
                       {article.categoryName}
                     </span>
 
@@ -232,7 +237,7 @@ export const HelpPage: React.FC = () => {
                   </div>
 
                   <div className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 group-hover:text-blue-700 flex-shrink-0 ml-2">
-                    <span>阅读全文</span>
+                    <span>阅读完整专栏</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -247,7 +252,7 @@ export const HelpPage: React.FC = () => {
             </div>
             <h3 className="text-base font-bold text-slate-900">未找到匹配的指引内容</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              抱歉，没有找到与“<span className="text-blue-600 font-semibold">{searchQuery}</span>”匹配的帮助文章。请尝试缩短关键词，或切换分类筛选。
+              抱歉，没有找到与“<span className="text-blue-600 font-semibold">{searchQuery}</span>”匹配的专栏文章。请尝试使用推荐关键词检索（如：隐形人机场、机场推荐、梯子、VPN、节点、Clash）。
             </p>
             <button
               type="button"
@@ -264,10 +269,10 @@ export const HelpPage: React.FC = () => {
           <div className="space-y-1 max-w-xl">
             <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-blue-600" />
-              <span>仍未排查出故障原因？</span>
+              <span>需要专属技术咨询或节点定制？</span>
             </h3>
             <p className="text-xs text-slate-500 leading-relaxed">
-              若遇到复杂的网络协议冲突或特定账户配置问题，您可以直接发起在线咨询，官方技术客服实时为您排查。
+              官方工程师 7×24 小时在线驻守，涉及特定协议调优、团队并发定制或节点连通诊断，欢迎直接发起在线沟通。
             </p>
           </div>
 
