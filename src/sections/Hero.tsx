@@ -32,31 +32,19 @@ export const Hero: React.FC = () => {
 
   return (
     <section
+      id="hero"
       aria-labelledby="hero-heading"
       className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-200 bg-white"
     >
-      {/* 极简网格与纯净环境微光背景 */}
-      <div className="absolute inset-0 subtle-grid opacity-60 pointer-events-none" aria-hidden="true" />
+      {/* 纯净环境柔光背景 (彻底移除所有网格与暗色系) */}
       <div
-        className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-100/40 blur-[140px] pointer-events-none rounded-full"
+        className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-100/30 blur-[140px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
       <div
-        className="absolute top-1/2 right-10 w-[500px] h-[300px] bg-sky-100/30 blur-[130px] pointer-events-none rounded-full"
+        className="absolute top-1/2 right-10 w-[500px] h-[300px] bg-sky-100/20 blur-[130px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
-
-      {/* 官方形象背景轻水印 */}
-      <div
-        className="absolute -right-16 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none rounded-full overflow-hidden"
-        aria-hidden="true"
-      >
-        <img
-          src="/images/hero-visual.png"
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">

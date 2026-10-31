@@ -34,12 +34,6 @@
 }
 
 @layer utilities {
-  .subtle-grid {
-    background-image: linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
-    background-size: 32px 32px;
-  }
-
   .clean-card {
     background-color: #FFFFFF;
     border: 1px solid #E2E8F0;
