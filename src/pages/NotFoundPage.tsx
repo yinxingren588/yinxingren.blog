@@ -15,7 +15,7 @@ export const NotFoundPage: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = `404 页面未找到 - ${BRAND_NAME}`;
+    document.title = `404 页面未找到 - ${BRAND_NAME}机场官网`;
     let metaRobots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
     let created = false;
     if (!metaRobots) {

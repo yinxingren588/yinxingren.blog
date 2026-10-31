@@ -15,7 +15,7 @@ import {
  */
 export const PrivacyPage: React.FC = () => {
   useEffect(() => {
-    document.title = `隐私政策与合规声明 - ${BRAND_NAME}`;
+    document.title = `${BRAND_NAME}机场用户隐私保护政策与数据合规 - ${BRAND_NAME}机场官网`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');

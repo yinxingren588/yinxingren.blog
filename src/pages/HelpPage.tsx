@@ -23,7 +23,7 @@ export const HelpPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
-    document.title = `${BRAND_NAME} 帮助中心与官方排错手册 - 专线机场推荐与科学技术指南`;
+    document.title = `${BRAND_NAME}机场帮助中心与官方故障排查手册 - ${BRAND_NAME}机场官网`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');
@@ -106,7 +106,7 @@ export const HelpPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            {BRAND_NAME} 帮助中心与技术专栏
+            {BRAND_NAME}机场 帮助中心与技术专栏
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

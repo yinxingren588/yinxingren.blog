@@ -34,7 +34,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/services/': {
     path: '/services/',
-    title: `服务架构与全球专线传输方案 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场服务架构与全球专线传输方案 - ${BRAND_NAME}机场官网`,
     description: `深入解析${BRAND_NAME}（${BRAND_NAME_EN}）官方专线传输架构：高强度协议混淆封装、智能动态负载容灾与精细化分流规则。协助出海团队与跨境开发者构建高速稳定的生产级网络工作流。`,
     keywords: [`${BRAND_NAME}服务`, `${BRAND_NAME}架构`, `${BRAND_NAME}官网`, '网络传输架构', '协议混淆', '专线容灾', '开发分流规则'],
     canonical: `${SITE_URL}/services/`,
@@ -42,7 +42,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/advantages/': {
     path: '/advantages/',
-    title: `核心专线优势与官方架构解析 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场核心专线优势与官方架构解析 - ${BRAND_NAME}机场官网`,
     description: `从协议深度隐匿伪装、骨干专线多路径容灾、全生态客户端无缝衔接到官方1x真实计费倍率承诺，全方位展现${BRAND_NAME}（${BRAND_NAME_EN}）作为官方正牌服务的核心技术价值。`,
     keywords: [`${BRAND_NAME}优势`, `${BRAND_NAME}专线优势`, `${BRAND_NAME}官网`, '网络指纹伪装', '专线加速', '容灾切换', '跨境办公协作'],
     canonical: `${SITE_URL}/advantages/`,
@@ -50,7 +50,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/locations/': {
     path: '/locations/',
-    title: `全球专线节点分布与智能调度指引 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场全球专线节点分布与智能调度指引 - ${BRAND_NAME}机场官网`,
     description: `了解${BRAND_NAME}官方全球优质专线节点的物理时延考量、骨干网络动态调度机制与分流优化方法。具体实时可用节点与延迟以官方控制台及客户端订阅列表为准。`,
     keywords: [`${BRAND_NAME}节点`, `${BRAND_NAME}线路`, `${BRAND_NAME}官网`, '专线节点分布', '网络时延优化', '域名分流策略'],
     canonical: `${SITE_URL}/locations/`,
@@ -58,7 +58,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/pricing/': {
     path: '/pricing/',
-    title: `官方 9 大精选配套与在线订阅中心 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场订阅套餐与官方 9 大精选规格 - ${BRAND_NAME}机场官网`,
     description: `${BRAND_NAME}官方直营公布的9大精选正式配套：涵盖星耀风暴、白银纪元、黄金序列、钻石穹顶、王者定制等6款循环周期订阅方案，以及3款永不过期的一次性独立买断流量包。全系专线1x真实倍率，官方在线安全激活。`,
     keywords: [`${BRAND_NAME}套餐`, `${BRAND_NAME}价格`, `${BRAND_NAME}官网订阅`, '一次性流量包', '专线套餐选型', `${BRAND_NAME}机场套餐`],
     canonical: `${SITE_URL}/pricing/`,
@@ -66,7 +66,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/help/': {
     path: '/help/',
-    title: `帮助中心与官方故障排查手册 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场帮助中心与官方故障排查手册 - ${BRAND_NAME}机场官网`,
     description: `汇集${BRAND_NAME}新手三步极速接入、全平台客户端官方订阅导入、多设备协同管理及系统时钟同步等常见问题排查方案。提供官方直属知识库与一对一工单支持入口。`,
     keywords: [`${BRAND_NAME}帮助`, `${BRAND_NAME}配置教程`, `${BRAND_NAME}官网手册`, '客户端配置', '时间同步排查', '网络故障排查'],
     canonical: `${SITE_URL}/help/`,
@@ -74,7 +74,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/downloads/': {
     path: '/downloads/',
-    title: `官方客户端下载与订阅导入中心 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场官方客户端下载与订阅导入中心 - ${BRAND_NAME}机场官网`,
     description: `汇总Windows、macOS、iOS与Android四大主流系统的${BRAND_NAME}官方客户端获取途径与配置导入指引。认准官方正版安全校验，保障端到端数据传输加密。`,
     keywords: [`${BRAND_NAME}下载`, `${BRAND_NAME}客户端`, `${BRAND_NAME}官网下载`, '客户端获取', '多平台适配', 'Windows客户端', 'macOS配置'],
     canonical: `${SITE_URL}/downloads/`,
@@ -82,7 +82,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/contact/': {
     path: '/contact/',
-    title: `官方支持中心与在线客服工单 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场官方支持中心与在线客服工单 - ${BRAND_NAME}机场官网`,
     description: `${BRAND_NAME}官方支持渠道汇总：提供官方在线技术工单通道、官方Telegram公告频道与官方技术交流群。官方直营售后团队全天候守护您的跨国连接顺畅。`,
     keywords: [`${BRAND_NAME}联系`, `${BRAND_NAME}官网客服`, '官方工单', 'Telegram官方频道', 'Telegram交流群', '客户支持'],
     canonical: `${SITE_URL}/contact/`,
@@ -90,7 +90,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/terms/': {
     path: '/terms/',
-    title: `服务条款与用户使用准则 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场服务条款与用户使用准则 - ${BRAND_NAME}机场官网`,
     description: `${BRAND_NAME}官方网站服务条款。明确官方平台直营服务性质、正版用户权益保障、网络安全合规准则与合理免责边界。`,
     keywords: ['服务条款', '官方正版', '用户准则', '网络合规', `${BRAND_NAME}官网`],
     canonical: `${SITE_URL}/terms/`,
@@ -98,7 +98,7 @@ export const SEO_DATA: Record<string, PageSEO> = {
   },
   '/privacy/': {
     path: '/privacy/',
-    title: `用户隐私保护政策与数据合规 - ${BRAND_NAME}官网`,
+    title: `${BRAND_NAME}机场用户隐私保护政策与数据合规 - ${BRAND_NAME}机场官网`,
     description: `${BRAND_NAME}官方平台隐私政策。详细阐述0 Cookie、0 本地存储追踪、纯客户端渲染架构与官方严格的数据安全加密保护承诺。`,
     keywords: ['隐私政策', '数据合规', '源码审查', '端到端加密', '隐私保护', `${BRAND_NAME}官网`],
     canonical: `${SITE_URL}/privacy/`,
@@ -123,7 +123,7 @@ HELP_ARTICLES.forEach((article) => {
   ]);
   SEO_DATA[path] = {
     path,
-    title: `${article.title} - ${BRAND_NAME}帮助中心与官方排错手册`,
+    title: `${article.title} - ${BRAND_NAME}机场官方帮助中心`,
     description: `${article.summary} 了解更多${article.categoryName}实用技巧与${BRAND_NAME}官方专线接入指引。`,
     keywords: Array.from(keywordSet),
     canonical: `${SITE_URL}${path}`,
@@ -140,7 +140,7 @@ export function updateClientSEO(pathname: string) {
 
   // 404 兜底处理
   if (!seo) {
-    document.title = `404 页面未找到 - ${BRAND_NAME}官方网站`;
+    document.title = `404 页面未找到 - ${BRAND_NAME}机场官网`;
     removeMetaTag('link[rel="canonical"]');
     removeMetaTag('meta[property^="og:"]');
     removeMetaTag('meta[name^="twitter:"]');

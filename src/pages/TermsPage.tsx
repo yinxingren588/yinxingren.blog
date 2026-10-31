@@ -16,7 +16,7 @@ import {
  */
 export const TermsPage: React.FC = () => {
   useEffect(() => {
-    document.title = `服务条款与免责声明 - ${BRAND_NAME}`;
+    document.title = `${BRAND_NAME}机场服务条款与用户使用准则 - ${BRAND_NAME}机场官网`;
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
       metaRobots.setAttribute('content', 'index, follow');

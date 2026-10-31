@@ -27,7 +27,7 @@ export const HelpArticlePage: React.FC = () => {
 
   useEffect(() => {
     if (article) {
-      document.title = `${article.title} - ${BRAND_NAME}官网帮助中心`;
+      document.title = `${article.title} - ${BRAND_NAME}机场官方帮助中心`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute(
