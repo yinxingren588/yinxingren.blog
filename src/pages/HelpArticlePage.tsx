@@ -163,6 +163,39 @@ export const HelpArticlePage: React.FC = () => {
                 {section.content}
               </p>
 
+              {/* 专业技术参数与对比表格 Table */}
+              {section.table && (
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm my-4">
+                  <table className="w-full text-left text-xs sm:text-sm font-sans">
+                    <thead className="bg-slate-50 border-b border-slate-200 text-slate-700 font-semibold">
+                      <tr>
+                        {section.table.headers.map((h, hIdx) => (
+                          <th key={hIdx} className="px-4 py-3.5 whitespace-nowrap">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 bg-white text-slate-600">
+                      {section.table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-slate-50/80 transition-colors">
+                          {row.map((cell, cIdx) => (
+                            <td
+                              key={cIdx}
+                              className={`px-4 py-3 leading-relaxed ${
+                                cIdx === 0 ? 'font-semibold text-slate-900 whitespace-nowrap' : ''
+                              }`}
+                            >
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
               {/* 重点提示 Tips */}
               {section.tips && section.tips.length > 0 && (
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
