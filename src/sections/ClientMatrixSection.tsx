@@ -15,6 +15,9 @@ import {
   WINDOWS_CLIENT_DOWNLOAD_URL,
   WINDOWS_CLIENT_VERSION,
   WINDOWS_CLIENT_FILENAME,
+  MACOS_CLIENT_DOWNLOAD_URL,
+  MACOS_CLIENT_VERSION,
+  MACOS_CLIENT_FILENAME,
 } from '@/config/site';
 
 export const ClientMatrixSection: React.FC = () => {
@@ -44,16 +47,18 @@ export const ClientMatrixSection: React.FC = () => {
       name: 'macOS',
       icon: Apple,
       title: 'macOS 苹果电脑客户端',
-      kernel: 'Clash Verge Rev / Surge / Sing-box',
+      kernel: '隐形人专属客户端 v3.0.0 (原生适配 Apple Silicon & Intel)',
       compatibility: 'macOS 12+ (原生适配 Apple M1/M2/M3/M4 & Intel)',
-      version: 'v1.7.7 Universal 通用版',
+      version: MACOS_CLIENT_VERSION,
+      downloadUrl: MACOS_CLIENT_DOWNLOAD_URL,
+      filename: MACOS_CLIENT_FILENAME,
       features: [
         '原生适配 Apple Silicon 芯片，超低 CPU 与电池能耗',
-        '深色极简顶栏状态菜单，一键快速切换线路',
-        'DNS 防泄露保护与分流规则智能更新',
+        '深色极简顶栏状态菜单，一键快速切换线路，免繁琐配置',
+        'DNS 防泄露保护与分流规则智能更新，秒开 4K/8K 与 AI 工具',
       ],
-      quickSteps: '1. 安装 Verge 或 Surge -> 2. 官方控制台复制订阅或一键导入 -> 3. 开启 TUN 模式畅享极速。',
-      primaryAction: '进入官方控制台下载 macOS 配套',
+      quickSteps: '1. 点击“立即下载 macOS 客户端”获取 .zip 包 -> 2. 解压安装 -> 3. 点击控制台“一键导入”或粘贴订阅链接即可极速连接。',
+      primaryAction: '立即下载 macOS 客户端 (v3.0.0)',
     },
     {
       id: 'ios',
@@ -223,7 +228,7 @@ export const ClientMatrixSection: React.FC = () => {
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-500/20 group"
                   >
                     <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                    <span>立即下载 Windows 客户端 (.zip)</span>
+                    <span>立即下载 {currentPlat.name} 客户端 (.zip)</span>
                     <ArrowDownToLine className="w-4 h-4" />
                   </a>
                 ) : (

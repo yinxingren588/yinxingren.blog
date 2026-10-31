@@ -30,6 +30,10 @@ export const WINDOWS_CLIENT_DOWNLOAD_URL = 'https://yinxing14.oss-ap-southeast-1
 export const WINDOWS_CLIENT_VERSION = 'v3.0.0 官方直连版';
 export const WINDOWS_CLIENT_FILENAME = 'yinxingren-3.0.0-windows.zip';
 
+export const MACOS_CLIENT_DOWNLOAD_URL = 'https://yinxing14.oss-ap-southeast-1.aliyuncs.com/v1.0.0/yinxingren-3.0.0-macos.zip';
+export const MACOS_CLIENT_VERSION = 'v3.0.0 Universal 通用版';
+export const MACOS_CLIENT_FILENAME = 'yinxingren-3.0.0-macos.zip';
+
 /**
  * 触发打开 Crisp 在线客服对话窗口
  */
