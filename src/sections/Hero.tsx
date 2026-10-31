@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             {/* 官方正版旗舰定位标签 */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs text-blue-700 font-semibold shadow-sm">
               <ShieldCheck className="w-4 h-4 text-blue-600" />
-              <span>官方直营 · {BRAND_NAME}全球专线网络加速中心</span>
+              <span>官方直营 · {BRAND_NAME}机场全球专线网络加速中心</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-1" />
             </div>
 
@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight"
             >
               <span className="text-blue-600">
-                {BRAND_NAME}官网
+                {BRAND_NAME}机场
               </span>
               <span className="block text-slate-900 mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold">
                 全球专线加速与跨境互联官方服务平台
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
 
             {/* Hero 副标题 */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
-              {BRAND_NAME}（{BRAND_NAME_EN}）官方直营控制台入口。全系部署 IEPL 企业级内网专线，承诺 1.0x 真实倍率，毫秒级跨网低延迟，原生支持 4K/8K 超高清流媒体与 AI 研发模型接入。官方正版直营，保障节点长效稳定。
+              {BRAND_NAME}机场（{BRAND_NAME_EN}）官方直营控制台入口。全系部署 IEPL 企业级内网专线，承诺 1.0x 真实倍率，毫秒级跨网低延迟，原生支持 4K/8K 超高清流媒体与 AI 研发模型接入。隐形人官网正版直营，保障节点长效稳定。
             </p>
 
             {/* CTA 操作按钮组：大屏三按钮矩阵 */}

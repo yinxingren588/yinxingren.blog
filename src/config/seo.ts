@@ -14,13 +14,13 @@ export const SHARE_IMAGE_URL = `${SITE_URL}/images/og-share.png`;
 export const SEO_DATA: Record<string, PageSEO> = {
   '/': {
     path: '/',
-    title: `${BRAND_NAME}官网 - ${BRAND_NAME}官方网站｜全球高速专线网络加速与官方控制台`,
-    description: `${BRAND_NAME}（${BRAND_NAME_EN}）官方直营网站。专注提供企业级全球专线网络加速、端到端流量混淆保护、官方9大订阅配套直选及全平台正版客户端接入指引。全系专线1x真实倍率，官方专属技术售后保障。`,
+    title: `${BRAND_NAME}机场官网 - ${BRAND_NAME}官网｜全球专线加速与官方控制台入口`,
+    description: `${BRAND_NAME}机场（${BRAND_NAME}官网）官方直营网站。专注提供企业级全球专线网络加速、端到端流量混淆保护、官方9大订阅配套直选及全平台正版客户端接入指引。全系专线1.0x真实倍率，官方专属技术售后保障。`,
     keywords: [
+      `${BRAND_NAME}机场`,
       `${BRAND_NAME}官网`,
       BRAND_NAME,
       `${BRAND_NAME}官方网站`,
-      `${BRAND_NAME}机场`,
       `${BRAND_NAME}专线`,
       `${BRAND_NAME}控制台`,
       `${BRAND_NAME_EN}`,
