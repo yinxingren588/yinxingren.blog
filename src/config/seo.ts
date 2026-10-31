@@ -109,23 +109,23 @@ export const SEO_DATA: Record<string, PageSEO> = {
 // 为所有帮助中心独立文章动态注入专业 SEO TDK
 HELP_ARTICLES.forEach((article) => {
   const path = `/help/${article.id}/`;
+  const keywordSet = new Set([
+    article.keyword,
+    ...article.tags,
+    `${BRAND_NAME}机场`,
+    '机场推荐',
+    '为什么选择隐形人机场',
+    '梯子',
+    'vpn',
+    '节点',
+    'clash',
+    `${BRAND_NAME}官网`,
+  ]);
   SEO_DATA[path] = {
     path,
     title: `${article.title} - ${BRAND_NAME}帮助中心与官方排错手册`,
     description: `${article.summary} 了解更多${article.categoryName}实用技巧与${BRAND_NAME}官方专线接入指引。`,
-    keywords: [
-      article.keyword,
-      article.title,
-      ...article.tags,
-      `${BRAND_NAME}机场`,
-      '机场推荐',
-      '为什么选择隐形人机场',
-      '梯子',
-      'vpn',
-      '节点',
-      'clash',
-      `${BRAND_NAME}官网`,
-    ],
+    keywords: Array.from(keywordSet),
     canonical: `${SITE_URL}${path}`,
     ogType: 'article',
   };
