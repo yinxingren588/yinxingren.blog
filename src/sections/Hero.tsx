@@ -46,6 +46,18 @@ export const Hero: React.FC = () => {
         aria-hidden="true"
       />
 
+      {/* 官方形象背景微光水印 */}
+      <div
+        className="absolute -right-16 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.04] pointer-events-none rounded-full overflow-hidden blur-[1px]"
+        aria-hidden="true"
+      >
+        <img
+          src="/images/hero-visual.png"
+          alt=""
+          className="w-full h-full object-contain filter invert"
+        />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* 左侧文字与操作区 (7列) */}
